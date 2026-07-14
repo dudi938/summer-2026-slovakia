@@ -332,15 +332,6 @@ function renderAttractionCard(attraction, index) {
   badge.textContent = categoryLabel;
   cardImage.appendChild(badge);
 
-  // Baby friendly indicator
-  if (attraction.suitableForBaby) {
-    const babyBadge = document.createElement('span');
-    babyBadge.className = 'card-baby-badge';
-    babyBadge.textContent = '👶';
-    babyBadge.title = 'מתאים לתינוקות';
-    cardImage.appendChild(babyBadge);
-  }
-
   card.appendChild(cardImage);
 
   // Card body
