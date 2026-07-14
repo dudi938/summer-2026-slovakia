@@ -140,7 +140,7 @@
     "distanceFromMalatiny": "280 ק\"מ, ~3 שעות נסיעה to Bratislava port",
     "familyScore": 5,
     "dayTripCluster": "bratislava-area",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Wien_01_Twin_City_Liner_2019_a.jpg/960px-Wien_01_Twin_City_Liner_2019_a.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Wien_01_Twin_City_Liner_2019_a.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=48.1397,17.11",
     "tags": [
       "מים",
@@ -218,7 +218,7 @@
     "distanceFromMalatiny": "310 ק\"מ to Bratislava (suitable for Vienna/Bratislava part of trip)",
     "familyScore": 5,
     "dayTripCluster": "bratislava-area",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/View_from_Gell%C3%A9rt_Hill_to_the_Danube%2C_Hungary_-_Budapest_%2828493220635%29.jpg/960px-View_from_Gell%C3%A9rt_Hill_to_the_Danube%2C_Hungary_-_Budapest_%2828493220635%29.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/97/Mal%C3%A1_Fatra_by_Pudelek_-_gondola_lift.JPG",
     "googleMapsUrl": "https://www.google.com/maps?q=48.1486,17.0742",
     "tags": [
       "מים",
@@ -418,7 +418,7 @@
     "distanceFromMalatiny": "~250 ק\"מ, כ-2.5-3 שעות by car",
     "familyScore": 5,
     "dayTripCluster": "budapest",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/27/Budapest_Chairlift_1.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Bodyflying_in_vertical_wind_tunnel.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=47.5097,18.9653",
     "tags": [
       "טבע",
@@ -536,7 +536,7 @@
     "distanceFromMalatiny": "75 דקות נסיעה (כ-80 ק\"מ)",
     "familyScore": 5,
     "dayTripCluster": "tatras-north",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Demenovska_jaskyna_slobody-smaragdove_jazierko.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Demanovska_ladova_jaskyna_1.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.2288,20.3116",
     "tags": [
       "טבע",
@@ -577,7 +577,7 @@
     "distanceFromMalatiny": "120 ק\"מ, כ-1 שעה 40 דקות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "tatras-north",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/88/Rafting_on_the_Dunajec_River%2C_Pieniny_Mountains.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Rafting_on_the_Dunajec_River.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.3889,20.4167",
     "tags": [
       "מים",
@@ -617,7 +617,7 @@
     "distanceFromMalatiny": "~95 ק\"מ, כ-1 שעה 20 דקות נסיעה to Starý Smokovec",
     "familyScore": 5,
     "dayTripCluster": "tatras-north",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/be/Sutovsky_vodopad.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Po%C4%BEovn%C3%ADcky_vodop%C3%A1d%2C_Borovec%2C_Vysok%C3%A9_Tatry%2C_%C5%BDilinsk%C3%BD_kraj%2C_Slovensko_02.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.1583,20.2247",
     "tags": [
       "טבע",
@@ -658,7 +658,7 @@
     "distanceFromMalatiny": "~80 ק\"מ, כ-1 שעה 10 דקות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "tatras-north",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f4/%C5%A0trbsk%C3%A9_pleso_-_panorama.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Vysok%C3%A9_Tatry%2C_Nov%C3%A9_%C5%A0trbsk%C3%A9_pleso.JPG",
     "googleMapsUrl": "https://www.google.com/maps?q=49.1583,20.2247",
     "tags": [
       "טבע",
@@ -698,7 +698,7 @@
     "distanceFromMalatiny": "115 ק\"מ, ~1.5 שעות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "tatras-north",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f4/%C5%A0trbsk%C3%A9_pleso_-_panorama.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Strbske_Pleso_-_Mountains.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.1406,20.22",
     "tags": [
       "טבע",
@@ -817,7 +817,7 @@
     "distanceFromMalatiny": "100 ק\"מ, כ-1.5 שעות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "tatras-north",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/40/Station_Skalnate_pleso.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=49.1953,20.2131",
     "tags": [
       "טבע",
@@ -857,7 +857,7 @@
     "distanceFromMalatiny": "~100 ק\"מ, כ-1 שעה 30 דקות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "tatras-north",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/40/Station_Skalnate_pleso.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=49.1958,20.2128",
     "tags": [
       "טבע",
@@ -899,7 +899,7 @@
     "distanceFromMalatiny": "20 ק\"מ, כ-20 דקות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Liptovska_Mara.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/30/Slovensky_raj%2C_11.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.0833,19.5333",
     "tags": [
       "מים",
@@ -940,7 +940,7 @@
     "distanceFromMalatiny": "20 ק\"מ, כ-20 דקות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Liptovska_Mara.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Slovensky_raj%2C_38.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.0833,19.5333",
     "tags": [
       "מים",
@@ -981,7 +981,7 @@
     "distanceFromMalatiny": "18 ק\"מ, כ-18 דקות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Liptovska_Mara.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/99/Slovensky_raj%2C_10.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.075,19.4833",
     "tags": [
       "מים",
@@ -1021,7 +1021,7 @@
     "distanceFromMalatiny": "35 ק\"מ, כ-30 דקות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Liptovska_Mara.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Slovensky_raj%2C_27.JPG",
     "googleMapsUrl": "https://www.google.com/maps?q=49.118467,19.479606",
     "tags": [
       "מים",
@@ -1059,7 +1059,7 @@
     "distanceFromMalatiny": "22 ק\"מ, כ-22 דקות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Liptovska_Mara.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Slovensky_raj%2C_32.JPG",
     "googleMapsUrl": "https://www.google.com/maps?q=49.09,19.55",
     "tags": [
       "מים",
@@ -1099,7 +1099,7 @@
     "distanceFromMalatiny": "110 ק\"מ east, כ-1.5-2 שעות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "tatras-north",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/88/Rafting_on_the_Dunajec_River%2C_Pieniny_Mountains.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Highlander_on_a_raft_in_the_Pieniny_Mountains_%2891684562%29.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.3833,20.4333",
     "tags": [
       "מים",
@@ -1137,7 +1137,7 @@
     "distanceFromMalatiny": "~85 ק\"מ drive to Štrbské pleso trailhead, then 1.5h hike",
     "familyScore": 5,
     "dayTripCluster": "tatras-north",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/92/Mengusovsk%C3%A1_dolina%2C_Vysok%C3%A9_Tatry_%2837%29.JPG",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Popradsk%C3%A9_pleso_2008.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.1531,20.0803",
     "tags": [
       "טבע",
@@ -1176,7 +1176,7 @@
     "distanceFromMalatiny": "25 ק\"מ, כ-25 דקות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "tatras-south",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Rafting_on_the_Bel%C3%A1_river.JPG",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=49.0847,19.6119",
     "tags": [
       "מים",
@@ -1216,7 +1216,7 @@
     "distanceFromMalatiny": "25 ק\"מ, כ-25 דקות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "tatras-south",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Rafting_on_the_Bel%C3%A1_river.JPG",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=49.0847,19.6119",
     "tags": [
       "מים",
@@ -1256,7 +1256,7 @@
     "distanceFromMalatiny": "110 ק\"מ east, כ-1.5-2 שעות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "tatras-north",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/88/Rafting_on_the_Dunajec_River%2C_Pieniny_Mountains.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/55/PL_Pieniny_Nowy_Przew%C3%B3z.JPG",
     "googleMapsUrl": "https://www.google.com/maps?q=49.3864,20.4105",
     "tags": [
       "מים",
@@ -1296,7 +1296,7 @@
     "distanceFromMalatiny": "~100 ק\"מ, כ-1 שעה 30 דקות נסיעה to Tatranská Lomnica base",
     "familyScore": 5,
     "dayTripCluster": "tatras-north",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/40/Station_Skalnate_pleso.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=49.1892,20.2344",
     "tags": [
       "טבע",
@@ -1336,7 +1336,7 @@
     "distanceFromMalatiny": "80 ק\"מ, כ-1.25 שעות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "tatras-north",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f4/%C5%A0trbsk%C3%A9_pleso_-_panorama.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Strbske_Pleso_-_Hotels.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.1192,20.0597",
     "tags": [
       "טבע",
@@ -1376,7 +1376,7 @@
     "distanceFromMalatiny": "100 ק\"מ, ~1.5 שעות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "tatras-north",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f4/%C5%A0trbsk%C3%A9_pleso_-_panorama.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Strbske_Pleso_-_Mountains_2.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.1197,20.0603",
     "tags": [
       "טבע",
@@ -1415,7 +1415,7 @@
     "distanceFromMalatiny": "100 ק\"מ, ~1.5 שעות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "tatras-north",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f4/%C5%A0trbsk%C3%A9_pleso_-_panorama.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/78/%C5%A0trbsk%C3%A9_pleso_%26_Hotel_Patria_2022.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.1197,20.0603",
     "tags": [
       "טבע",
@@ -1455,7 +1455,7 @@
     "distanceFromMalatiny": "130 ק\"מ, ~1.75 שעות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "tatras-north",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Zdiar%2C_Slovakia.JPG/960px-Zdiar%2C_Slovakia.JPG",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/86/Slovakia_Zdiar_46.JPG",
     "googleMapsUrl": "https://www.google.com/maps?q=49.27,20.2583",
     "tags": [
       "טבע",
@@ -1494,7 +1494,7 @@
     "distanceFromMalatiny": "115 ק\"מ, ~1.5 שעות נסיעה to trailhead",
     "familyScore": 5,
     "dayTripCluster": "tatras-north",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/92/Mengusovsk%C3%A1_dolina%2C_Vysok%C3%A9_Tatry_%2837%29.JPG",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Popradsk%C3%A9_pleso_2021.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.1833,20.2167",
     "tags": [
       "טבע",
@@ -1535,7 +1535,7 @@
     "distanceFromMalatiny": "~55 ק\"מ, כ-50 דקות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "tatras-north",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f4/%C5%A0trbsk%C3%A9_pleso_-_panorama.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/High_Tatras_%28%C5%A0trbsk%C3%A9_pleso%29.JPG",
     "googleMapsUrl": "https://www.google.com/maps?q=49.12,20.06",
     "tags": [
       "טבע",
@@ -1576,7 +1576,7 @@
     "distanceFromMalatiny": "~85 ק\"מ, כ-1 שעה 15 דקות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "tatras-north",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f4/%C5%A0trbsk%C3%A9_pleso_-_panorama.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/48/Strbske_pleso%2C_Slovakia_-_panoramio.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.1225,20.0583",
     "tags": [
       "טבע",
@@ -1616,7 +1616,7 @@
     "distanceFromMalatiny": "~85 ק\"מ drive to Štrbské pleso starting point",
     "familyScore": 5,
     "dayTripCluster": "tatras-north",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f4/%C5%A0trbsk%C3%A9_pleso_-_panorama.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Strbske_pleso_panorama_137.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.1378,20.0693",
     "tags": [
       "טבע",
@@ -1657,7 +1657,7 @@
     "distanceFromMalatiny": "~25 ק\"מ, כ-25 דקות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Liptovska_Mara.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/de/Misov%C3%A9_vodop%C3%A1dy%2C_Such%C3%A1_Bel%C3%A1%2C_Slovensk%C3%BD_r%C3%A1j%2C_2012%2C_01.JPG",
     "googleMapsUrl": "https://www.google.com/maps?q=49.09,19.56",
     "tags": [
       "מים",
@@ -1697,7 +1697,7 @@
     "distanceFromMalatiny": "~45 ק\"מ, כ-45 דקות נסיעה to Jasná base station",
     "familyScore": 5,
     "dayTripCluster": "tatras-south",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Jasn%C3%A1_Ski_Resort_-_gondola_lift_Kosodrevina_-_Chopok_%284%29.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/05/Mal%C3%A1_Fatra_-_view_from_Snilovsk%C3%A9_sedlo.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=48.9436,19.59",
     "tags": [
       "טבע",
@@ -1736,7 +1736,7 @@
     "distanceFromMalatiny": "~10 ק\"מ, כ-12 דקות נסיעה to start",
     "familyScore": 5,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/69/Downhill_cycling_Jasna.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=49.075,19.26",
     "tags": [
       "אופניים",
@@ -1775,7 +1775,7 @@
     "distanceFromMalatiny": "165 ק\"מ, ~2 שעות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "slovensky-raj",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/45/Slovensky_raj-Stratenska_pila.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Dedinky_Evening_fishing_40358.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=48.85,20.3167",
     "tags": [
       "טבע",
@@ -1813,7 +1813,7 @@
     "distanceFromMalatiny": "50 דקות נסיעה (כ-55 ק\"מ)",
     "familyScore": 5,
     "dayTripCluster": "tatras-south",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Demenovska_jaskyna_slobody-smaragdove_jazierko.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=48.9981,19.5851",
     "tags": [
       "טבע",
@@ -1851,7 +1851,7 @@
     "distanceFromMalatiny": "~45 ק\"מ, כ-40 דקות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "tatras-south",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Demenovska_jaskyna_slobody-smaragdove_jazierko.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/db/Dem%C3%A4novsk%C3%A1_jasky%C5%88a_slobody_-_Slovakia.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=48.9986,19.5819",
     "tags": [
       "טבע",
@@ -1889,7 +1889,7 @@
     "distanceFromMalatiny": "45 דקות נסיעה (כ-50 ק\"מ)",
     "familyScore": 5,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Demenovska_jaskyna_slobody-smaragdove_jazierko.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/af/Demanova_Ice_Cave_10.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.0162,19.5828",
     "tags": [
       "טבע",
@@ -1927,7 +1927,7 @@
     "distanceFromMalatiny": "~45 ק\"מ, כ-40 דקות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "tatras-south",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Demenovska_jaskyna_slobody-smaragdove_jazierko.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Demanova_Ice_Cave_22.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=48.9986,19.5819",
     "tags": [
       "טבע",
@@ -1967,7 +1967,7 @@
     "distanceFromMalatiny": "~45 ק\"מ, כ-40 דקות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "tatras-south",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Demenovska_jaskyna_slobody-smaragdove_jazierko.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Demanova_Ice_Cave_01.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=48.9667,19.5833",
     "tags": [
       "טבע",
@@ -2005,7 +2005,7 @@
     "distanceFromMalatiny": "90 דקות נסיעה (כ-95 ק\"מ)",
     "familyScore": 5,
     "dayTripCluster": "tatras-north",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/88/Rafting_on_the_Dunajec_River%2C_Pieniny_Mountains.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/22/Pieniny_478.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.4075,20.4247",
     "tags": [
       "מים",
@@ -2043,7 +2043,7 @@
     "distanceFromMalatiny": "30 ק\"מ, כ-25 דקות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Liptovsky_Mikulas_Montage.jpg/960px-Liptovsky_Mikulas_Montage.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Vertical_wind_tunnel_in_Moscow.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.08,19.59",
     "tags": [
       "הרפתקה",
@@ -2081,7 +2081,7 @@
     "distanceFromMalatiny": "55 דקות נסיעה (כ-55 ק\"מ)",
     "familyScore": 5,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/45/Slovensky_raj-Stratenska_pila.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/91/Slovensky_Raj-Slovak_Paradise_-_panoramio.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.248,19.035",
     "tags": [
       "טבע",
@@ -2119,7 +2119,7 @@
     "distanceFromMalatiny": "20 דקות נסיעה (כ-20 ק\"מ)",
     "familyScore": 5,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Kva%C4%8Diansk%C3%A1_valley.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/db/Kva%C4%8Diansk%C3%A1_valley_waterfall.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.15,19.4833",
     "tags": [
       "טבע",
@@ -2158,7 +2158,7 @@
     "distanceFromMalatiny": "~30 ק\"מ, כ-30 דקות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Kva%C4%8Diansk%C3%A1_valley.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=49.1667,19.5333",
     "tags": [
       "טבע",
@@ -2197,7 +2197,7 @@
     "distanceFromMalatiny": "35-45 דקות נסיעה to Liptovský Mikuláš (כ-40-50 ק\"מ)",
     "familyScore": 5,
     "dayTripCluster": "tatras-south",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/69/Downhill_cycling_Jasna.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=49.0833,19.6167",
     "tags": [
       "אופניים",
@@ -2237,7 +2237,7 @@
     "distanceFromMalatiny": "~25 ק\"מ, כ-25 דקות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Liptovska_Mara.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Slovensky_raj%2C_Sucha_Bela%2C_01.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.0986,19.4889",
     "tags": [
       "מים",
@@ -2277,7 +2277,7 @@
     "distanceFromMalatiny": "~20 ק\"מ, כ-20 דקות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/be/Sutovsky_vodopad.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Vodop%C3%A1d_Skok_v_Mlynickej_doline.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.1299,19.4034",
     "tags": [
       "טבע",
@@ -2315,7 +2315,7 @@
     "distanceFromMalatiny": "~12 ק\"מ, כ-15 דקות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/77/Ruzomberok_town_hall.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=49.06,19.27",
     "tags": [
       "אופניים",
@@ -2394,7 +2394,7 @@
     "distanceFromMalatiny": "30 דקות נסיעה (כ-25 ק\"מ)",
     "familyScore": 5,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Orava_Castle.jpg/960px-Orava_Castle.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Orava_Castle.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.3843,19.5366",
     "tags": [
       "מים",
@@ -2508,7 +2508,7 @@
     "distanceFromMalatiny": "165 ק\"מ, ~2 שעות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "slovensky-raj",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/45/Slovensky_raj-Stratenska_pila.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/80/Slovensky_raj-zebrik.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=48.8667,20.3167",
     "tags": [
       "הרפתקה",
@@ -2545,7 +2545,7 @@
     "distanceFromMalatiny": "130 ק\"מ, כ-1 שעה 45 דקות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "slovensky-raj",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/45/Slovensky_raj-Stratenska_pila.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Slovensky_Raj-Slovak_Paradise_-_panoramio_-_Tomas_Jancovic.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=48.925,20.3667",
     "tags": [
       "מים",
@@ -2583,7 +2583,7 @@
     "distanceFromMalatiny": "130 ק\"מ, כ-1 שעה 45 דקות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "slovensky-raj",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/45/Slovensky_raj-Stratenska_pila.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Sucha_Bela_Gorge.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=48.9333,20.3833",
     "tags": [
       "מים",
@@ -2622,7 +2622,7 @@
     "distanceFromMalatiny": "~130 ק\"מ, כ-1 שעה 45 דקות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "slovensky-raj",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/45/Slovensky_raj-Stratenska_pila.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Slovensky_raj%2C_21.JPG",
     "googleMapsUrl": "https://www.google.com/maps?q=48.9167,20.4167",
     "tags": [
       "טבע",
@@ -2659,7 +2659,7 @@
     "distanceFromMalatiny": "~130 ק\"מ, כ-1 שעה 45 דקות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "slovensky-raj",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/45/Slovensky_raj-Stratenska_pila.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/af/Such%C3%A1_Bel%C3%A1%2C_Slovensk%C3%BD_r%C3%A1j%2C_2012%2C_020.JPG",
     "googleMapsUrl": "https://www.google.com/maps?q=48.9333,20.3833",
     "tags": [
       "הרפתקה",
@@ -2699,7 +2699,7 @@
     "distanceFromMalatiny": "160 ק\"מ, ~2 שעות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "slovensky-raj",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/45/Slovensky_raj-Stratenska_pila.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Slovensky_raj%2C_01.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=48.8833,20.2833",
     "tags": [
       "טבע",
@@ -2739,7 +2739,7 @@
     "distanceFromMalatiny": "~28 ק\"מ, כ-28 דקות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "tatras-south",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Liptovska_Mara.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a5/STRBSKE_PLESO.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.085,19.61",
     "tags": [
       "טבע",
@@ -2779,7 +2779,7 @@
     "distanceFromMalatiny": "~38 ק\"מ, כ-35 דקות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://i0.wp.com/vratna.sk/wp-content/uploads/2024/06/OGImage.png?fit=1200%2C628&ssl=1",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Vr%C3%A1tna_dolina_2005.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.22,19.0167",
     "tags": [
       "טבע",
@@ -2816,7 +2816,7 @@
     "distanceFromMalatiny": "~45 ק\"מ, כ-45 דקות נסיעה to Štefanová trailhead",
     "familyScore": 5,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/04/Chopok_top.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Elektrick%C3%A1_jednotka_425.95%2C_%C5%A0trbsk%C3%A9_pleso.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.2311,19.1",
     "tags": [
       "טבע",
@@ -2854,7 +2854,7 @@
     "distanceFromMalatiny": "40 ק\"מ, כ-35 דקות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Krivanska_mala_fatra_hreben.jpg/960px-Krivanska_mala_fatra_hreben.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Krivanska_mala_fatra_hreben.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.1544,19.0347",
     "tags": [
       "טבע",
@@ -2894,7 +2894,7 @@
     "distanceFromMalatiny": "~40 ק\"מ, כ-40 דקות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Krivanska_mala_fatra_hreben.jpg/960px-Krivanska_mala_fatra_hreben.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=49.2272,19.0333",
     "tags": [
       "טבע",
@@ -2934,7 +2934,7 @@
     "distanceFromMalatiny": "~25 ק\"מ, כ-25 דקות נסיעה to start",
     "familyScore": 5,
     "dayTripCluster": "tatras-south",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/69/Downhill_cycling_Jasna.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=49.084,19.61",
     "tags": [
       "אופניים",
@@ -2973,7 +2973,7 @@
     "distanceFromMalatiny": "15 דקות נסיעה (כ-12 ק\"מ)",
     "familyScore": 5,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/be/Sutovsky_vodopad.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/18/Skok_waterfall.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.168,19.135",
     "tags": [
       "טבע",
@@ -3012,7 +3012,7 @@
     "distanceFromMalatiny": "~25 ק\"מ, כ-30 דקות נסיעה to trailhead",
     "familyScore": 5,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/be/Sutovsky_vodopad.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/10/Vodopad_Skok_in_Mlynicka_dolina.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.187,19.083",
     "tags": [
       "טבע",
@@ -3248,7 +3248,7 @@
     "distanceFromMalatiny": "310 ק\"מ, ~3.5 שעות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "vienna-city",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Purkersdorf_-_Ortskern.JPG/960px-Purkersdorf_-_Ortskern.JPG",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Purkersdorf_schloss.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=48.1856,16.1756",
     "tags": [
       "הרפתקה",
@@ -3492,7 +3492,7 @@
     "distanceFromMalatiny": "Vienna departure is 280 ק\"מ from Malatiny, כ-3 שעות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "vienna-city",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Wien_01_Twin_City_Liner_2019_a.jpg/960px-Wien_01_Twin_City_Liner_2019_a.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/93/Indoor_Skydiving_Freestyle.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=48.2127,16.3769",
     "tags": [
       "מים",
@@ -3532,7 +3532,7 @@
     "distanceFromMalatiny": "290 ק\"מ, כ-3.5 שעות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "vienna-city",
-    "imageUrl": "https://chabadvienna.com/wp-content/uploads/sites/75/2022/09/vienna.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=48.217,16.384",
     "tags": [
       "כללי",
@@ -3570,7 +3570,7 @@
     "distanceFromMalatiny": "280-290 ק\"מ, כ-3 שעות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "vienna-city",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Wienerwald2.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Purkersdorf_Sanatorium_2024_1.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=48.25,16.15",
     "tags": [
       "טבע",
@@ -3609,7 +3609,7 @@
     "distanceFromMalatiny": "285 ק\"מ, כ-3 שעות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "vienna-city",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Wienerwald2.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=48.2234,16.2356",
     "tags": [
       "אופניים",
@@ -3648,7 +3648,7 @@
     "distanceFromMalatiny": "230 ק\"מ, כ-2.5 שעות נסיעה",
     "familyScore": 4,
     "dayTripCluster": "bratislava-area",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DSCN1028.JPG/960px-DSCN1028.JPG",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/DSCN1028.JPG",
     "googleMapsUrl": "https://www.google.com/maps?q=48.0285,17.2025",
     "tags": [
       "מים",
@@ -3725,7 +3725,7 @@
     "distanceFromMalatiny": "280 ק\"מ, כ-3.5 שעות נסיעה",
     "familyScore": 4,
     "dayTripCluster": "budapest",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/View_from_Gell%C3%A9rt_Hill_to_the_Danube%2C_Hungary_-_Budapest_%2828493220635%29.jpg/960px-View_from_Gell%C3%A9rt_Hill_to_the_Danube%2C_Hungary_-_Budapest_%2828493220635%29.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=47.4982,19.063",
     "tags": [
       "כללי",
@@ -3800,7 +3800,7 @@
     "distanceFromMalatiny": "280 ק\"מ, כ-3.5 שעות נסיעה",
     "familyScore": 4,
     "dayTripCluster": "budapest",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/View_from_Gell%C3%A9rt_Hill_to_the_Danube%2C_Hungary_-_Budapest_%2828493220635%29.jpg/960px-View_from_Gell%C3%A9rt_Hill_to_the_Danube%2C_Hungary_-_Budapest_%2828493220635%29.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=47.499,19.065",
     "tags": [
       "כללי",
@@ -3837,7 +3837,7 @@
     "distanceFromMalatiny": "380 ק\"מ, כ-4 שעות נסיעה",
     "familyScore": 4,
     "dayTripCluster": "czech-moravia",
-    "imageUrl": "http://chabadprague.cz/wp-content/uploads/2018/12/prague.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=50.09,14.42",
     "tags": [
       "כללי",
@@ -3874,7 +3874,7 @@
     "distanceFromMalatiny": "380 ק\"מ, כ-4 שעות נסיעה",
     "familyScore": 4,
     "dayTripCluster": "czech-moravia",
-    "imageUrl": "http://chabadprague.cz/wp-content/uploads/2018/12/prague.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=50.09,14.42",
     "tags": [
       "כללי",
@@ -3911,7 +3911,7 @@
     "distanceFromMalatiny": "380 ק\"מ, כ-4 שעות נסיעה",
     "familyScore": 4,
     "dayTripCluster": "czech-moravia",
-    "imageUrl": "http://chabadprague.cz/wp-content/uploads/2018/12/prague.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=50.09,14.42",
     "tags": [
       "כללי",
@@ -3987,7 +3987,7 @@
     "distanceFromMalatiny": "380 ק\"מ, כ-4 שעות נסיעה",
     "familyScore": 4,
     "dayTripCluster": "czech-moravia",
-    "imageUrl": "http://chabadprague.cz/wp-content/uploads/2018/12/prague.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=50.09,14.42",
     "tags": [
       "כללי",
@@ -4024,7 +4024,7 @@
     "distanceFromMalatiny": "380 ק\"מ, כ-4 שעות נסיעה",
     "familyScore": 4,
     "dayTripCluster": "czech-moravia",
-    "imageUrl": "http://chabadprague.cz/wp-content/uploads/2018/12/prague.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=50.09,14.42",
     "tags": [
       "כללי",
@@ -4100,7 +4100,7 @@
     "distanceFromMalatiny": "~85 ק\"מ, כ-1 שעה 15 דקות נסיעה",
     "familyScore": 4,
     "dayTripCluster": "tatras-north",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/40/Station_Skalnate_pleso.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=49.195,20.213",
     "tags": [
       "טבע",
@@ -4179,7 +4179,7 @@
     "distanceFromMalatiny": "~25 ק\"מ, כ-25 דקות נסיעה",
     "familyScore": 4,
     "dayTripCluster": "tatras-south",
-    "imageUrl": "https://www.visitliptov.sk/wp-content/uploads/2024/02/CYKLO_Otvorenie-singl-trail-Haj-Nicovo_2023-32small_.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=49.06,19.62",
     "tags": [
       "הרפתקה",
@@ -4218,7 +4218,7 @@
     "distanceFromMalatiny": "~35 ק\"מ, כ-35 דקות נסיעה + cable car",
     "familyScore": 4,
     "dayTripCluster": "tatras-south",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/04/Chopok_top.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/05/Stadler_GTW_2-6_-_Tatra_Electric_Railway_%283%29.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=48.95,19.59",
     "tags": [
       "טבע",
@@ -4296,7 +4296,7 @@
     "distanceFromMalatiny": "~35 ק\"מ, כ-35 דקות נסיעה",
     "familyScore": 4,
     "dayTripCluster": "tatras-south",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Jasn%C3%A1_Ski_Resort_-_gondola_lift_Kosodrevina_-_Chopok_%284%29.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=48.94,19.587",
     "tags": [
       "טבע",
@@ -4335,7 +4335,7 @@
     "distanceFromMalatiny": "100 דקות נסיעה (כ-105 ק\"מ via Trstená)",
     "familyScore": 4,
     "dayTripCluster": "tatras-north",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/88/Rafting_on_the_Dunajec_River%2C_Pieniny_Mountains.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ad/005Dunajec.JPG",
     "googleMapsUrl": "https://www.google.com/maps?q=49.4028,20.4172",
     "tags": [
       "מים",
@@ -4375,7 +4375,7 @@
     "distanceFromMalatiny": "~25 ק\"מ, כ-25 דקות נסיעה",
     "familyScore": 4,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Liptovska_Mara.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Strbske_pleso_Solisko.JPG",
     "googleMapsUrl": "https://www.google.com/maps?q=49.09,19.55",
     "tags": [
       "מים",
@@ -4414,7 +4414,7 @@
     "distanceFromMalatiny": "10-15 דקות נסיעה to starting points (כ-10-20 ק\"מ)",
     "familyScore": 4,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/69/Downhill_cycling_Jasna.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=49.21,19.3",
     "tags": [
       "אופניים",
@@ -4453,7 +4453,7 @@
     "distanceFromMalatiny": "30 דקות נסיעה (כ-25 ק\"מ)",
     "familyScore": 4,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Orava_Castle.jpg/960px-Orava_Castle.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=49.38,19.52",
     "tags": [
       "מים",
@@ -4492,7 +4492,7 @@
     "distanceFromMalatiny": "~8 ק\"מ, כ-10 דקות נסיעה",
     "familyScore": 4,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Rafting_on_the_Bel%C3%A1_river.JPG",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=49.08,19.31",
     "tags": [
       "מים",
@@ -4531,7 +4531,7 @@
     "distanceFromMalatiny": "50 דקות נסיעה (כ-55 ק\"מ)",
     "familyScore": 4,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://i0.wp.com/vratna.sk/wp-content/uploads/2024/06/OGImage.png?fit=1200%2C628&ssl=1",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=49.2267,19.0167",
     "tags": [
       "הרפתקה",
@@ -4570,7 +4570,7 @@
     "distanceFromMalatiny": "40 דקות נסיעה (כ-45 ק\"מ)",
     "familyScore": 4,
     "dayTripCluster": "tatras-south",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Rafting_on_the_Bel%C3%A1_river.JPG",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=49.0733,19.6175",
     "tags": [
       "מים",
@@ -4645,7 +4645,7 @@
     "distanceFromMalatiny": "290 ק\"מ, כ-3.5 שעות נסיעה",
     "familyScore": 4,
     "dayTripCluster": "vienna-city",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Stadttempel_Vienna_Sept._2006_001.jpg/800px-Stadttempel_Vienna_Sept._2006_001.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/84/Stadttempel_Vienna_Sept._2006_001.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=48.2185,16.385",
     "tags": [
       "כללי",
@@ -4683,7 +4683,7 @@
     "distanceFromMalatiny": "290 ק\"מ, כ-3.5 שעות נסיעה",
     "familyScore": 4,
     "dayTripCluster": "vienna-city",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Stadttempel_Vienna_Sept._2006_001.jpg/800px-Stadttempel_Vienna_Sept._2006_001.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=48.2167,16.3833",
     "tags": [
       "כללי",
@@ -4757,7 +4757,7 @@
     "distanceFromMalatiny": "290 ק\"מ, ~3 שעות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "bratislava-area",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DSCN1028.JPG/960px-DSCN1028.JPG",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=48.0283,17.2",
     "tags": [
       "מים",
@@ -4904,7 +4904,7 @@
     "distanceFromMalatiny": "280 ק\"מ, כ-3.5 שעות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "budapest",
-    "imageUrl": "https://w2.chabad.org/media/images/1196/MSQU11962027.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=47.498,19.0627",
     "tags": [
       "כללי",
@@ -5020,7 +5020,7 @@
     "distanceFromMalatiny": "40 ק\"מ, כ-35 דקות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/LiptovskyMikulas11Slovakia28.JPG/960px-LiptovskyMikulas11Slovakia28.JPG",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/26/LiptovskyMikulas11Slovakia28.JPG",
     "googleMapsUrl": "https://www.google.com/maps?q=49.025201,19.561466",
     "tags": [
       "הרפתקה",
@@ -5098,7 +5098,7 @@
     "distanceFromMalatiny": "130 ק\"מ, ~1.75 שעות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "tatras-north",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Chodn%C3%ADk_Korunami_Stromov_%28Treetop_walk%29_%2850359326307%29.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Kva%C4%8Diansk%C3%A1_valley2.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.28,20.25",
     "tags": [
       "הרפתקה",
@@ -5137,7 +5137,7 @@
     "distanceFromMalatiny": "125 ק\"מ, ~1.5 שעות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "tatras-north",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Demenovska_jaskyna_slobody-smaragdove_jazierko.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Demanova_Cave_of_Freedom_42.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.2267,20.3167",
     "tags": [
       "טבע",
@@ -5175,7 +5175,7 @@
     "distanceFromMalatiny": "100 ק\"מ, ~1.5 שעות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "tatras-north",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f4/%C5%A0trbsk%C3%A9_pleso_-_panorama.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/97/Drone_view_of_%C5%A0trbsk%C3%A9_pleso_at_sunset%2C_September_2024.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.1183,20.055",
     "tags": [
       "הרפתקה",
@@ -5214,7 +5214,7 @@
     "distanceFromMalatiny": "150 ק\"מ, ~2 שעות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "tatras-north",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/88/Rafting_on_the_Dunajec_River%2C_Pieniny_Mountains.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fa/006Dunajec.JPG",
     "googleMapsUrl": "https://www.google.com/maps?q=49.3917,20.4167",
     "tags": [
       "מים",
@@ -5330,7 +5330,7 @@
     "distanceFromMalatiny": "95 ק\"מ, ~1.5 שעות נסיעה to trailhead",
     "familyScore": 2,
     "dayTripCluster": "tatras-south",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/04/Chopok_top.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/91/Star%C3%BD_Smokovec_station%2C_Tatra_Electric_Railway%2C_Slovakia%2C_March_1993.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.1647,19.9994",
     "tags": [
       "טבע",
@@ -5369,7 +5369,7 @@
     "distanceFromMalatiny": "120 ק\"מ, ~1.5 שעות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "tatras-north",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/40/Station_Skalnate_pleso.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=49.1953,20.2131",
     "tags": [
       "הרפתקה",
@@ -5408,7 +5408,7 @@
     "distanceFromMalatiny": "105 ק\"מ, ~1.5 שעות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "tatras-north",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/92/Mengusovsk%C3%A1_dolina%2C_Vysok%C3%A9_Tatry_%2837%29.JPG",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/63/Popradsk%C3%A9_pleso_-_panorama.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.1383,20.0786",
     "tags": [
       "טבע",
@@ -5522,7 +5522,7 @@
     "distanceFromMalatiny": "100 ק\"מ, ~1.5 שעות נסיעה to trailhead",
     "familyScore": 2,
     "dayTripCluster": "tatras-north",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/92/Mengusovsk%C3%A1_dolina%2C_Vysok%C3%A9_Tatry_%2837%29.JPG",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/21/Popradsk%C3%A9_pleso_v_zime.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.1794,20.0881",
     "tags": [
       "טבע",
@@ -5561,7 +5561,7 @@
     "distanceFromMalatiny": "100 ק\"מ, ~1.5 שעות נסיעה to trailhead",
     "familyScore": 2,
     "dayTripCluster": "tatras-north",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/be/Sutovsky_vodopad.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Nizni_Skok.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.11,20.04",
     "tags": [
       "טבע",
@@ -5600,7 +5600,7 @@
     "distanceFromMalatiny": "100 ק\"מ, כ-1.5 שעות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "tatras-north",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Altitude_High_Ropes_Adventure_-_geograph.org.uk_-_7370657.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b6/PikiWiki_Israel_5253_Bridge_ropes-Park_Nesher.JPG",
     "googleMapsUrl": "https://www.google.com/maps?q=49.1608,20.2753",
     "tags": [
       "הרפתקה",
@@ -5639,7 +5639,7 @@
     "distanceFromMalatiny": "45 ק\"מ, כ-40 דקות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "tatras-south",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Altitude_High_Ropes_Adventure_-_geograph.org.uk_-_7370657.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=48.973876,19.596996",
     "tags": [
       "הרפתקה",
@@ -5715,7 +5715,7 @@
     "distanceFromMalatiny": "~85 ק\"מ, כ-1 שעה 15 דקות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "tatras-north",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/LiptovskyMikulas11Slovakia28.JPG/960px-LiptovskyMikulas11Slovakia28.JPG",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=49.165,20.283",
     "tags": [
       "הרפתקה",
@@ -5868,7 +5868,7 @@
     "distanceFromMalatiny": "130 ק\"מ, ~1.75 שעות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "tatras-north",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Zdiar%2C_Slovakia.JPG/960px-Zdiar%2C_Slovakia.JPG",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Zdiar%2C_Slovakia.JPG",
     "googleMapsUrl": "https://www.google.com/maps?q=49.27,20.2583",
     "tags": [
       "טבע",
@@ -5907,7 +5907,7 @@
     "distanceFromMalatiny": "~25 ק\"מ, כ-25 דקות נסיעה to start",
     "familyScore": 2,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/69/Downhill_cycling_Jasna.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=49.09,19.55",
     "tags": [
       "אופניים",
@@ -5944,7 +5944,7 @@
     "distanceFromMalatiny": "~35 ק\"מ, כ-35 דקות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "tatras-south",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/69/Downhill_cycling_Jasna.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=48.98,19.59",
     "tags": [
       "אופניים",
@@ -5982,7 +5982,7 @@
     "distanceFromMalatiny": "~15 ק\"מ, כ-20 דקות נסיעה to trailhead",
     "familyScore": 2,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/be/Sutovsky_vodopad.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Szarafiowy_Wodospad_a1.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.02,19.25",
     "tags": [
       "טבע",
@@ -6054,7 +6054,7 @@
     "distanceFromMalatiny": "55 ק\"מ, ~45 דקות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "tatras-south",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/db/Dem%C3%A4novsk%C3%A1_jasky%C5%88a_slobody_-_Slovakia.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=48.9981,19.5851",
     "tags": [
       "טבע",
@@ -6129,7 +6129,7 @@
     "distanceFromMalatiny": "~25 ק\"מ, כ-25 דקות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "tatras-south",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Liptovsky_Mikulas_Montage.jpg/960px-Liptovsky_Mikulas_Montage.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/58/Indoor_skydiving_Bottrop_wind_tunnel_scheme.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.084,19.605",
     "tags": [
       "הרפתקה",
@@ -6167,7 +6167,7 @@
     "distanceFromMalatiny": "35 ק\"מ, כ-30 דקות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Liptovsky_Mikulas_Montage.jpg/960px-Liptovsky_Mikulas_Montage.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/36/Vertical_wind_tunnel_simulated_skydiving.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.0886,19.5694",
     "tags": [
       "הרפתקה",
@@ -6205,7 +6205,7 @@
     "distanceFromMalatiny": "40 ק\"מ, ~40 דקות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/45/Slovensky_raj-Stratenska_pila.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Slovensky_Raj-Slovak_paradise_-_Klastorisko_-_panoramio.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.25,19.0167",
     "tags": [
       "הרפתקה",
@@ -6242,7 +6242,7 @@
     "distanceFromMalatiny": "45 ק\"מ, כ-40 דקות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "tatras-south",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/69/Downhill_cycling_Jasna.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=48.9697,19.5864",
     "tags": [
       "אופניים",
@@ -6279,7 +6279,7 @@
     "distanceFromMalatiny": "45 ק\"מ, כ-40 דקות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "tatras-south",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Jasn%C3%A1_Ski_Resort_-_gondola_lift_Kosodrevina_-_Chopok_%284%29.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Lanovka_-_Cableway_Vr%C3%A1tna_Dolina_-_panoramio.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=48.9697,19.5864",
     "tags": [
       "משפחה",
@@ -6316,7 +6316,7 @@
     "distanceFromMalatiny": "45 ק\"מ, כ-40 דקות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "tatras-south",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Jasn%C3%A1_Ski_Resort_-_gondola_lift_Kosodrevina_-_Chopok_%284%29.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/56/Vr%C3%A1tna_dolina%2C_2023.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=48.9697,19.5864",
     "tags": [
       "הרפתקה",
@@ -6354,7 +6354,7 @@
     "distanceFromMalatiny": "55 ק\"מ, ~45 דקות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "tatras-south",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Jasn%C3%A1_Ski_Resort_-_gondola_lift_Kosodrevina_-_Chopok_%284%29.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=48.9667,19.5833",
     "tags": [
       "הרפתקה",
@@ -6392,7 +6392,7 @@
     "distanceFromMalatiny": "45 ק\"מ, כ-40 דקות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "tatras-south",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Jasn%C3%A1_Ski_Resort_-_gondola_lift_Kosodrevina_-_Chopok_%284%29.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=48.9697,19.5864",
     "tags": [
       "הרפתקה",
@@ -6430,7 +6430,7 @@
     "distanceFromMalatiny": "45 ק\"מ, כ-40 דקות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "tatras-south",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Jasn%C3%A1_Ski_Resort_-_gondola_lift_Kosodrevina_-_Chopok_%284%29.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=48.9697,19.5864",
     "tags": [
       "הרפתקה",
@@ -6468,7 +6468,7 @@
     "distanceFromMalatiny": "~20 ק\"מ, כ-20 דקות נסיעה to trailhead",
     "familyScore": 2,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Kva%C4%8Diansk%C3%A1_valley.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Kva%C4%8Diansk%C3%A1_valley3.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.15,19.52",
     "tags": [
       "טבע",
@@ -6506,7 +6506,7 @@
     "distanceFromMalatiny": "~12 ק\"מ, כ-15 דקות נסיעה to trailhead",
     "familyScore": 2,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/77/Ruzomberok_town_hall.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=49.06,19.3",
     "tags": [
       "טבע",
@@ -6544,7 +6544,7 @@
     "distanceFromMalatiny": "~25 ק\"מ, כ-25 דקות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "tatras-south",
-    "imageUrl": "https://www.visitliptov.sk/wp-content/uploads/2024/02/CYKLO_Otvorenie-singl-trail-Haj-Nicovo_2023-32small_.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=49.084,19.612",
     "tags": [
       "הרפתקה",
@@ -6581,7 +6581,7 @@
     "distanceFromMalatiny": "15 ק\"מ, כ-15 דקות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/77/Ruzomberok_town_hall.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=49.0472,19.2703",
     "tags": [
       "אופניים",
@@ -6619,7 +6619,7 @@
     "distanceFromMalatiny": "35 דקות נסיעה (כ-35 ק\"מ)",
     "familyScore": 2,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/77/Ruzomberok_town_hall.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=49.0653,19.285",
     "tags": [
       "הרפתקה",
@@ -6695,7 +6695,7 @@
     "distanceFromMalatiny": "~25 ק\"מ, כ-25 דקות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "tatras-south",
-    "imageUrl": "https://www.visitliptov.sk/wp-content/uploads/2024/02/CYKLO_Otvorenie-singl-trail-Haj-Nicovo_2023-32small_.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=49.05,19.63",
     "tags": [
       "הרפתקה",
@@ -6733,7 +6733,7 @@
     "distanceFromMalatiny": "~12 ק\"מ, כ-15 דקות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/77/Ruzomberok_town_hall.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=49.06,19.27",
     "tags": [
       "הרפתקה",
@@ -6771,7 +6771,7 @@
     "distanceFromMalatiny": "~25 ק\"מ, כ-25 דקות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Liptovska_Mara.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=49.1,19.56",
     "tags": [
       "מים",
@@ -6885,7 +6885,7 @@
     "distanceFromMalatiny": "~18 ק\"מ, כ-20 דקות נסיעה to trailhead",
     "familyScore": 2,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/25/Vstup_do_prosieckej_doliny.JPG",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=49.14,19.5",
     "tags": [
       "טבע",
@@ -6922,7 +6922,7 @@
     "distanceFromMalatiny": "40 דקות נסיעה (כ-45 ק\"מ)",
     "familyScore": 2,
     "dayTripCluster": "tatras-south",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Rafting_on_the_Bel%C3%A1_river.JPG",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=49.0733,19.6175",
     "tags": [
       "מים",
@@ -6959,7 +6959,7 @@
     "distanceFromMalatiny": "~40 ק\"מ, כ-40 דקות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "tatras-south",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Rafting_on_the_Bel%C3%A1_river.JPG",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=49.04,19.72",
     "tags": [
       "מים",
@@ -7071,7 +7071,7 @@
     "distanceFromMalatiny": "160 ק\"מ, ~2 שעות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "slovensky-raj",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/45/Slovensky_raj-Stratenska_pila.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Slovensky_raj%2C_03.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=48.92,20.35",
     "tags": [
       "הרפתקה",
@@ -7109,7 +7109,7 @@
     "distanceFromMalatiny": "160 ק\"מ, ~2 שעות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "slovensky-raj",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/45/Slovensky_raj-Stratenska_pila.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/89/Slovensky_raj%2C_02.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=48.95,20.4167",
     "tags": [
       "הרפתקה",
@@ -7147,7 +7147,7 @@
     "distanceFromMalatiny": "160 ק\"מ, ~2 שעות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "slovensky-raj",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/45/Slovensky_raj-Stratenska_pila.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Such%C3%A1_Bel%C3%A1.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=48.9333,20.3667",
     "tags": [
       "הרפתקה",
@@ -7184,7 +7184,7 @@
     "distanceFromMalatiny": "160 ק\"מ, ~2 שעות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "slovensky-raj",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/45/Slovensky_raj-Stratenska_pila.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Slovensky_raj%2C_30.JPG",
     "googleMapsUrl": "https://www.google.com/maps?q=48.94,20.38",
     "tags": [
       "הרפתקה",
@@ -7222,7 +7222,7 @@
     "distanceFromMalatiny": "~120 ק\"מ, כ-1 שעה 45 דקות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "slovensky-raj",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/45/Slovensky_raj-Stratenska_pila.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/60/Slovensky_raj_-_panoramio.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=48.92,20.42",
     "tags": [
       "טבע",
@@ -7299,7 +7299,7 @@
     "distanceFromMalatiny": "~12 ק\"מ, כ-15 דקות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Altitude_High_Ropes_Adventure_-_geograph.org.uk_-_7370657.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=49.07,19.29",
     "tags": [
       "הרפתקה",
@@ -7337,7 +7337,7 @@
     "distanceFromMalatiny": "~35 ק\"מ, כ-35 דקות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "tatras-south",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Altitude_High_Ropes_Adventure_-_geograph.org.uk_-_7370657.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=48.99,19.58",
     "tags": [
       "הרפתקה",
@@ -7411,7 +7411,7 @@
     "distanceFromMalatiny": "45 ק\"מ, ~45 דקות נסיעה to trailhead",
     "familyScore": 2,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/04/Chopok_top.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Lake_Poprad.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.2333,19.0833",
     "tags": [
       "טבע",
@@ -7561,7 +7561,7 @@
     "distanceFromMalatiny": "45 ק\"מ, ~45 דקות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://i0.wp.com/vratna.sk/wp-content/uploads/2024/06/OGImage.png?fit=1200%2C628&ssl=1",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=49.2167,19",
     "tags": [
       "הרפתקה",
@@ -7599,7 +7599,7 @@
     "distanceFromMalatiny": "40 ק\"מ, כ-35 דקות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://i0.wp.com/vratna.sk/wp-content/uploads/2024/06/OGImage.png?fit=1200%2C628&ssl=1",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=49.1544,19.0347",
     "tags": [
       "הרפתקה",
@@ -7675,7 +7675,7 @@
     "distanceFromMalatiny": "~10 ק\"מ, כ-12 דקות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "liptov-center",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/77/Ruzomberok_town_hall.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=49.075,19.295",
     "tags": [
       "הרפתקה",
@@ -7714,7 +7714,7 @@
     "distanceFromMalatiny": "290 ק\"מ, כ-3 שעות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "vienna-city",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Purkersdorf_-_Ortskern.JPG/960px-Purkersdorf_-_Ortskern.JPG",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/59/Purkersdorf_hauptplatz_14.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=48.2089,16.1722",
     "tags": [
       "הרפתקה",
@@ -7754,7 +7754,7 @@
     "distanceFromMalatiny": "340 ק\"מ, כ-3.5 שעות נסיעה (but near Vienna base)",
     "familyScore": 2,
     "dayTripCluster": "vienna-city",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Purkersdorf_-_Ortskern.JPG/960px-Purkersdorf_-_Ortskern.JPG",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/95/Purkersdorf%2C_Nieder%C3%B6sterreich_-_Blick_zur_Pfarrkirche_St._Jakob_2012.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=48.185,16.165",
     "tags": [
       "הרפתקה",
@@ -7871,7 +7871,7 @@
     "distanceFromMalatiny": "310 ק\"מ, ~3.5 שעות נסיעה",
     "familyScore": 2,
     "dayTripCluster": "vienna-city",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Wienerwald2.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=48.15,16.15",
     "tags": [
       "טבע",
@@ -7987,7 +7987,7 @@
     "distanceFromMalatiny": "110 ק\"מ, כ-1.5 שעות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "high-tatras-east",
-    "imageUrl": "https://www.vt.sk/fileadmin/_processed_/c/8/csm_c_Marek_Hajkovsky_foto_ZIMA_VT_2018_114_411e2a6f05.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=49.164,20.283",
     "tags": [
       "מגלשת הרים",
@@ -8025,7 +8025,7 @@
     "distanceFromMalatiny": "30 ק\"מ, כ-30 דקות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "liptov-area",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Jasn%C3%A1_Ski_Resort_-_gondola_lift_Kosodrevina_-_Chopok_%284%29.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=48.97,19.58",
     "tags": [
       "מגלשת הרים",
@@ -8063,7 +8063,7 @@
     "distanceFromMalatiny": "55 ק\"מ, כ-50 דקות נסיעה",
     "familyScore": 4,
     "dayTripCluster": "mala-fatra",
-    "imageUrl": "https://i0.wp.com/vratna.sk/wp-content/uploads/2024/06/OGImage.png?fit=1200%2C628&ssl=1",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=49.224,19.02",
     "tags": [
       "מגלשת הרים",
@@ -8140,7 +8140,7 @@
     "distanceFromMalatiny": "115 ק\"מ, כ-1.5 שעות נסיעה",
     "familyScore": 4,
     "dayTripCluster": "high-tatras-east",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f4/%C5%A0trbsk%C3%A9_pleso_-_panorama.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Sheep_herd_in_Vr%C3%A1tna_Valley_of_Mal%C3%A1_Fatra_in_%C5%BDilina_District%2C_Slovakia%2C_2016_June.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.231,20.305",
     "tags": [
       "מגלשת הרים",
@@ -8215,7 +8215,7 @@
     "distanceFromMalatiny": "30 ק\"מ, כ-35 דקות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "liptov-area",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Donovaly_panorama.jpg/1280px-Donovaly_panorama.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Donovaly_panorama.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=48.8876,19.2213",
     "tags": [
       "מגלשת הרים",
@@ -8253,7 +8253,7 @@
     "distanceFromMalatiny": "30 ק\"מ, כ-35 דקות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "liptov-area",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Donovaly_panorama.jpg/1280px-Donovaly_panorama.jpg",
+    "imageUrl": "",
     "googleMapsUrl": "https://www.google.com/maps?q=48.8876,19.2213",
     "tags": [
       "עגלות הרים",

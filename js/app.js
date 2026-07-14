@@ -435,6 +435,17 @@ function renderAttractionCard(attraction, index) {
     actions.appendChild(webBtn);
   }
 
+  // Share button
+  const shareBtn = document.createElement('button');
+  shareBtn.className = 'card-btn card-btn-secondary btn-share';
+  shareBtn.title = 'שתף';
+  shareBtn.textContent = '📤';
+  shareBtn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    shareAttraction(attraction);
+  });
+  actions.appendChild(shareBtn);
+
   // Add to day plan button
   const planBtn = document.createElement('button');
   planBtn.className = 'card-btn card-btn-outline btn-add-plan' + (isInPlan ? ' added' : '');
@@ -1018,8 +1029,106 @@ function clearAllFilters() {
   applyFilters();
 }
 
+// ===== Share Attraction =====
+function shareAttraction(attraction) {
+  var attractionId = attraction.id || attraction.name;
+  var url = window.location.origin + window.location.pathname + '#attraction=' + encodeURIComponent(attractionId);
+  var title = attraction.nameHebrew || attraction.name;
+  var text = title + ' - חופשה בסלובקיה 2026';
+
+  // Try native share (mobile) first
+  if (navigator.share) {
+    navigator.share({ title: text, url: url }).catch(function() {});
+  } else {
+    // Show share options popup
+    showShareMenu(url, text, title);
+  }
+}
+
+function showShareMenu(url, text, title) {
+  // Remove existing share menu if any
+  var existing = document.getElementById('share-menu-overlay');
+  if (existing) existing.remove();
+
+  var overlay = document.createElement('div');
+  overlay.id = 'share-menu-overlay';
+  overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:10000;display:flex;align-items:center;justify-content:center;';
+
+  var menu = document.createElement('div');
+  menu.style.cssText = 'background:white;border-radius:16px;padding:1.5rem;max-width:320px;width:90%;text-align:center;font-family:Heebo,sans-serif;';
+
+  var menuTitle = document.createElement('h3');
+  menuTitle.style.cssText = 'margin:0 0 1rem;font-size:1.1rem;';
+  menuTitle.textContent = '📤 שתף אטרקציה';
+  menu.appendChild(menuTitle);
+
+  // WhatsApp button
+  var waBtn = document.createElement('a');
+  waBtn.href = 'https://wa.me/?text=' + encodeURIComponent(text + '\n' + url);
+  waBtn.target = '_blank';
+  waBtn.style.cssText = 'display:block;padding:0.8rem;margin:0.5rem 0;background:#25D366;color:white;border-radius:10px;text-decoration:none;font-weight:600;font-size:0.95rem;';
+  waBtn.textContent = '💬 שתף בוואטסאפ';
+  menu.appendChild(waBtn);
+
+  // Copy link button
+  var copyBtn = document.createElement('button');
+  copyBtn.style.cssText = 'display:block;width:100%;padding:0.8rem;margin:0.5rem 0;background:#4A90D9;color:white;border-radius:10px;border:none;font-weight:600;font-size:0.95rem;cursor:pointer;font-family:Heebo,sans-serif;';
+  copyBtn.textContent = '🔗 העתק קישור';
+  copyBtn.addEventListener('click', function() {
+    navigator.clipboard.writeText(url).then(function() {
+      copyBtn.textContent = '✓ הקישור הועתק!';
+      copyBtn.style.background = '#27AE60';
+      setTimeout(function() { overlay.remove(); }, 1200);
+    }).catch(function() {
+      // Fallback for older browsers
+      var input = document.createElement('input');
+      input.value = url;
+      document.body.appendChild(input);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+      copyBtn.textContent = '✓ הקישור הועתק!';
+      copyBtn.style.background = '#27AE60';
+      setTimeout(function() { overlay.remove(); }, 1200);
+    });
+  });
+  menu.appendChild(copyBtn);
+
+  // Close button
+  var closeBtn = document.createElement('button');
+  closeBtn.style.cssText = 'display:block;width:100%;padding:0.6rem;margin:0.5rem 0 0;background:transparent;color:#666;border:1px solid #ddd;border-radius:10px;font-size:0.9rem;cursor:pointer;font-family:Heebo,sans-serif;';
+  closeBtn.textContent = 'סגור';
+  closeBtn.addEventListener('click', function() { overlay.remove(); });
+  menu.appendChild(closeBtn);
+
+  overlay.appendChild(menu);
+  overlay.addEventListener('click', function(e) { if (e.target === overlay) overlay.remove(); });
+  document.body.appendChild(overlay);
+}
+
+// ===== URL Hash - Open attraction from link =====
+function handleAttractionHash() {
+  var hash = window.location.hash;
+  if (hash && hash.startsWith('#attraction=')) {
+    var attractionId = decodeURIComponent(hash.replace('#attraction=', ''));
+    var attraction = allAttractions.find(function(a) {
+      return a.id === attractionId || a.name === attractionId;
+    });
+    if (attraction) {
+      openAttractionModal(attraction);
+    }
+  }
+}
+
+// Listen for hash changes (e.g., user navigates back)
+window.addEventListener('hashchange', handleAttractionHash);
+
 // ===== Attraction Modal =====
 function openAttractionModal(attraction) {
+  // Update URL hash
+  var attractionId = attraction.id || attraction.name;
+  history.replaceState(null, '', '#attraction=' + encodeURIComponent(attractionId));
+
   const modal = document.getElementById('attraction-modal');
   if (!modal) return;
 
@@ -1148,6 +1257,15 @@ function openAttractionModal(attraction) {
       modalActions.appendChild(webBtn);
     }
 
+    // Share button (in modal)
+    const shareBtn = document.createElement('button');
+    shareBtn.className = 'modal-action-btn modal-btn-share';
+    shareBtn.textContent = '📤 שתף';
+    shareBtn.addEventListener('click', function() {
+      shareAttraction(attraction);
+    });
+    modalActions.appendChild(shareBtn);
+
     // Add to plan button
     const isInPlan = dayPlan.some(function(item) { return item.name === attraction.name; });
     const planBtn = document.createElement('button');
@@ -1185,6 +1303,10 @@ function closeAttractionModal() {
   if (modal) {
     modal.classList.add('hidden');
     document.body.style.overflow = '';
+  }
+  // Clear URL hash
+  if (window.location.hash.startsWith('#attraction=')) {
+    history.replaceState(null, '', window.location.pathname + window.location.search);
   }
 }
 
@@ -1475,4 +1597,7 @@ document.addEventListener('DOMContentLoaded', async function () {
   // Setup clear filters button
   const clearBtn = document.getElementById('clear-filters-btn');
   if (clearBtn) clearBtn.addEventListener('click', clearAllFilters);
+
+  // Open attraction from URL hash (for shared links)
+  handleAttractionHash();
 });
