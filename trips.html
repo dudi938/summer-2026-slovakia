@@ -280,15 +280,17 @@
   <!-- Content -->
   <div class="trips-container">
     <div class="trips-section-title">
-      <h2>🏙️ טיולים לאזור ברטיסלבה, וינה, בודפשט וצ'כיה</h2>
+      <h2>🏙️ טיולים מברטיסלבה - וינה, בודפשט וצ'כיה</h2>
       <span class="section-badge section-badge-city">3 טיולים</span>
     </div>
+    <p style="padding: 0 1rem; margin-top: -0.8rem; margin-bottom: 1.5rem; font-size: 0.85rem; color: var(--color-gray-500);">📍 יציאה מבסיס ברטיסלבה</p>
     <div id="city-trips"></div>
 
     <div class="trips-section-title">
-      <h2>🏔️ טיולים באזור הרי הטטרה</h2>
+      <h2>🏔️ טיולים מאזור ליפטוב - הרי הטטרה</h2>
       <span class="section-badge section-badge-tatras">3 טיולים</span>
     </div>
+    <p style="padding: 0 1rem; margin-top: -0.8rem; margin-bottom: 1.5rem; font-size: 0.85rem; color: var(--color-gray-500);">📍 יציאה מבסיס ליפטובסקי מיקולאש (Liptovský Mikuláš) - מרכז אזור הטטרה, גובה 500 מ', קריר באוגוסט!</p>
     <div id="tatras-trips"></div>
   </div>
 
@@ -336,7 +338,11 @@
 
   <script>
   (async function() {
-    const MALATINY = [49.0847, 19.2247];
+    // Two bases: Tatras (Liptovský Mikuláš area) and Bratislava
+    const BASES = {
+      tatras: { coords: [49.0847, 19.2247], name: 'בסיס ליפטוב (הטטרה)', label: '🏔️' },
+      bratislava: { coords: [48.1486, 17.1077], name: 'בסיס ברטיסלבה', label: '🏙️' }
+    };
     const CAT_ICONS = {
       'nature': '🌲', 'adventure': '🧗', 'water-sports': '🚣',
       'cycling': '🚴', 'family': '👨‍👩‍👧', 'indoor': '🏢',
@@ -489,18 +495,22 @@
       var secondaries = trip.secondaryAttractions.map(function(id) { return byId[id]; }).filter(Boolean);
       var alts = (trip.alternatives || []).map(function(id) { return byId[id]; }).filter(Boolean);
 
+      // Select correct base for this trip
+      var base = BASES[trip.baseArea] || BASES.tatras;
+      var baseCoords = base.coords;
+
       // Base marker (green house)
       var baseIcon = L.divIcon({
         className: '',
         html: '<div style="background:#4caf50;color:white;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;border:3px solid white;box-shadow:0 2px 8px rgba(0,0,0,0.4);">🏠</div>',
         iconSize: [32, 32], iconAnchor: [16, 16]
       });
-      L.marker(MALATINY, { icon: baseIcon }).addTo(map)
-        .bindPopup('<h4>🏠 בסיס - Malatiny</h4><p>נקודת היציאה</p>');
-      bounds.extend(MALATINY);
+      L.marker(baseCoords, { icon: baseIcon }).addTo(map)
+        .bindPopup('<h4>🏠 ' + base.name + '</h4><p>נקודת היציאה</p>');
+      bounds.extend(baseCoords);
 
       // Route points for polyline
-      var routePoints = [MALATINY];
+      var routePoints = [baseCoords];
 
       // Main attraction (orange, number 1)
       if (mainA && mainA.coordinates) {
@@ -555,7 +565,7 @@
       // Fit bounds with padding
       try {
         map.fitBounds(bounds, { padding: [40, 40] });
-      } catch(e) { map.setView(MALATINY, 10); }
+      } catch(e) { map.setView(baseCoords, 10); }
 
       // Force resize after a brief delay (fixes mobile rendering)
       setTimeout(function() { map.invalidateSize(); }, 300);
@@ -594,7 +604,11 @@
       var mainA = byId[trip.mainAttraction];
       var secondaries = trip.secondaryAttractions.map(function(id) { return byId[id]; }).filter(Boolean);
       var alts = (trip.alternatives || []).map(function(id) { return byId[id]; }).filter(Boolean);
-      var routePoints = [MALATINY];
+
+      // Select correct base for this trip
+      var base = BASES[trip.baseArea] || BASES.tatras;
+      var baseCoords = base.coords;
+      var routePoints = [baseCoords];
 
       // Base marker
       var baseIcon = L.divIcon({
@@ -602,9 +616,9 @@
         html: '<div style="background:#4caf50;color:white;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;border:3px solid white;box-shadow:0 3px 10px rgba(0,0,0,0.4);">🏠</div>',
         iconSize: [38, 38], iconAnchor: [19, 19]
       });
-      L.marker(MALATINY, { icon: baseIcon }).addTo(fullscreenMap)
-        .bindPopup('<h4>🏠 בסיס - Malatiny</h4><p>נקודת היציאה</p>');
-      bounds.extend(MALATINY);
+      L.marker(baseCoords, { icon: baseIcon }).addTo(fullscreenMap)
+        .bindPopup('<h4>🏠 ' + base.name + '</h4><p>נקודת היציאה</p>');
+      bounds.extend(baseCoords);
 
       // Main attraction
       if (mainA && mainA.coordinates) {
@@ -665,7 +679,7 @@
       // Fit and resize
       try {
         fullscreenMap.fitBounds(bounds, { padding: [50, 50] });
-      } catch(e) { fullscreenMap.setView(MALATINY, 10); }
+      } catch(e) { fullscreenMap.setView(baseCoords, 10); }
       setTimeout(function() { fullscreenMap.invalidateSize(); }, 100);
     }
 

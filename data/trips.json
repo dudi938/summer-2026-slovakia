@@ -5,7 +5,8 @@
     "subtitle": "פארק חבלים + מוזיאון טכנולוגיה + אקווריום",
     "area": "vienna",
     "areaLabel": "וינה, אוסטריה",
-    "driveFromBase": "3.5 שעות מ-Malatíny (320 ק\"מ)",
+    "baseArea": "bratislava",
+    "driveFromBase": "שעה מברטיסלבה (80 ק\"מ)",
     "mainAttraction": "kletterpark-purkersdorf",
     "secondaryAttractions": [
       "technisches-museum-vienna",
@@ -40,7 +41,8 @@
     "subtitle": "פארק חיות בר + טרופיקריום + אי מרגרט",
     "area": "budapest",
     "areaLabel": "בודפשט, הונגריה",
-    "driveFromBase": "3 שעות מ-Malatíny (280 ק\"מ)",
+    "baseArea": "bratislava",
+    "driveFromBase": "2 שעות מברטיסלבה (200 ק\"מ)",
     "mainAttraction": "budakeszi-wildlife-park-and-adventure-park",
     "secondaryAttractions": [
       "tropicarium-budapest",
@@ -75,7 +77,8 @@
     "subtitle": "מגלשת הרים דולני מורבה + טירת לדניצה + VIDA מרכז מדע",
     "area": "czech",
     "areaLabel": "דרום מורביה, צ'כיה",
-    "driveFromBase": "2.5-3.5 שעות מ-Malatíny",
+    "baseArea": "bratislava",
+    "driveFromBase": "1.5-2 שעות מברטיסלבה",
     "mainAttraction": "bobova-draha-dolni-morava",
     "secondaryAttractions": [
       "lednice-castle-gardens-unesco",
@@ -109,7 +112,8 @@
     "subtitle": "בובסלד + עגלות הרים + פארק מגלשות + טיובינג",
     "area": "high-tatras",
     "areaLabel": "יאסנה, הרי הטטרה הנמוכה",
-    "driveFromBase": "30 דקות מ-Malatíny (30 ק\"מ)",
+    "baseArea": "tatras",
+    "driveFromBase": "30 דקות מהבסיס בליפטוב (30 ק\"מ)",
     "mainAttraction": "bobova-draha-jasna",
     "secondaryAttractions": [
       "mountain-carts-jasna",
@@ -146,7 +150,8 @@
     "subtitle": "רכבל לפסגה + בובסלד + עגלות הרים + פארק חבלים",
     "area": "high-tatras",
     "areaLabel": "הטטרה הגבוהה",
-    "driveFromBase": "1.5 שעות מ-Malatíny (110 ק\"מ)",
+    "baseArea": "tatras",
+    "driveFromBase": "שעה מהבסיס בליפטוב (80 ק\"מ)",
     "mainAttraction": "bobova-draha-tatranská-lomnica",
     "secondaryAttractions": [
       "mountain-carts-tatranska-lomnica",
@@ -183,7 +188,8 @@
     "subtitle": "רפטינג בנהר ואה + בובסלד מלינו ברדו + מגלשת אופליסקו",
     "area": "high-tatras",
     "areaLabel": "ליפטוב - הכי קרוב לבסיס!",
-    "driveFromBase": "10-25 דקות מ-Malatíny!",
+    "baseArea": "tatras",
+    "driveFromBase": "10-25 דקות מהבסיס בליפטוב!",
     "mainAttraction": "rafting-on-river-vh-ruomberok",
     "secondaryAttractions": [
       "bobova-draha-malino-brdo",
