@@ -24,7 +24,15 @@
       "שלבו ארוחת צהריים בין אטרקציה 1 ל-2"
     ],
     "schedule": "10:00 פארק חבלים (2-3 שעות) → 13:30 ארוחת צהריים → 14:30 מוזיאון טכנולוגיה (2 שעות) → 17:00 בית הים (1.5 שעות)",
-    "internalDistances": "פארק חבלים → מוזיאון: 20 דקות | מוזיאון → אקווריום: 10 דקות"
+    "internalDistances": "פארק חבלים → מוזיאון: 20 דקות | מוזיאון → אקווריום: 10 דקות",
+    "alternatives": [
+      "ninja-park-vienna",
+      "lainzer-tiergarten",
+      "wienerwald-trail-center-wien-mountain-biking",
+      "vienna-woods-family-hiking-trails",
+      "lobau-danube-wetlands-national-park"
+    ],
+    "alternativesNote": "כל החלופות בטווח 15 דקות נסיעה מהמסלול. פארק הנינג'ה מעולה כתחליף לפארק חבלים ביום גשום."
   },
   {
     "id": "budapest-nature-thrills",
@@ -51,7 +59,15 @@
       "באי מרגרט אפשר לשלב בריכת פלטינוס סטרנד"
     ],
     "schedule": "09:30 פארק חיות בר (2.5 שעות) → 12:30 נסיעה + צהריים → 14:00 טרופיקריום (1.5 שעות) → 16:00 אי מרגרט אופניים (2 שעות)",
-    "internalDistances": "פארק חיות → טרופיקריום: 25 דקות | טרופיקריום → אי מרגרט: 20 דקות"
+    "internalDistances": "פארק חיות → טרופיקריום: 25 דקות | טרופיקריום → אי מרגרט: 20 דקות",
+    "alternatives": [
+      "zugliget-chairlift-libego-to-janos-hegy",
+      "normafa-park-buda-hills-hiking",
+      "palvolgyi-cave-palvolgyi-barlang",
+      "palatinus-strand-budapest",
+      "miniversum-budapest"
+    ],
+    "alternativesNote": "רכבל זוגליגט + פארק נורמפה - חלופה מצוינת לטרופיקריום. מערת פלבלגי - ליום חם. בריכות פלטינוס - אם רוצים מים."
   },
   {
     "id": "czech-extreme-culture",
@@ -79,7 +95,13 @@
       "VIDA בברנו - מתאים גם ליום גשום כגיבוי"
     ],
     "schedule": "09:00 Dolní Morava בובסלד + Sky Walk (3 שעות) → 12:30 נסיעה לברנו + צהריים → 14:30 VIDA מדע (2.5 שעות) [או: נסיעה ללדניצה → 14:00 טירה + שייט (2.5 שעות)]",
-    "internalDistances": "Dolní Morava → ברנו (VIDA): 2 שעות | Dolní Morava → לדניצה: 2.5 שעות | לדניצה → ברנו: 50 דקות"
+    "internalDistances": "Dolní Morava → ברנו (VIDA): 2 שעות | Dolní Morava → לדניצה: 2.5 שעות | לדניצה → ברנו: 50 דקות",
+    "alternatives": [
+      "lednice-boat-trip",
+      "valtice-castle-moravia",
+      "bobova-draha-mosty-u-jablunkova"
+    ],
+    "alternativesNote": "שייט סירות באגמי לדניצה משלים את הטירה. ולטיצה - ארמון בארוקי עם מרתפי יין (7 דקות מלדניצה). בובסלד מוסטי - חלופה קרובה יותר לבסיס."
   },
   {
     "id": "jasna-mega-day",
@@ -108,7 +130,15 @@
       "מסעדות באתר - אפשר לאכול צהריים בהר"
     ],
     "schedule": "09:00 רכבל + בובסלד (1.5 שעה) → 10:30 עגלות הרים (45 דקות) → 11:30 פארק מגלשות (שעה) → 12:30 צהריים בהר → 13:30 טיובינג + טרמפולינות (שעה)",
-    "internalDistances": "הכל באותו מתחם! 0 נסיעה בין אטרקציות 🎉"
+    "internalDistances": "הכל באותו מתחם! 0 נסיעה בין אטרקציות 🎉",
+    "alternatives": [
+      "jasna-tubing",
+      "jasna-bungee-trampolines",
+      "jasna-bike-park",
+      "tarzania-rope-park-jasna",
+      "demnovsk-dolina-valley-walk"
+    ],
+    "alternativesNote": "הכל באותו מתחם! אם נגמר הכוח מאקסטרים - טיול בעמק דמנובסקה עם מערות (10 דקות). פארק חבלים טרזניה בתוך יאסנה."
   },
   {
     "id": "lomnica-peak-adventure",
@@ -137,7 +167,15 @@
       "בובסלד ועגלות - אין צורך בהזמנה, סתם בואו"
     ],
     "schedule": "08:30 רכבל לפסגת לומניצקי שטיט (2.5 שעות כולל תצפית) → 11:00 ירידה → 11:30 בובסלד (30 דקות) → 12:30 צהריים → 13:30 עגלות הרים + קורקינטים (שעה) → 14:30 פארק חבלים (אופציונלי)",
-    "internalDistances": "הכל באותו מתחם! תחנת רכבל → בובסלד: 3 דקות הליכה"
+    "internalDistances": "הכל באותו מתחם! תחנת רכבל → בובסלד: 3 דקות הליכה",
+    "alternatives": [
+      "koliesko-rope-adventure-park-tatranska-lomnica",
+      "tarzania-rope-park-tatranska-lomnica",
+      "hrebienok-cold-stream-waterfalls-vodopdy-studenho-",
+      "hrebienok-funicular-trails",
+      "tricklandia-tatras"
+    ],
+    "alternativesNote": "פארקי חבלים קוליאסקו וטרזניה - 5 דקות הליכה מהרכבל. מפלי חרביינוק - טיול הליכה קל. טריקלנדיה - מוזיאון אשליות (10 דקות נסיעה)."
   },
   {
     "id": "local-water-thrills",
@@ -166,6 +204,14 @@
       "אפשר לשלב גם פארק אופניים מלינו ברדו"
     ],
     "schedule": "09:30 רפטינג בנהר ואה (1.5 שעה) → 11:30 התייבשות + נשנוש → 12:00 בובסלד מלינו ברדו (45 דקות) → 13:00 צהריים → 14:30 מגלשת אופליסקו (שעה)",
-    "internalDistances": "רפטינג → מלינו ברדו: 10 דקות | מלינו ברדו → אופליסקו: 5 דקות"
+    "internalDistances": "רפטינג → מלינו ברדו: 10 דקות | מלינו ברדו → אופליסקו: 5 דקות",
+    "alternatives": [
+      "zipline-ruomberok-liptovactive",
+      "tarznia-hrabovo-rope-park",
+      "malin-brdo-summer-park-mountain-carts-scooters",
+      "mountain-scooters-at-malin-brdo",
+      "lookout-tower-sidorovo-ruomberok"
+    ],
+    "alternativesNote": "זיפליין רוז'ומברוק - 2 דקות מהרפטינג! פארק חבלים חרבובו - 3 דקות. מגדל תצפית סידורובו - טיול הליכה קצר עם נוף מטורף."
   }
 ]

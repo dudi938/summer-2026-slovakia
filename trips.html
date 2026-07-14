@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <link rel="stylesheet" href="css/style.css">
 
   <style>
@@ -28,381 +29,161 @@
       position: relative;
       overflow: hidden;
     }
-
-    .trips-hero::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='rgba(255,255,255,0.05)' d='M0,96L48,112C96,128,192,160,288,176C384,192,480,192,576,170.7C672,149,768,107,864,90.7C960,75,1056,85,1152,112C1248,139,1344,181,1392,202.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'/%3E%3C/svg%3E") no-repeat bottom;
-      background-size: cover;
-    }
-
-    .trips-hero h1 {
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      font-weight: 800;
-      margin-bottom: 0.5rem;
-      position: relative;
-    }
-
-    .trips-hero p {
-      font-size: 1.2rem;
-      opacity: 0.9;
-      position: relative;
-      max-width: 600px;
-      margin: 0 auto;
-    }
+    .trips-hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; margin-bottom: 0.5rem; position: relative; }
+    .trips-hero p { font-size: 1.2rem; opacity: 0.9; position: relative; max-width: 600px; margin: 0 auto; }
 
     .trips-section-title {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin: 2.5rem 0 1.5rem;
-      padding: 0 1rem;
+      display: flex; align-items: center; gap: 0.75rem;
+      margin: 2.5rem 0 1.5rem; padding: 0 1rem;
     }
-
-    .trips-section-title h2 {
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: var(--color-gray-800);
-    }
-
-    .trips-section-title .section-badge {
-      padding: 0.3rem 0.8rem;
-      border-radius: 20px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: white;
-    }
-
+    .trips-section-title h2 { font-size: 1.6rem; font-weight: 700; color: var(--color-gray-800); }
+    .section-badge { padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; color: white; }
     .section-badge-city { background: var(--trip-gradient-city); }
     .section-badge-tatras { background: var(--trip-gradient-tatras); }
 
-    .trips-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1rem 4rem;
-    }
+    .trips-container { max-width: 1200px; margin: 0 auto; padding: 0 1rem 4rem; }
 
+    /* Trip Card */
     .trip-card {
-      background: white;
-      border-radius: var(--trip-card-radius);
+      background: white; border-radius: var(--trip-card-radius);
       box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-      margin-bottom: 2.5rem;
-      overflow: hidden;
+      margin-bottom: 2.5rem; overflow: hidden;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+    .trip-card:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
 
-    .trip-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(0,0,0,0.15);
-    }
-
-    .trip-card-header {
-      position: relative;
-      padding: 2rem 1.5rem 1.5rem;
-      color: white;
-      overflow: hidden;
-    }
-
-    .trip-card-header.city-gradient {
-      background: var(--trip-gradient-city);
-    }
-
-    .trip-card-header.tatras-gradient {
-      background: var(--trip-gradient-tatras);
-    }
-
-    .trip-card-header::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      height: 30px;
-      background: linear-gradient(transparent, rgba(0,0,0,0.1));
-    }
+    .trip-card-header { position: relative; padding: 2rem 1.5rem 1.5rem; color: white; }
+    .trip-card-header.city-gradient { background: var(--trip-gradient-city); }
+    .trip-card-header.tatras-gradient { background: var(--trip-gradient-tatras); }
 
     .trip-number {
-      position: absolute;
-      top: 1rem;
-      left: 1rem;
-      width: 40px; height: 40px;
-      background: rgba(255,255,255,0.25);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      font-size: 1.2rem;
+      position: absolute; top: 1rem; left: 1rem;
+      width: 40px; height: 40px; background: rgba(255,255,255,0.25);
+      border-radius: 50%; display: flex; align-items: center;
+      justify-content: center; font-weight: 800; font-size: 1.2rem;
       backdrop-filter: blur(4px);
     }
+    .trip-header-content { position: relative; z-index: 1; }
+    .trip-header-content h3 { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.3rem; }
+    .trip-header-content .trip-subtitle { font-size: 0.95rem; opacity: 0.9; }
 
-    .trip-header-content {
-      position: relative;
-      z-index: 1;
-    }
-
-    .trip-header-content h3 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 0.3rem;
-    }
-
-    .trip-header-content .trip-subtitle {
-      font-size: 0.95rem;
-      opacity: 0.9;
-    }
-
-    .trip-meta-bar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 1rem;
-      font-size: 0.85rem;
-    }
-
+    .trip-meta-bar { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 1rem; font-size: 0.85rem; }
     .trip-meta-item {
-      display: flex;
-      align-items: center;
-      gap: 0.3rem;
-      background: rgba(255,255,255,0.2);
-      padding: 0.3rem 0.7rem;
-      border-radius: 12px;
-      backdrop-filter: blur(4px);
+      display: flex; align-items: center; gap: 0.3rem;
+      background: rgba(255,255,255,0.2); padding: 0.3rem 0.7rem;
+      border-radius: 12px; backdrop-filter: blur(4px);
     }
 
-    .trip-card-body {
-      padding: 1.5rem;
-    }
+    .trip-card-body { padding: 1.5rem; }
 
+    /* Map */
+    .trip-map-container {
+      width: 100%; height: 280px; border-radius: 14px;
+      overflow: hidden; margin-bottom: 1.5rem;
+      border: 2px solid var(--color-gray-200);
+    }
+    @media (min-width: 768px) { .trip-map-container { height: 340px; } }
+
+    .map-legend {
+      display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 0.5rem; margin-bottom: 1rem;
+      font-size: 0.8rem; color: var(--color-gray-600);
+    }
+    .map-legend-item { display: flex; align-items: center; gap: 0.3rem; }
+    .legend-dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+    .legend-dot-main { background: #e65100; }
+    .legend-dot-secondary { background: #1565c0; }
+    .legend-dot-alt { background: #9e9e9e; }
+    .legend-dot-base { background: #4caf50; }
+
+    /* Why Special */
     .trip-why-special {
       background: linear-gradient(135deg, #fff3e0, #fffde7);
-      border-radius: 12px;
-      padding: 1rem 1.2rem;
-      margin-bottom: 1.5rem;
+      border-radius: 12px; padding: 1rem 1.2rem; margin-bottom: 1.5rem;
       border-right: 4px solid #ff9800;
     }
-
-    .trip-why-special h4 {
-      font-size: 0.9rem;
-      color: #e65100;
-      margin-bottom: 0.4rem;
-      font-weight: 700;
-    }
-
-    .trip-why-special p {
-      font-size: 0.9rem;
-      color: var(--color-gray-700);
-      line-height: 1.6;
-    }
-
-    .trip-attractions-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-    }
-
-    @media (min-width: 768px) {
-      .trip-attractions-grid {
-        grid-template-columns: 1fr 1fr 1fr;
-      }
-    }
-
-    .trip-attraction-card {
-      border: 1.5px solid var(--color-gray-200);
-      border-radius: 14px;
-      overflow: hidden;
-      transition: border-color 0.3s;
-    }
-
-    .trip-attraction-card:hover {
-      border-color: var(--color-primary);
-    }
-
-    .trip-attraction-card.main-attraction {
-      border-color: #ff9800;
-      box-shadow: 0 2px 12px rgba(255,152,0,0.15);
-    }
-
-    .trip-attraction-img {
-      width: 100%;
-      height: 140px;
-      object-fit: cover;
-      background: var(--color-gray-100);
-    }
-
-    .trip-attraction-info {
-      padding: 0.8rem;
-    }
-
-    .trip-attraction-badge {
-      display: inline-block;
-      padding: 0.15rem 0.5rem;
-      border-radius: 8px;
-      font-size: 0.7rem;
-      font-weight: 600;
-      margin-bottom: 0.4rem;
-    }
-
-    .badge-main { background: #fff3e0; color: #e65100; }
-    .badge-secondary { background: #e3f2fd; color: #1565c0; }
-
-    .trip-attraction-info h5 {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--color-gray-800);
-      margin-bottom: 0.3rem;
-    }
-
-    .trip-attraction-info .price-line {
-      font-size: 0.8rem;
-      color: var(--color-gray-600);
-      margin-bottom: 0.3rem;
-    }
-
-    .trip-attraction-info .link-line {
-      font-size: 0.8rem;
-    }
-
-    .trip-attraction-info .link-line a {
-      color: var(--color-primary);
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .trip-attraction-info .link-line a:hover {
-      text-decoration: underline;
-    }
-
-    .trip-details-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-    }
-
-    @media (min-width: 768px) {
-      .trip-details-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    .trip-detail-box {
-      background: var(--color-gray-50);
-      border-radius: 12px;
-      padding: 1rem;
-    }
-
-    .trip-detail-box h4 {
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: var(--color-gray-700);
-      margin-bottom: 0.6rem;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .trip-detail-box ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .trip-detail-box li {
-      font-size: 0.85rem;
-      color: var(--color-gray-600);
-      padding: 0.25rem 0;
-      padding-right: 1.2rem;
-      position: relative;
-    }
-
-    .trip-detail-box li::before {
-      content: '✓';
-      position: absolute;
-      right: 0;
-      color: #43a047;
-      font-weight: bold;
-    }
-
-    .trip-detail-box.tips-box li::before {
-      content: '💡';
-    }
-
-    .trip-schedule {
-      background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
-      border-radius: 12px;
-      padding: 1.2rem;
-      margin-bottom: 1rem;
-    }
-
-    .trip-schedule h4 {
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: #2e7d32;
-      margin-bottom: 0.6rem;
-    }
-
-    .trip-schedule p {
-      font-size: 0.85rem;
-      color: var(--color-gray-700);
-      line-height: 1.8;
-      direction: rtl;
-    }
-
-    .trip-distances {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 0.8rem;
-    }
-
-    .trip-distance-chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-      background: white;
-      border: 1px solid var(--color-gray-200);
-      padding: 0.3rem 0.7rem;
-      border-radius: 20px;
-      font-size: 0.8rem;
-      color: var(--color-gray-600);
-    }
+    .trip-why-special h4 { font-size: 0.9rem; color: #e65100; margin-bottom: 0.4rem; font-weight: 700; }
+    .trip-why-special p { font-size: 0.9rem; color: var(--color-gray-700); line-height: 1.6; }
 
     .trip-target-audience {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      background: #f3e5f5;
-      color: #6a1b9a;
-      padding: 0.4rem 0.8rem;
-      border-radius: 20px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      margin-top: 0.5rem;
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      background: #f3e5f5; color: #6a1b9a;
+      padding: 0.4rem 0.8rem; border-radius: 20px;
+      font-size: 0.82rem; font-weight: 600; margin-bottom: 1.2rem;
     }
+
+    /* Attractions Grid */
+    .trip-attractions-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-bottom: 1.5rem; }
+    @media (min-width: 768px) { .trip-attractions-grid { grid-template-columns: 1fr 1fr 1fr; } }
+
+    .trip-attraction-card {
+      border: 1.5px solid var(--color-gray-200); border-radius: 14px;
+      overflow: hidden; transition: border-color 0.3s;
+    }
+    .trip-attraction-card:hover { border-color: var(--color-primary); }
+    .trip-attraction-card.main-attraction { border-color: #ff9800; box-shadow: 0 2px 12px rgba(255,152,0,0.15); }
+
+    .trip-attraction-img { width: 100%; height: 140px; object-fit: cover; background: var(--color-gray-100); }
+    .trip-attraction-info { padding: 0.8rem; }
+    .trip-attraction-badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 8px; font-size: 0.7rem; font-weight: 600; margin-bottom: 0.4rem; }
+    .badge-main { background: #fff3e0; color: #e65100; }
+    .badge-secondary { background: #e3f2fd; color: #1565c0; }
+    .trip-attraction-info h5 { font-size: 0.95rem; font-weight: 600; color: var(--color-gray-800); margin-bottom: 0.3rem; }
+    .trip-attraction-info .price-line { font-size: 0.8rem; color: var(--color-gray-600); margin-bottom: 0.3rem; }
+    .trip-attraction-info .link-line { font-size: 0.8rem; }
+    .trip-attraction-info .link-line a { color: var(--color-primary); text-decoration: none; font-weight: 500; }
+
+    /* Details Grid */
+    .trip-details-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-bottom: 1.5rem; }
+    @media (min-width: 768px) { .trip-details-grid { grid-template-columns: 1fr 1fr; } }
+
+    .trip-detail-box { background: var(--color-gray-50); border-radius: 12px; padding: 1rem; }
+    .trip-detail-box h4 { font-size: 0.85rem; font-weight: 700; color: var(--color-gray-700); margin-bottom: 0.6rem; display: flex; align-items: center; gap: 0.4rem; }
+    .trip-detail-box ul { list-style: none; padding: 0; margin: 0; }
+    .trip-detail-box li { font-size: 0.85rem; color: var(--color-gray-600); padding: 0.25rem 0; padding-right: 1.2rem; position: relative; }
+    .trip-detail-box li::before { content: '✓'; position: absolute; right: 0; color: #43a047; font-weight: bold; }
+    .trip-detail-box.tips-box li::before { content: '💡'; }
+
+    /* Schedule */
+    .trip-schedule { background: linear-gradient(135deg, #e8f5e9, #f1f8e9); border-radius: 12px; padding: 1.2rem; margin-bottom: 1rem; }
+    .trip-schedule h4 { font-size: 0.9rem; font-weight: 700; color: #2e7d32; margin-bottom: 0.6rem; }
+    .trip-schedule p { font-size: 0.85rem; color: var(--color-gray-700); line-height: 1.8; }
+    .trip-distances { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.8rem; }
+    .trip-distance-chip { display: inline-flex; align-items: center; gap: 0.3rem; background: white; border: 1px solid var(--color-gray-200); padding: 0.3rem 0.7rem; border-radius: 20px; font-size: 0.8rem; color: var(--color-gray-600); }
+
+    /* Alternatives Section */
+    .trip-alternatives {
+      background: linear-gradient(135deg, #fce4ec, #fff3e0);
+      border-radius: 14px; padding: 1.2rem; margin-top: 1.5rem;
+      border: 1px solid rgba(233, 30, 99, 0.1);
+    }
+    .trip-alternatives h4 { font-size: 0.95rem; font-weight: 700; color: #c62828; margin-bottom: 0.4rem; }
+    .trip-alternatives .alt-note { font-size: 0.83rem; color: var(--color-gray-600); margin-bottom: 0.8rem; line-height: 1.5; }
+    .alt-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .alt-chip {
+      display: inline-flex; align-items: center; gap: 0.3rem;
+      background: white; border: 1px solid var(--color-gray-200);
+      padding: 0.4rem 0.8rem; border-radius: 20px;
+      font-size: 0.8rem; color: var(--color-gray-700);
+      transition: all 0.2s; cursor: default;
+    }
+    .alt-chip:hover { border-color: #c62828; color: #c62828; background: #fff5f5; }
+    .alt-chip .alt-cat-icon { font-size: 0.9rem; }
 
     /* Navigation */
     .nav-dropdown { position: relative; }
-    .nav-dropdown-trigger {
-      display: inline-flex; align-items: center; gap: 0.3rem;
-      padding: 0.5rem 1rem; border-radius: var(--radius-sm);
-      font-weight: 500; color: var(--color-gray-600);
-      transition: var(--transition); cursor: pointer;
-    }
+    .nav-dropdown-trigger { display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.5rem 1rem; border-radius: var(--radius-sm); font-weight: 500; color: var(--color-gray-600); transition: var(--transition); cursor: pointer; }
     .nav-dropdown-trigger:hover { color: var(--color-primary); background-color: rgba(74, 144, 217, 0.08); }
-    .nav-dropdown-menu {
-      position: absolute; top: calc(100% + 4px); right: 0;
-      background: var(--color-white); border-radius: var(--radius-md);
-      box-shadow: var(--shadow-lg); padding: 0.5rem; min-width: 180px;
-      opacity: 0; visibility: hidden; transform: translateY(-8px);
-      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); z-index: 1100;
-    }
+    .nav-dropdown-menu { position: absolute; top: calc(100% + 4px); right: 0; background: var(--color-white); border-radius: var(--radius-md); box-shadow: var(--shadow-lg); padding: 0.5rem; min-width: 180px; opacity: 0; visibility: hidden; transform: translateY(-8px); transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); z-index: 1100; }
     .nav-dropdown-menu.open { opacity: 1; visibility: visible; transform: translateY(0); }
     .nav-dropdown-menu a { display: block; padding: 0.6rem 1rem; border-radius: var(--radius-sm); font-size: 0.9rem; font-weight: 500; color: var(--color-gray-700); transition: var(--transition); white-space: nowrap; }
     .nav-dropdown-menu a:hover { background-color: rgba(74, 144, 217, 0.08); color: var(--color-primary); }
 
-    /* Footer override */
     .trips-footer { margin-bottom: 4.5rem; }
+
+    /* Leaflet popup override */
+    .leaflet-popup-content { direction: rtl; font-family: 'Heebo', sans-serif; }
+    .leaflet-popup-content h4 { margin: 0 0 4px; font-size: 0.9rem; }
+    .leaflet-popup-content p { margin: 0; font-size: 0.8rem; color: #555; }
   </style>
 </head>
 <body>
@@ -427,7 +208,6 @@
     </div>
   </header>
 
-  <!-- Mobile Nav -->
   <div class="nav-overlay" id="nav-overlay"></div>
   <nav class="nav-mobile" id="nav-mobile">
     <button class="nav-mobile-close" id="nav-mobile-close" aria-label="סגור">&times;</button>
@@ -441,202 +221,268 @@
   <!-- Hero -->
   <section class="trips-hero">
     <h1>🗺️ הצעות לטיולי יום</h1>
-    <p>6 טיולים מושלמים עם שילוב של אקסטרים, טבע ותרבות - מוכנים ליציאה!</p>
+    <p>6 טיולים מושלמים עם שילוב של אקסטרים, טבע ותרבות - כולל חלופות קרובות למקרה ששינוי תוכניות!</p>
   </section>
 
-  <!-- Trips Content -->
+  <!-- Content -->
   <div class="trips-container">
-
-    <!-- SECTION: City trips -->
     <div class="trips-section-title">
       <h2>🏙️ טיולים לאזור ברטיסלבה, וינה, בודפשט וצ'כיה</h2>
       <span class="section-badge section-badge-city">3 טיולים</span>
     </div>
-
     <div id="city-trips"></div>
 
-    <!-- SECTION: Tatras trips -->
     <div class="trips-section-title">
       <h2>🏔️ טיולים באזור הרי הטטרה</h2>
       <span class="section-badge section-badge-tatras">3 טיולים</span>
     </div>
-
     <div id="tatras-trips"></div>
-
   </div>
 
   <!-- Footer -->
   <footer class="trips-footer" style="background: var(--color-gray-800); color: var(--color-gray-300); padding: 2.5rem 1.5rem; text-align: center;">
     <div style="max-width: 800px; margin: 0 auto;">
-      <p style="font-size: 1.1rem; font-weight: 600; color: var(--color-white); margin-bottom: 0.5rem;">&#x1F1F8;&#x1F1F0; חופשה משפחתית בסלובקיה - קיץ 2026</p>
-      <p style="font-size: 0.85rem; opacity: 0.8; margin-bottom: 0.75rem;">6 הצעות טיולי יום | אקסטרים + טבע + תרבות</p>
+      <p style="font-size: 1.1rem; font-weight: 600; color: white; margin-bottom: 0.5rem;">&#x1F1F8;&#x1F1F0; חופשה משפחתית בסלובקיה - קיץ 2026</p>
+      <p style="font-size: 0.85rem; opacity: 0.8; margin-bottom: 0.75rem;">6 הצעות טיולי יום | אקסטרים + טבע + תרבות + חלופות</p>
       <p style="font-size: 0.75rem; opacity: 0.5;">נבנה באהבה למשפחה | כל המידע לצורכי תכנון בלבד</p>
     </div>
   </footer>
 
   <!-- Bottom Nav -->
   <nav class="bottom-nav">
-    <a href="index.html" class="bottom-nav-item">
-      <span class="nav-icon">&#x1F3E0;</span><span>בית</span>
-    </a>
-    <a href="map.html" class="bottom-nav-item">
-      <span class="nav-icon">&#x1F5FA;</span><span>מפה</span>
-    </a>
-    <a href="trips.html" class="bottom-nav-item active">
-      <span class="nav-icon">🗺️</span><span>טיולים</span>
-    </a>
-    <a href="shabbat.html" class="bottom-nav-item">
-      <span class="nav-icon">&#x1F54E;</span><span>שבת</span>
-    </a>
+    <a href="index.html" class="bottom-nav-item"><span class="nav-icon">&#x1F3E0;</span><span>בית</span></a>
+    <a href="map.html" class="bottom-nav-item"><span class="nav-icon">&#x1F5FA;</span><span>מפה</span></a>
+    <a href="trips.html" class="bottom-nav-item active"><span class="nav-icon">🗺️</span><span>טיולים</span></a>
+    <a href="shabbat.html" class="bottom-nav-item"><span class="nav-icon">&#x1F54E;</span><span>שבת</span></a>
   </nav>
 
-  <!-- Floating Buttons -->
   <div class="floating-btns">
     <button class="float-btn" id="back-to-top-btn" aria-label="חזרה למעלה">⬆</button>
     <a href="index.html" class="float-btn home-btn" aria-label="דף הבית">🏠</a>
   </div>
 
+  <!-- Scripts -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
   <script>
-    // Load trips data and render
-    (async function() {
-      const [tripsResp, attractionsResp] = await Promise.all([
-        fetch('data/trips.json'),
-        fetch('data/attractions.json')
-      ]);
-      const trips = await tripsResp.json();
-      const attractions = await attractionsResp.json();
-      const byId = {};
-      attractions.forEach(a => byId[a.id] = a);
+  (async function() {
+    const MALATINY = [49.0847, 19.2247];
+    const CAT_ICONS = {
+      'nature': '🌲', 'adventure': '🧗', 'water-sports': '🚣',
+      'cycling': '🚴', 'family': '👨‍👩‍👧', 'indoor': '🏢',
+      'shabbat': '🕍', 'other': '📍'
+    };
 
-      const cityTrips = trips.filter(t => ['vienna', 'budapest', 'czech'].includes(t.area));
-      const tatrasTrips = trips.filter(t => t.area === 'high-tatras');
+    const [tripsResp, attractionsResp] = await Promise.all([
+      fetch('data/trips.json'), fetch('data/attractions.json')
+    ]);
+    const trips = await tripsResp.json();
+    const attractions = await attractionsResp.json();
+    const byId = {};
+    attractions.forEach(a => byId[a.id] = a);
 
-      function renderTripCard(trip, index, gradientClass) {
-        const main = byId[trip.mainAttraction];
-        const secondaries = trip.secondaryAttractions.map(id => byId[id]).filter(Boolean);
+    const cityTrips = trips.filter(t => ['vienna', 'budapest', 'czech'].includes(t.area));
+    const tatrasTrips = trips.filter(t => t.area === 'high-tatras');
 
-        const allAttractions = [main, ...secondaries];
+    function createMarkerIcon(color, label) {
+      return L.divIcon({
+        className: 'custom-marker',
+        html: '<div style="background:' + color + ';color:white;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:bold;border:2px solid white;box-shadow:0 2px 6px rgba(0,0,0,0.3);">' + label + '</div>',
+        iconSize: [28, 28],
+        iconAnchor: [14, 14]
+      });
+    }
 
-        const attractionCards = allAttractions.map((a, i) => {
-          const isMain = i === 0;
-          const badgeClass = isMain ? 'badge-main' : 'badge-secondary';
-          const badgeText = isMain ? '⭐ אטרקציה ראשית' : 'אטרקציה משלימה';
-          const cardClass = isMain ? 'trip-attraction-card main-attraction' : 'trip-attraction-card';
+    function renderTripCard(trip, index, gradientClass) {
+      const main = byId[trip.mainAttraction];
+      const secondaries = trip.secondaryAttractions.map(id => byId[id]).filter(Boolean);
+      const altAttractions = (trip.alternatives || []).map(id => byId[id]).filter(Boolean);
+      const allAttractions = [main, ...secondaries];
+      const mapId = 'map-' + trip.id;
 
-          const imgUrl = a.imageUrl || '';
-          const price = [];
-          if (a.priceAdult) price.push('מבוגר: ' + a.priceAdult);
-          if (a.priceChild) price.push('ילד: ' + a.priceChild);
-          const priceStr = price.length ? price.join(' | ') : 'בדקו באתר';
+      // Attraction cards HTML
+      const attractionCards = allAttractions.map((a, i) => {
+        const isMain = i === 0;
+        const badgeClass = isMain ? 'badge-main' : 'badge-secondary';
+        const badgeText = isMain ? '⭐ אטרקציה ראשית' : 'אטרקציה משלימה';
+        const cardClass = isMain ? 'trip-attraction-card main-attraction' : 'trip-attraction-card';
+        const price = [];
+        if (a.priceAdult) price.push('מבוגר: ' + a.priceAdult);
+        if (a.priceChild) price.push('ילד: ' + a.priceChild);
+        const priceStr = price.length ? price.join(' | ') : 'בדקו באתר';
+        const websiteLink = a.website ? '<a href="' + a.website + '" target="_blank" rel="noopener">🔗 אתר</a> ' : '';
+        const mapsLink = a.googleMapsUrl ? '<a href="' + a.googleMapsUrl + '" target="_blank" rel="noopener">📍 ניווט</a>' : '';
 
-          const websiteLink = a.website
-            ? '<a href="' + a.website + '" target="_blank" rel="noopener">🔗 לאתר הרשמי</a>'
-            : '';
-          const mapsLink = a.googleMapsUrl
-            ? ' <a href="' + a.googleMapsUrl + '" target="_blank" rel="noopener">📍 ניווט</a>'
-            : '';
+        return '<div class="' + cardClass + '">' +
+          '<img class="trip-attraction-img" src="' + (a.imageUrl || '') + '" alt="' + (a.nameHebrew || a.name) + '" loading="lazy" onerror="this.style.display=\'none\'">' +
+          '<div class="trip-attraction-info">' +
+            '<span class="trip-attraction-badge ' + badgeClass + '">' + badgeText + '</span>' +
+            '<h5>' + (a.nameHebrew || a.name) + '</h5>' +
+            '<p class="price-line">💰 ' + priceStr + '</p>' +
+            '<p class="link-line">' + websiteLink + mapsLink + '</p>' +
+          '</div></div>';
+      }).join('');
 
-          return '<div class="' + cardClass + '">' +
-            '<img class="trip-attraction-img" src="' + imgUrl + '" alt="' + (a.nameHebrew || a.name) + '" loading="lazy" onerror="this.style.display=\'none\'">' +
-            '<div class="trip-attraction-info">' +
-              '<span class="trip-attraction-badge ' + badgeClass + '">' + badgeText + '</span>' +
-              '<h5>' + (a.nameHebrew || a.name) + '</h5>' +
-              '<p class="price-line">💰 ' + priceStr + '</p>' +
-              '<p class="link-line">' + websiteLink + mapsLink + '</p>' +
-            '</div>' +
-          '</div>';
-        }).join('');
+      // Alternatives chips
+      const altChips = altAttractions.map(a => {
+        const icon = CAT_ICONS[a.category] || '📍';
+        return '<span class="alt-chip"><span class="alt-cat-icon">' + icon + '</span> ' + (a.nameHebrew || a.name) + '</span>';
+      }).join('');
 
-        const highlights = trip.highlights.map(h => '<li>' + h + '</li>').join('');
-        const tips = trip.tips.map(t => '<li>' + t + '</li>').join('');
+      const altSection = altAttractions.length ?
+        '<div class="trip-alternatives">' +
+          '<h4>🔄 חלופות בסביבה - אם משהו לא מסתדר</h4>' +
+          '<p class="alt-note">' + (trip.alternativesNote || '') + '</p>' +
+          '<div class="alt-chips">' + altChips + '</div>' +
+        '</div>' : '';
 
-        return '<div class="trip-card">' +
-          '<div class="trip-card-header ' + gradientClass + '">' +
-            '<span class="trip-number">' + (index + 1) + '</span>' +
-            '<div class="trip-header-content">' +
-              '<h3>' + trip.title + '</h3>' +
-              '<p class="trip-subtitle">' + trip.subtitle + '</p>' +
-              '<div class="trip-meta-bar">' +
-                '<span class="trip-meta-item">📍 ' + trip.areaLabel + '</span>' +
-                '<span class="trip-meta-item">🚗 ' + trip.driveFromBase + '</span>' +
-              '</div>' +
-            '</div>' +
-          '</div>' +
-          '<div class="trip-card-body">' +
-            '<div class="trip-why-special">' +
-              '<h4>✨ מה מיוחד בטיול הזה?</h4>' +
-              '<p>' + trip.whySpecial + '</p>' +
-            '</div>' +
-            '<span class="trip-target-audience">👨‍👩‍👧‍👦 למי מתאים: ' + trip.bestFor + '</span>' +
-            '<div class="trip-attractions-grid" style="margin-top:1.2rem;">' + attractionCards + '</div>' +
-            '<div class="trip-details-grid">' +
-              '<div class="trip-detail-box">' +
-                '<h4>🌟 נקודות חובה</h4>' +
-                '<ul>' + highlights + '</ul>' +
-              '</div>' +
-              '<div class="trip-detail-box tips-box">' +
-                '<h4>💡 טיפים חשובים</h4>' +
-                '<ul>' + tips + '</ul>' +
-              '</div>' +
-            '</div>' +
-            '<div class="trip-schedule">' +
-              '<h4>⏰ לוח זמנים מומלץ</h4>' +
-              '<p>' + trip.schedule + '</p>' +
-              '<div class="trip-distances">' +
-                '<span class="trip-distance-chip">🚗 ' + trip.internalDistances + '</span>' +
-              '</div>' +
+      const highlights = trip.highlights.map(h => '<li>' + h + '</li>').join('');
+      const tips = trip.tips.map(t => '<li>' + t + '</li>').join('');
+
+      return '<div class="trip-card">' +
+        '<div class="trip-card-header ' + gradientClass + '">' +
+          '<span class="trip-number">' + (index + 1) + '</span>' +
+          '<div class="trip-header-content">' +
+            '<h3>' + trip.title + '</h3>' +
+            '<p class="trip-subtitle">' + trip.subtitle + '</p>' +
+            '<div class="trip-meta-bar">' +
+              '<span class="trip-meta-item">📍 ' + trip.areaLabel + '</span>' +
+              '<span class="trip-meta-item">🚗 ' + trip.driveFromBase + '</span>' +
             '</div>' +
           '</div>' +
-        '</div>';
+        '</div>' +
+        '<div class="trip-card-body">' +
+          // Map
+          '<div class="trip-map-container" id="' + mapId + '"></div>' +
+          '<div class="map-legend">' +
+            '<span class="map-legend-item"><span class="legend-dot legend-dot-base"></span> בסיס (Malatiny)</span>' +
+            '<span class="map-legend-item"><span class="legend-dot legend-dot-main"></span> אטרקציה ראשית</span>' +
+            '<span class="map-legend-item"><span class="legend-dot legend-dot-secondary"></span> אטרקציה משלימה</span>' +
+            '<span class="map-legend-item"><span class="legend-dot legend-dot-alt"></span> חלופה</span>' +
+          '</div>' +
+          // Why Special
+          '<div class="trip-why-special">' +
+            '<h4>✨ מה מיוחד בטיול הזה?</h4>' +
+            '<p>' + trip.whySpecial + '</p>' +
+          '</div>' +
+          '<span class="trip-target-audience">👨‍👩‍👧‍👦 למי מתאים: ' + trip.bestFor + '</span>' +
+          // Attraction cards
+          '<div class="trip-attractions-grid">' + attractionCards + '</div>' +
+          // Details
+          '<div class="trip-details-grid">' +
+            '<div class="trip-detail-box"><h4>🌟 נקודות חובה</h4><ul>' + highlights + '</ul></div>' +
+            '<div class="trip-detail-box tips-box"><h4>💡 טיפים חשובים</h4><ul>' + tips + '</ul></div>' +
+          '</div>' +
+          // Schedule
+          '<div class="trip-schedule">' +
+            '<h4>⏰ לוח זמנים מומלץ</h4>' +
+            '<p>' + trip.schedule + '</p>' +
+            '<div class="trip-distances"><span class="trip-distance-chip">🚗 ' + trip.internalDistances + '</span></div>' +
+          '</div>' +
+          // Alternatives
+          altSection +
+        '</div></div>';
+    }
+
+    // Render cards
+    const cityContainer = document.getElementById('city-trips');
+    cityContainer.innerHTML = cityTrips.map((t, i) => renderTripCard(t, i, 'city-gradient')).join('');
+
+    const tatrasContainer = document.getElementById('tatras-trips');
+    tatrasContainer.innerHTML = tatrasTrips.map((t, i) => renderTripCard(t, i, 'tatras-gradient')).join('');
+
+    // Initialize maps
+    function initTripMap(trip) {
+      const mapId = 'map-' + trip.id;
+      const mapEl = document.getElementById(mapId);
+      if (!mapEl) return;
+
+      const map = L.map(mapId, { scrollWheelZoom: false, zoomControl: true });
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OSM', maxZoom: 16
+      }).addTo(map);
+
+      const bounds = L.latLngBounds();
+      const mainA = byId[trip.mainAttraction];
+      const secondaries = trip.secondaryAttractions.map(id => byId[id]).filter(Boolean);
+      const alts = (trip.alternatives || []).map(id => byId[id]).filter(Boolean);
+
+      // Base marker
+      const baseMarker = L.marker(MALATINY, { icon: createMarkerIcon('#4caf50', '🏠') }).addTo(map);
+      baseMarker.bindPopup('<h4>🏠 בסיס - Malatiny</h4><p>נקודת היציאה</p>');
+      bounds.extend(MALATINY);
+
+      // Route points for polyline
+      const routePoints = [MALATINY];
+
+      // Main attraction
+      if (mainA && mainA.coordinates) {
+        const pos = [mainA.coordinates.lat, mainA.coordinates.lng];
+        const m = L.marker(pos, { icon: createMarkerIcon('#e65100', '1') }).addTo(map);
+        m.bindPopup('<h4>⭐ ' + (mainA.nameHebrew || mainA.name) + '</h4><p>אטרקציה ראשית</p>');
+        bounds.extend(pos);
+        routePoints.push(pos);
       }
 
-      // Render city trips
-      const cityContainer = document.getElementById('city-trips');
-      cityContainer.innerHTML = cityTrips.map((t, i) => renderTripCard(t, i, 'city-gradient')).join('');
+      // Secondary attractions
+      secondaries.forEach((a, i) => {
+        if (a && a.coordinates) {
+          const pos = [a.coordinates.lat, a.coordinates.lng];
+          const m = L.marker(pos, { icon: createMarkerIcon('#1565c0', String(i + 2)) }).addTo(map);
+          m.bindPopup('<h4>' + (a.nameHebrew || a.name) + '</h4><p>אטרקציה ' + (i + 2) + '</p>');
+          bounds.extend(pos);
+          routePoints.push(pos);
+        }
+      });
 
-      // Render tatras trips
-      const tatrasContainer = document.getElementById('tatras-trips');
-      tatrasContainer.innerHTML = tatrasTrips.map((t, i) => renderTripCard(t, i, 'tatras-gradient')).join('');
-    })();
-
-    // Mobile menu
-    (function() {
-      const hamburgerBtn = document.getElementById('hamburger-btn');
-      const navMobile = document.getElementById('nav-mobile');
-      const navOverlay = document.getElementById('nav-overlay');
-      const navMobileClose = document.getElementById('nav-mobile-close');
-
-      function openMobileNav() {
-        navMobile.classList.add('open');
-        navOverlay.classList.add('visible');
-        hamburgerBtn.classList.add('active');
-        document.body.style.overflow = 'hidden';
+      // Draw route line
+      if (routePoints.length > 1) {
+        L.polyline(routePoints, { color: '#1565c0', weight: 3, opacity: 0.6, dashArray: '8, 8' }).addTo(map);
       }
-      function closeMobileNav() {
-        navMobile.classList.remove('open');
-        navOverlay.classList.remove('visible');
-        hamburgerBtn.classList.remove('active');
-        document.body.style.overflow = '';
-      }
-      hamburgerBtn.addEventListener('click', openMobileNav);
-      navMobileClose.addEventListener('click', closeMobileNav);
-      navOverlay.addEventListener('click', closeMobileNav);
-    })();
 
-    // Floating buttons
-    (function() {
-      var floatingBtns = document.querySelector('.floating-btns');
-      var backToTopBtn = document.getElementById('back-to-top-btn');
-      if (floatingBtns && backToTopBtn) {
-        window.addEventListener('scroll', function() {
-          if (window.scrollY > 300) floatingBtns.classList.add('visible');
-          else floatingBtns.classList.remove('visible');
-        });
-        backToTopBtn.addEventListener('click', function() {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-      }
-    })();
+      // Alternative markers (smaller, gray)
+      alts.forEach(a => {
+        if (a && a.coordinates) {
+          const pos = [a.coordinates.lat, a.coordinates.lng];
+          const icon = L.divIcon({
+            className: 'custom-marker',
+            html: '<div style="background:#9e9e9e;color:white;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;border:2px solid white;box-shadow:0 1px 4px rgba(0,0,0,0.2);">⟳</div>',
+            iconSize: [22, 22], iconAnchor: [11, 11]
+          });
+          const m = L.marker(pos, { icon: icon }).addTo(map);
+          m.bindPopup('<h4>🔄 ' + (a.nameHebrew || a.name) + '</h4><p>חלופה בסביבה</p>');
+          bounds.extend(pos);
+        }
+      });
+
+      map.fitBounds(bounds, { padding: [30, 30] });
+    }
+
+    // Init all maps
+    trips.forEach(trip => initTripMap(trip));
+  })();
+
+  // Mobile menu
+  (function() {
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const navMobile = document.getElementById('nav-mobile');
+    const navOverlay = document.getElementById('nav-overlay');
+    const navMobileClose = document.getElementById('nav-mobile-close');
+    function open() { navMobile.classList.add('open'); navOverlay.classList.add('visible'); hamburgerBtn.classList.add('active'); document.body.style.overflow = 'hidden'; }
+    function close() { navMobile.classList.remove('open'); navOverlay.classList.remove('visible'); hamburgerBtn.classList.remove('active'); document.body.style.overflow = ''; }
+    hamburgerBtn.addEventListener('click', open);
+    navMobileClose.addEventListener('click', close);
+    navOverlay.addEventListener('click', close);
+  })();
+
+  // Floating buttons
+  (function() {
+    var f = document.querySelector('.floating-btns'), b = document.getElementById('back-to-top-btn');
+    if (f && b) {
+      window.addEventListener('scroll', function() { f.classList.toggle('visible', window.scrollY > 300); });
+      b.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    }
+  })();
   </script>
 </body>
 </html>
