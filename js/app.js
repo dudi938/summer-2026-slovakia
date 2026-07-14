@@ -50,7 +50,7 @@ function getAgeBadges(attraction) {
   }
 
   // Adults
-  if (/adults|מבוגרים|elderly|קשישים/.test(joined)) {
+  if (/adults|מבוגרים|elderly|קשישים|כל הגילאים|משפחות/.test(joined)) {
     badges.push({ emoji: '👨', label: 'מבוגרים', color: '#F0F0F0' });
   }
 
@@ -310,11 +310,19 @@ function renderAttractionCard(attraction, index) {
   // Card image / header area
   const cardImage = document.createElement('div');
   cardImage.className = 'card-image';
-  cardImage.style.background = 'linear-gradient(135deg, ' + categoryColor + '22, ' + categoryColor + '44)';
+  if (attraction.imageUrl) {
+    cardImage.style.backgroundImage = 'url(' + attraction.imageUrl + ')';
+    cardImage.style.backgroundSize = 'cover';
+    cardImage.style.backgroundPosition = 'center';
+  } else {
+    cardImage.style.background = 'linear-gradient(135deg, ' + categoryColor + '22, ' + categoryColor + '44)';
+  }
 
   const placeholderIcon = document.createElement('span');
   placeholderIcon.className = 'placeholder-icon';
-  placeholderIcon.textContent = iconEmoji;
+  if (!attraction.imageUrl) {
+    placeholderIcon.textContent = iconEmoji;
+  }
   cardImage.appendChild(placeholderIcon);
 
   const badge = document.createElement('span');
@@ -1159,10 +1167,10 @@ function openAttractionModal(attraction) {
   const modalSource = modal.querySelector('.modal-source');
   if (modalSource) {
     modalSource.textContent = '';
-    if (attraction.sourceUrl || attraction.website) {
+    if (attraction.source || attraction.website) {
       const sourceLink = document.createElement('a');
       sourceLink.className = 'modal-source-link';
-      sourceLink.href = attraction.sourceUrl || attraction.website;
+      sourceLink.href = attraction.source || attraction.website;
       sourceLink.target = '_blank';
       sourceLink.rel = 'noopener';
       sourceLink.textContent = '🔗 מקור מידע';

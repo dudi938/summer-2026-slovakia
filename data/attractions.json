@@ -8149,5 +8149,387 @@
       "טטרנסקה קוטלינה"
     ],
     "source": "https://www.gopass.travel"
+  },
+  {
+    "id": "bobova-draha-malino-brdo",
+    "name": "Bobová Dráha Malinô Brdo",
+    "nameHebrew": "מגלשת הרים (בובסלד) - מלינו ברדו",
+    "category": "adventure",
+    "area": "high-tatras",
+    "description": "Summer alpine coaster at Malinô Brdo ski resort near Ružomberok. A thrilling gravity-powered ride on a metal track winding down through the forest with individual speed control.",
+    "descriptionHebrew": "מגלשת הרים קיצית באתר הסקי מלינו ברדו ליד רוז'ומברוק. נסיעה מרגשת על מסלול מתכת המתפתל במורד ההר דרך היער עם שליטה אישית על המהירות. אורך המסלול כ-700 מטר.",
+    "address": "Malinô Brdo, 034 01 Ružomberok, Slovakia",
+    "website": "https://www.malinobrdovlcisedlo.sk",
+    "priceAdult": "~8-12€ per ride",
+    "priceChild": "~6-8€ per ride",
+    "coordinates": {
+      "lat": 49.0608,
+      "lng": 19.2589
+    },
+    "suitableFor": [
+      "ילדים מגיל 6",
+      "נוער (13+)",
+      "מבוגרים"
+    ],
+    "suitableForBaby": false,
+    "notes": "מתאים לילדים מגיל 6 בליווי מבוגר, מגיל 10 לבד. קרוב מאוד למלטיני - אידיאלי לטיול יומי קצר.",
+    "notesHebrew": "מתאים לילדים מגיל 6 בליווי מבוגר, מגיל 10 לבד. קרוב מאוד למלטיני - אידיאלי לטיול יומי קצר.",
+    "distanceFromMalatiny": "15 ק\"מ, כ-20 דקות נסיעה",
+    "familyScore": 5,
+    "dayTripCluster": "liptov-area",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Malin%C3%B4_Brdo%2C_Ru%C5%BEomberok%2C_Slovakia.jpg/1280px-Malin%C3%B4_Brdo%2C_Ru%C5%BEomberok%2C_Slovakia.jpg",
+    "googleMapsUrl": "https://www.google.com/maps?q=49.0608,19.2589",
+    "tags": [
+      "מגלשת הרים",
+      "בובסלד",
+      "בובסלד אלפיני",
+      "הרפתקה",
+      "קיץ"
+    ],
+    "source": "https://www.malinobrdovlcisedlo.sk"
+  },
+  {
+    "id": "bobova-draha-donovaly",
+    "name": "Bobová Dráha Donovaly (Park Snow)",
+    "nameHebrew": "מגלשת הרים (בובסלד) - דונובלי",
+    "category": "adventure",
+    "area": "high-tatras",
+    "description": "Alpine coaster at Park Snow Donovaly resort. A thrilling ride on a metal track with curves, waves, and jumps. Individual speed control with brakes. One of the most popular alpine coasters in Slovakia.",
+    "descriptionHebrew": "מגלשת הרים באתר פארק סנואו דונובלי. נסיעה מרגשת על מסלול מתכת עם עיקולים, גלים וקפיצות. שליטה אישית על המהירות. אחת ממגלשות ההרים הפופולריות בסלובקיה, באורך כ-800 מטר.",
+    "address": "Park Snow Donovaly, 976 39 Donovaly, Slovakia",
+    "website": "https://www.parksnow.sk",
+    "priceAdult": "~10-14€ per ride",
+    "priceChild": "~7-10€ per ride",
+    "coordinates": {
+      "lat": 48.8876,
+      "lng": 19.2213
+    },
+    "suitableFor": [
+      "ילדים מגיל 6",
+      "נוער (13+)",
+      "מבוגרים"
+    ],
+    "suitableForBaby": false,
+    "notes": "מתאים לילדים מגיל 6 בליווי מבוגר. דונובלי הוא אזור נופש פופולרי עם מגוון אטרקציות. שילוב מצוין עם עגלות ההרים באותו מקום.",
+    "notesHebrew": "מתאים לילדים מגיל 6 בליווי מבוגר. דונובלי הוא אזור נופש פופולרי עם מגוון אטרקציות. שילוב מצוין עם עגלות ההרים באותו מקום.",
+    "distanceFromMalatiny": "30 ק\"מ, כ-35 דקות נסיעה",
+    "familyScore": 5,
+    "dayTripCluster": "liptov-area",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Donovaly_panorama.jpg/1280px-Donovaly_panorama.jpg",
+    "googleMapsUrl": "https://www.google.com/maps?q=48.8876,19.2213",
+    "tags": [
+      "מגלשת הרים",
+      "בובסלד",
+      "בובסלד אלפיני",
+      "הרפתקה",
+      "דונובלי"
+    ],
+    "source": "https://www.parksnow.sk"
+  },
+  {
+    "id": "mountain-carts-donovaly",
+    "name": "Mountain Carts Donovaly (Park Snow)",
+    "nameHebrew": "עגלות הרים (קארטס) - דונובלי",
+    "category": "adventure",
+    "area": "high-tatras",
+    "description": "Mountain trikes (three-wheeled carts) at Park Snow Donovaly. Ride down the mountain on specially designed mountain carts on a paved track. Fun gravity-powered descent for the whole family.",
+    "descriptionHebrew": "עגלות הרים תלת גלגליות באתר פארק סנואו דונובלי. נסיעה במורד ההר על עגלות מיוחדות על מסלול סלול. ירידה מהנה וכיפית לכל המשפחה המבוססת על כוח המשיכה.",
+    "address": "Park Snow Donovaly, 976 39 Donovaly, Slovakia",
+    "website": "https://www.parksnow.sk",
+    "priceAdult": "~8-12€ per ride",
+    "priceChild": "~6-8€ per ride",
+    "coordinates": {
+      "lat": 48.8876,
+      "lng": 19.2213
+    },
+    "suitableFor": [
+      "ילדים מגיל 6",
+      "נוער (13+)",
+      "מבוגרים"
+    ],
+    "suitableForBaby": false,
+    "notes": "מתאים לילדים מגיל 6 בליווי מבוגר. שילוב מצוין עם הבובסלד באותו אתר. חוויה שונה ומשלימה למגלשת ההרים.",
+    "notesHebrew": "מתאים לילדים מגיל 6 בליווי מבוגר. שילוב מצוין עם הבובסלד באותו אתר. חוויה שונה ומשלימה למגלשת ההרים.",
+    "distanceFromMalatiny": "30 ק\"מ, כ-35 דקות נסיעה",
+    "familyScore": 5,
+    "dayTripCluster": "liptov-area",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Donovaly_panorama.jpg/1280px-Donovaly_panorama.jpg",
+    "googleMapsUrl": "https://www.google.com/maps?q=48.8876,19.2213",
+    "tags": [
+      "עגלות הרים",
+      "קארטס",
+      "הרפתקה",
+      "דונובלי",
+      "קיץ"
+    ],
+    "source": "https://www.parksnow.sk"
+  },
+  {
+    "id": "bobova-draha-kubinska-hola",
+    "name": "Bobová Dráha Kubínska Hoľa",
+    "nameHebrew": "מגלשת הרים (בובסלד) - קובינסקה הוליה",
+    "category": "adventure",
+    "area": "high-tatras",
+    "description": "Alpine coaster at Kubínska Hoľa ski resort in the Orava region. A fun gravity-powered ride through the forest with beautiful mountain views. Individual speed control with brakes.",
+    "descriptionHebrew": "מגלשת הרים באתר הסקי קובינסקה הוליה באזור אורבה. נסיעה מהנה דרך היער עם נופי הרים יפים. שליטה אישית על המהירות באמצעות בלמים. אורך המסלול כ-650 מטר.",
+    "address": "Kubínska Hoľa, 029 51 Vyšný Kubín, Slovakia",
+    "website": "https://www.kubinska.sk",
+    "priceAdult": "~8-11€ per ride",
+    "priceChild": "~6-8€ per ride",
+    "coordinates": {
+      "lat": 49.2517,
+      "lng": 19.2833
+    },
+    "suitableFor": [
+      "ילדים מגיל 6",
+      "נוער (13+)",
+      "מבוגרים"
+    ],
+    "suitableForBaby": false,
+    "notes": "מתאים לילדים מגיל 6 בליווי מבוגר. קובינסקה הוליה הוא אזור נופש שקט יותר בחבל אורבה.",
+    "notesHebrew": "מתאים לילדים מגיל 6 בליווי מבוגר. קובינסקה הוליה הוא אזור נופש שקט יותר בחבל אורבה.",
+    "distanceFromMalatiny": "25 ק\"מ, כ-30 דקות נסיעה",
+    "familyScore": 5,
+    "dayTripCluster": "orava-area",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Kub%C3%ADnska_ho%C4%BEa_z_Mokrade.jpg/1280px-Kub%C3%ADnska_ho%C4%BEa_z_Mokrade.jpg",
+    "googleMapsUrl": "https://www.google.com/maps?q=49.2517,19.2833",
+    "tags": [
+      "מגלשת הרים",
+      "בובסלד",
+      "בובסלד אלפיני",
+      "הרפתקה",
+      "אורבה"
+    ],
+    "source": "https://www.kubinska.sk"
+  },
+  {
+    "id": "bobova-draha-mosty-u-jablunkova",
+    "name": "Bobová Dráha Mosty u Jablunkova",
+    "nameHebrew": "מגלשת הרים (בובסלד) - מוסטי אוי יבלונקובה",
+    "category": "adventure",
+    "area": "czech",
+    "description": "Alpine coaster near the Czech-Slovakia border at Mosty u Jablunkova. A thrilling ride on a modern bobsled track with curves and turns through the Beskydy mountains landscape.",
+    "descriptionHebrew": "מגלשת הרים ליד הגבול הצ'כי-סלובקי במוסטי אוי יבלונקובה. נסיעה מרגשת על מסלול בובסלד מודרני עם עיקולים ופניות דרך נופי הרי בסקידי. מסלול באורך כ-750 מטר.",
+    "address": "Mosty u Jablunkova, 739 98, Czech Republic",
+    "website": "https://www.mostyujablunkova.cz",
+    "priceAdult": "~120-150 CZK per ride",
+    "priceChild": "~90-110 CZK per ride",
+    "coordinates": {
+      "lat": 49.5267,
+      "lng": 18.76
+    },
+    "suitableFor": [
+      "ילדים מגיל 6",
+      "נוער (13+)",
+      "מבוגרים"
+    ],
+    "suitableForBaby": false,
+    "notes": "מתאים לילדים מגיל 6 בליווי מבוגר. נמצא בצד הצ'כי של הגבול. מרחק נסיעה ארוך יותר אבל אפשר לשלב עם טיול יום בהרי בסקידי.",
+    "notesHebrew": "מתאים לילדים מגיל 6 בליווי מבוגר. נמצא בצד הצ'כי של הגבול. מרחק נסיעה ארוך יותר אבל אפשר לשלב עם טיול יום בהרי בסקידי.",
+    "distanceFromMalatiny": "120 ק\"מ, כ-2 שעות נסיעה",
+    "familyScore": 4,
+    "dayTripCluster": "czech-day-trip",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Beskydy_CZ-SK.JPG/1280px-Beskydy_CZ-SK.JPG",
+    "googleMapsUrl": "https://www.google.com/maps?q=49.5267,18.7600",
+    "tags": [
+      "מגלשת הרים",
+      "בובסלד",
+      "בובסלד אלפיני",
+      "הרפתקה",
+      "צ'כיה"
+    ],
+    "source": "https://www.mostyujablunkova.cz"
+  },
+  {
+    "id": "bobova-draha-dolni-morava",
+    "name": "Bobová Dráha Dolní Morava",
+    "nameHebrew": "מגלשת הרים (בובסלד) - דולני מורבה",
+    "category": "adventure",
+    "area": "czech",
+    "description": "One of the longest alpine coasters in Europe at Dolní Morava resort in Czech Republic. Over 2.5 km long track with spectacular views. Located near the famous Sky Walk suspended bridge.",
+    "descriptionHebrew": "אחת ממגלשות ההרים הארוכות באירופה באתר דולני מורבה בצ'כיה. מסלול באורך למעלה מ-2.5 ק\"מ עם נופים מרהיבים. נמצא ליד גשר Sky Walk המפורסם התלוי באוויר. חוויה אדירה!",
+    "address": "Dolní Morava 153, 561 69, Czech Republic",
+    "website": "https://www.dolnimorava.cz",
+    "priceAdult": "~200-250 CZK per ride",
+    "priceChild": "~150-180 CZK per ride",
+    "coordinates": {
+      "lat": 50.1275,
+      "lng": 16.8097
+    },
+    "suitableFor": [
+      "ילדים מגיל 6",
+      "נוער (13+)",
+      "מבוגרים"
+    ],
+    "suitableForBaby": false,
+    "notes": "מתאים לילדים מגיל 6 בליווי מבוגר. מסלול ארוך במיוחד - הנסיעה נמשכת כ-10 דקות! כדאי לשלב עם Sky Walk. מרחק נסיעה ארוך אבל שווה את הטיול.",
+    "notesHebrew": "מתאים לילדים מגיל 6 בליווי מבוגר. מסלול ארוך במיוחד - הנסיעה נמשכת כ-10 דקות! כדאי לשלב עם Sky Walk. מרחק נסיעה ארוך אבל שווה את הטיול.",
+    "distanceFromMalatiny": "350 ק\"מ, כ-4.5 שעות נסיעה",
+    "familyScore": 5,
+    "dayTripCluster": "czech-day-trip",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Doln%C3%AD_Morava_-_Stezka_v_oblac%C3%ADch.jpg/1280px-Doln%C3%AD_Morava_-_Stezka_v_oblac%C3%ADch.jpg",
+    "googleMapsUrl": "https://www.google.com/maps?q=50.1275,16.8097",
+    "tags": [
+      "מגלשת הרים",
+      "בובסלד",
+      "בובסלד אלפיני",
+      "הרפתקה",
+      "צ'כיה",
+      "Sky Walk"
+    ],
+    "source": "https://www.dolnimorava.cz"
+  },
+  {
+    "id": "mountain-carts-chopok-juh",
+    "name": "Mountain Carts Chopok Juh (South)",
+    "nameHebrew": "עגלות הרים (קארטס) - צ'ופוק דרום",
+    "category": "adventure",
+    "area": "high-tatras",
+    "description": "Mountain trikes on the south side of Chopok mountain at Jasna resort. Ride down on specially designed three-wheeled mountain carts. A fun alternative to the main Jasna mountain carts.",
+    "descriptionHebrew": "עגלות הרים בצד הדרומי של הר צ'ופוק באתר יסנה. נסיעה במורד על עגלות הרים תלת גלגליות מיוחדות. חלופה מהנה לעגלות ההרים הראשיות ביסנה, עם נופים שונים ויפים.",
+    "address": "Chopok Juh, Jasna, 031 01 Demänovská Dolina, Slovakia",
+    "website": "https://www.jasna.sk",
+    "priceAdult": "~8-12€ per ride",
+    "priceChild": "~6-8€ per ride",
+    "coordinates": {
+      "lat": 48.9394,
+      "lng": 19.5881
+    },
+    "suitableFor": [
+      "ילדים מגיל 6",
+      "נוער (13+)",
+      "מבוגרים"
+    ],
+    "suitableForBaby": false,
+    "notes": "מתאים לילדים מגיל 6 בליווי מבוגר. ניתן לשלב עם שאר האטרקציות באזור יסנה.",
+    "notesHebrew": "מתאים לילדים מגיל 6 בליווי מבוגר. ניתן לשלב עם שאר האטרקציות באזור יסנה.",
+    "distanceFromMalatiny": "60 ק\"מ, כ-1 שעה נסיעה",
+    "familyScore": 5,
+    "dayTripCluster": "liptov-area",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Chopok_z_juhu.jpg/1280px-Chopok_z_juhu.jpg",
+    "googleMapsUrl": "https://www.google.com/maps?q=48.9394,19.5881",
+    "tags": [
+      "עגלות הרים",
+      "קארטס",
+      "הרפתקה",
+      "יסנה",
+      "צ'ופוק"
+    ],
+    "source": "https://www.jasna.sk"
+  },
+  {
+    "id": "letna-sankova-draha-opalisko",
+    "name": "Letná Sánková Dráha Opalisko",
+    "nameHebrew": "מגלשת קיץ (סנקה) - אופליסקו",
+    "category": "adventure",
+    "area": "high-tatras",
+    "description": "Summer toboggan run at Ski Centrum Opalisko near Ružomberok. A classic summer sledding track for families. Fun gravity-powered ride suitable for young children.",
+    "descriptionHebrew": "מגלשת קיץ במרכז הסקי אופליסקו ליד רוז'ומברוק. מסלול מגלשה קלסי לקיץ למשפחות. נסיעה מהנה ומתאימה גם לילדים צעירים יותר. קרוב מאוד למלטיני!",
+    "address": "Ski Centrum Opalisko, Demänovská Dolina, Slovakia",
+    "website": "https://www.opalisko.sk",
+    "priceAdult": "~6-10€ per ride",
+    "priceChild": "~5-7€ per ride",
+    "coordinates": {
+      "lat": 49.075,
+      "lng": 19.3111
+    },
+    "suitableFor": [
+      "ילדים מגיל 4",
+      "נוער (13+)",
+      "מבוגרים"
+    ],
+    "suitableForBaby": false,
+    "notes": "מתאים לילדים מגיל 4-5 בליווי מבוגר. מסלול קצר וידידותי יותר לילדים צעירים מאשר הבובסלד האלפיני. מיקום מצוין - קרוב מאוד למלטיני.",
+    "notesHebrew": "מתאים לילדים מגיל 4-5 בליווי מבוגר. מסלול קצר וידידותי יותר לילדים צעירים מאשר הבובסלד האלפיני. מיקום מצוין - קרוב מאוד למלטיני.",
+    "distanceFromMalatiny": "10 ק\"מ, כ-15 דקות נסיעה",
+    "familyScore": 5,
+    "dayTripCluster": "liptov-area",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Liptovsk%C3%A9_Lazy_-_panoramio.jpg/1280px-Liptovsk%C3%A9_Lazy_-_panoramio.jpg",
+    "googleMapsUrl": "https://www.google.com/maps?q=49.0750,19.3111",
+    "tags": [
+      "מגלשת קיץ",
+      "סנקה",
+      "הרפתקה",
+      "משפחתי",
+      "קיץ"
+    ],
+    "source": "https://www.opalisko.sk"
+  },
+  {
+    "id": "bobova-draha-lipno",
+    "name": "Bobová Dráha Lipno nad Vltavou",
+    "nameHebrew": "מגלשת הרים (בובסלד) - ליפנו",
+    "category": "adventure",
+    "area": "czech",
+    "description": "Alpine coaster at Lipno nad Vltavou resort in Czech Republic. One of the most popular summer attractions in the Lipno region. Long track with great views of Lipno lake.",
+    "descriptionHebrew": "מגלשת הרים באתר ליפנו נד ולטבו בצ'כיה. אחת האטרקציות הקיציות הפופולריות ביותר באזור ליפנו. מסלול ארוך עם נופים נהדרים של אגם ליפנו. אורך המסלול כ-1000 מטר.",
+    "address": "Lipno nad Vltavou, 382 78, Czech Republic",
+    "website": "https://www.lipno.info",
+    "priceAdult": "~180-220 CZK per ride",
+    "priceChild": "~140-170 CZK per ride",
+    "coordinates": {
+      "lat": 48.6333,
+      "lng": 14.2167
+    },
+    "suitableFor": [
+      "ילדים מגיל 6",
+      "נוער (13+)",
+      "מבוגרים"
+    ],
+    "suitableForBaby": false,
+    "notes": "מתאים לילדים מגיל 6 בליווי מבוגר. ליפנו הוא אזור נופש פופולרי עם אגם ואטרקציות רבות. מרחק נסיעה ארוך אבל אפשר לשלב עם טיול רב-יומי לדרום צ'כיה.",
+    "notesHebrew": "מתאים לילדים מגיל 6 בליווי מבוגר. ליפנו הוא אזור נופש פופולרי עם אגם ואטרקציות רבות. מרחק נסיעה ארוך אבל אפשר לשלב עם טיול רב-יומי לדרום צ'כיה.",
+    "distanceFromMalatiny": "450 ק\"מ, כ-5.5 שעות נסיעה",
+    "familyScore": 4,
+    "dayTripCluster": "czech-day-trip",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Lipno_nad_Vltavou%2C_%C4%8Desk%C3%BD_Krumlov_District.jpg/1280px-Lipno_nad_Vltavou%2C_%C4%8Desk%C3%BD_Krumlov_District.jpg",
+    "googleMapsUrl": "https://www.google.com/maps?q=48.6333,14.2167",
+    "tags": [
+      "מגלשת הרים",
+      "בובסלד",
+      "בובסלד אלפיני",
+      "הרפתקה",
+      "צ'כיה",
+      "ליפנו"
+    ],
+    "source": "https://www.lipno.info"
+  },
+  {
+    "id": "kolesova-draha-martinky",
+    "name": "Kolesová Dráha Martinky",
+    "nameHebrew": "מסלול גלגלים - מרטינקי",
+    "category": "adventure",
+    "area": "high-tatras",
+    "description": "Wheeled track at Martinky ski resort near Martin. A fun mountain coaster ride on a wheeled sled system. Family-friendly attraction in the Malá Fatra region.",
+    "descriptionHebrew": "מסלול גלגלים באתר הסקי מרטינקי ליד מרטין. נסיעה מהנה על מערכת מזחלות עם גלגלים. אטרקציה ידידותית למשפחות באזור מאלה פטרה. אורך המסלול כ-600 מטר.",
+    "address": "Martinky Ski Resort, 038 52 Turany, Slovakia",
+    "website": "https://www.martinky.sk",
+    "priceAdult": "~7-10€ per ride",
+    "priceChild": "~5-8€ per ride",
+    "coordinates": {
+      "lat": 49.0333,
+      "lng": 18.9
+    },
+    "suitableFor": [
+      "ילדים מגיל 6",
+      "נוער (13+)",
+      "מבוגרים"
+    ],
+    "suitableForBaby": false,
+    "notes": "מתאים לילדים מגיל 6 בליווי מבוגר. מרטינקי הוא אזור סקי קטן וידידותי באזור מאלה פטרה.",
+    "notesHebrew": "מתאים לילדים מגיל 6 בליווי מבוגר. מרטינקי הוא אזור סקי קטן וידידותי באזור מאלה פטרה.",
+    "distanceFromMalatiny": "40 ק\"מ, כ-45 דקות נסיעה",
+    "familyScore": 5,
+    "dayTripCluster": "liptov-area",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Martinsk%C3%A9_hole_-_panoramio.jpg/1280px-Martinsk%C3%A9_hole_-_panoramio.jpg",
+    "googleMapsUrl": "https://www.google.com/maps?q=49.0333,18.9000",
+    "tags": [
+      "מסלול גלגלים",
+      "מגלשת הרים",
+      "הרפתקה",
+      "מאלה פטרה",
+      "קיץ"
+    ],
+    "source": "https://www.martinky.sk"
   }
 ]

@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="אטרקציות שחובה להזמין מראש - חופשה משפחתית בסלובקיה קיץ 2026">
+  <meta name="theme-color" content="#E74C3C">
+  <title>חובה להזמין מראש | חופשה בסלובקיה 2026</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .must-book-hero {
+      background: linear-gradient(135deg, #E74C3C 0%, #C0392B 50%, #922B21 100%);
+      color: white;
+      padding: 3rem 1.5rem;
+      text-align: center;
+      margin-top: 70px;
+    }
+
+    .must-book-hero h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    .must-book-hero p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .must-book-warning {
+      background: #FFF3CD;
+      border: 2px solid #FFC107;
+      border-radius: 12px;
+      padding: 1.2rem 1.5rem;
+      margin: 1.5rem auto;
+      max-width: 700px;
+      text-align: center;
+      font-weight: 600;
+      color: #856404;
+    }
+
+    .must-book-warning::before {
+      content: "⚠️ ";
+      font-size: 1.3rem;
+    }
+
+    .booking-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .booking-card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+      border-top: 4px solid #E74C3C;
+    }
+
+    .booking-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    }
+
+    .booking-card-image {
+      height: 180px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .booking-card-urgency {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: #E74C3C;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    .booking-card-body {
+      padding: 1.2rem;
+    }
+
+    .booking-card-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #2C3E50;
+      margin-bottom: 0.5rem;
+    }
+
+    .booking-card-desc {
+      color: #555;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin-bottom: 0.8rem;
+    }
+
+    .booking-card-reason {
+      background: #FDEDEC;
+      border-radius: 8px;
+      padding: 0.8rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .booking-card-reason-title {
+      font-weight: 700;
+      color: #E74C3C;
+      font-size: 0.85rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .booking-card-reason-text {
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    .booking-card-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .booking-detail {
+      font-size: 0.8rem;
+      color: #666;
+    }
+
+    .booking-detail strong {
+      color: #333;
+      display: block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .booking-card-ages {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .booking-age-badge {
+      font-size: 0.75rem;
+      padding: 3px 8px;
+      border-radius: 12px;
+      font-weight: 600;
+    }
+
+    .booking-age-badge.yes {
+      background: #D4EDDA;
+      color: #155724;
+    }
+
+    .booking-age-badge.no {
+      background: #F8D7DA;
+      color: #721C24;
+    }
+
+    .booking-card-actions {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .booking-btn {
+      flex: 1;
+      padding: 0.7rem 1rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      transition: all 0.2s;
+      font-family: 'Heebo', sans-serif;
+    }
+
+    .booking-btn-primary {
+      background: #E74C3C;
+      color: white;
+    }
+
+    .booking-btn-primary:hover {
+      background: #C0392B;
+    }
+
+    .booking-btn-secondary {
+      background: #EEE;
+      color: #333;
+    }
+
+    .booking-btn-secondary:hover {
+      background: #DDD;
+    }
+
+    .booking-timeline {
+      background: #F8F9FA;
+      padding: 2rem 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .booking-timeline-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .booking-timeline h2 {
+      text-align: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: #2C3E50;
+    }
+
+    .timeline-item {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      align-items: flex-start;
+    }
+
+    .timeline-badge {
+      min-width: 100px;
+      background: #E74C3C;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+
+    .timeline-badge.orange {
+      background: #F39C12;
+    }
+
+    .timeline-badge.yellow {
+      background: #F1C40F;
+      color: #333;
+    }
+
+    .timeline-badge.green {
+      background: #27AE60;
+    }
+
+    .timeline-content {
+      flex: 1;
+    }
+
+    .timeline-content h4 {
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .timeline-content p {
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 2rem 0 1rem;
+      color: #2C3E50;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .must-book-hero h1 {
+        font-size: 1.6rem;
+      }
+      .booking-grid {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+      }
+      .booking-card-details {
+        grid-template-columns: 1fr;
+      }
+      .timeline-item {
+        flex-direction: column;
+      }
+      .timeline-badge {
+        min-width: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">&#x1F1F8;&#x1F1F0;</span>
+        <span class="logo-text">חופשה בסלובקיה 2026</span>
+      </a>
+      <nav class="nav-desktop">
+        <a href="index.html">בית</a>
+        <a href="map.html">מפה</a>
+        <a href="must-book.html" class="active">חובה להזמין</a>
+        <a href="shabbat.html">שבת וכשרות</a>
+      </nav>
+      <button class="hamburger" id="hamburger-btn" aria-label="תפריט">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="nav-overlay" id="nav-overlay"></div>
+  <nav class="nav-mobile" id="nav-mobile">
+    <button class="nav-mobile-close" id="nav-mobile-close" aria-label="סגור תפריט">&times;</button>
+    <a href="index.html">בית</a>
+    <a href="map.html">מפה</a>
+    <a href="must-book.html" class="active">חובה להזמין מראש</a>
+    <a href="areas/high-tatras.html">הרי הטטרה</a>
+    <a href="areas/bratislava.html">ברטיסלבה</a>
+    <a href="areas/vienna.html">וינה</a>
+    <a href="areas/budapest.html">בודפשט</a>
+    <a href="categories/water-sports.html">ספורט מים</a>
+    <a href="categories/adventure.html">הרפתקאות</a>
+    <a href="shabbat.html">שבת וכשרות</a>
+  </nav>
+
+  <!-- Hero -->
+  <section class="must-book-hero">
+    <h1>🎫 חובה להזמין מראש!</h1>
+    <p>אטרקציות שנגמרות מהר בקיץ - אל תשכחו להזמין לפני שמגיעים</p>
+    <div class="must-book-warning">
+      אוגוסט הוא עונת השיא! רוב האטרקציות הפופולריות מתמלאות. מומלץ להזמין 2-4 שבועות מראש.
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section class="booking-timeline">
+    <div class="booking-timeline-inner">
+      <h2>📅 לוח זמנים להזמנות</h2>
+
+      <div class="timeline-item">
+        <div class="timeline-badge">חודש+ מראש</div>
+        <div class="timeline-content">
+          <h4>רפטינג, קניונינג, טיסה חופשית (פרגלידינג)</h4>
+          <p>פעילויות עם מדריך אישי ומקומות מוגבלים - נגמרות ראשונות בעונת השיא</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-badge orange">2-3 שבועות</div>
+        <div class="timeline-content">
+          <h4>סיורים מודרכים, רכיבת סוסים, ATV</h4>
+          <p>קבוצות קטנות עם מקומות מוגבלים - מומלץ להזמין מוקדם</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-badge yellow">שבוע מראש</div>
+        <p class="timeline-content">
+          <h4>פארקי חבלים, זיפליין, via ferrata</h4>
+          <p>בדרך כלל יש מקום, אבל בסופ"ש ובשיא הקיץ כדאי להזמין</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-badge green">יום לפני / באותו יום</div>
+        <div class="timeline-content">
+          <h4>מגלשות הרים, עגלות הרים, רכבלים</h4>
+          <p>בדרך כלל ניתן להגיע ללא הזמנה, אבל בתור ארוך בשיא</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Must Book Attractions -->
+  <h2 class="section-title">🔥 האטרקציות שאסור לפספס</h2>
+  <p class="section-subtitle">כל מה שצריך הזמנה מוקדמת - עם קישור ישיר להזמנה</p>
+
+  <div class="booking-grid" id="booking-grid">
+    <!-- Cards will be populated by JS -->
+  </div>
+
+  <!-- Bottom Nav (Mobile) -->
+  <nav class="bottom-nav">
+    <a href="index.html" class="bottom-nav-item" data-target="home">
+      <span class="bottom-nav-icon">🏠</span>
+      <span class="bottom-nav-label">בית</span>
+    </a>
+    <a href="map.html" class="bottom-nav-item" data-target="map">
+      <span class="bottom-nav-icon">🗺️</span>
+      <span class="bottom-nav-label">מפה</span>
+    </a>
+    <a href="must-book.html" class="bottom-nav-item active" data-target="book">
+      <span class="bottom-nav-icon">🎫</span>
+      <span class="bottom-nav-label">הזמנות</span>
+    </a>
+    <a href="shabbat.html" class="bottom-nav-item" data-target="shabbat">
+      <span class="bottom-nav-icon">✡️</span>
+      <span class="bottom-nav-label">שבת</span>
+    </a>
+  </nav>
+
+  <script>
+    // Must-book attractions data
+    const mustBookAttractions = [
+      {
+        name: "רפטינג על נהר ואג (Váh)",
+        description: "שייט רפטינג מרגש על הנהר הגדול ביותר בסלובקיה. מסלולים ברמות קושי שונות, כולל מסלול משפחתי רגוע ומסלול אדרנלין.",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/V%C3%A1h_river_in_Liptov.jpg/1280px-V%C3%A1h_river_in_Liptov.jpg",
+        reason: "קבוצות קטנות (8-12 אנשים) עם מדריך. באוגוסט נגמר מהר!",
+        bookAhead: "3-4 שבועות מראש",
+        price: "25-40€ למבוגר",
+        ages: {baby: false, kids: "8+", teens: true, adults: true},
+        website: "https://www.adventoura.eu/en/rafting",
+        location: "ליפטובסקי מיקולאש",
+        distance: "20 ק\"מ מ-Malatíny"
+      },
+      {
+        name: "רפטינג בקניון דונייץ (Dunajec)",
+        description: "שייט מסורתי על רפסודות עץ בקניון מרהיב על גבול פולין-סלובקיה. אחד מהחוויות הייחודיות ביותר באזור!",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Dunajec_pltnici.jpg/1280px-Dunajec_pltnici.jpg",
+        reason: "מסלול פופולרי מאוד - רפסודות יוצאות בשעות קבועות ונגמרות מוקדם. חובה להזמין!",
+        bookAhead: "2-3 שבועות מראש",
+        price: "20-25€ למבוגר, 15€ ילד",
+        ages: {baby: true, kids: "3+", teens: true, adults: true},
+        website: "https://www.pltnictvo.sk",
+        location: "Červený Kláštor",
+        distance: "90 ק\"מ, כ-1.5 שעות נסיעה"
+      },
+      {
+        name: "קניונינג בסלובקי פרדייס",
+        description: "טיול הרפתקני דרך קניונים, מפלים, סולמות ושרשראות בגן העדן הסלובקי. חוויה בלתי נשכחת!",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Slovak_Paradise_Sucha_Bela.jpg/800px-Slovak_Paradise_Sucha_Bela.jpg",
+        reason: "מסלולים חד-כיווניים עם הגבלת כניסה יומית. בקיץ נסגר עד 9-10 בבוקר!",
+        bookAhead: "להגיע מוקדם (7:00-8:00)! אין הזמנה - כניסה לפי סדר",
+        price: "2€ כניסה + 2€ חניה",
+        ages: {baby: false, kids: "8+", teens: true, adults: true},
+        website: "https://www.slovensky-raj.sk",
+        location: "Slovenský Raj",
+        distance: "110 ק\"מ, כ-1.5 שעות"
+      },
+      {
+        name: "פרגלידינג (טיסה חופשית) מעל הטטרה",
+        description: "טיסת טנדם מעל הרי הטטרה עם מדריך מוסמך. נוף מטורף של הרים, אגמים ועמקים מלמעלה!",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Paragliding_Tatra_Mountains.jpg/1280px-Paragliding_Tatra_Mountains.jpg",
+        reason: "מדריכים בודדים, תלוי מזג אוויר, מקומות מוגבלים מאוד",
+        bookAhead: "חודש+ מראש (וגמישות בתאריכים בגלל מזג אוויר)",
+        price: "80-120€ לטיסה",
+        ages: {baby: false, kids: false, teens: "14+", adults: true},
+        website: "https://www.flytatras.sk",
+        location: "הרי הטטרה",
+        distance: "30-60 ק\"מ"
+      },
+      {
+        name: "רכיבת סוסים בליפטוב",
+        description: "רכיבת סוסים במסלולים יפהפיים בעמק ליפטוב. יש מסלולים למתחילים ולמנוסים. החוות מציעות גם חוויה לילדים קטנים.",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Liptov_landscape.jpg/1280px-Liptov_landscape.jpg",
+        reason: "חוות קטנות עם מספר סוסים מוגבל. בקיץ מתמלא מהר",
+        bookAhead: "2 שבועות מראש",
+        price: "20-35€ לשעה",
+        ages: {baby: false, kids: "6+", teens: true, adults: true},
+        website: "https://www.visitliptov.sk/en/horse-riding",
+        location: "אזור ליפטוב",
+        distance: "15-30 ק\"מ"
+      },
+      {
+        name: "ATV / קוואדרסייקלים בהרי הטטרה",
+        description: "סיור בקוואדרסייקלים (ATV) בשבילי הרים מדהימים. מסלולים בין יערות ונופים פנורמיים. חוויית אדרנלין!",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/ATV_trail.jpg/1280px-ATV_trail.jpg",
+        reason: "מספר כלי רכב מוגבל, קבוצות קטנות עם מדריך",
+        bookAhead: "2-3 שבועות מראש",
+        price: "50-80€ לאדם (שעה-שעתיים)",
+        ages: {baby: false, kids: false, teens: "16+", adults: true},
+        website: "https://www.tatrymotion.sk",
+        location: "הרי הטטרה",
+        distance: "30-50 ק\"מ"
+      },
+      {
+        name: "Via Ferrata - מסלול מאובטח בהרים",
+        description: "מסלול טיפוס מאובטח עם כבלי פלדה, סולמות וגשרים תלויים. חוויה מרגשת עם נוף מדהים. מתאים גם למתחילים עם מדריך.",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Klettersteig.jpg/1280px-Klettersteig.jpg",
+        reason: "חובה עם מדריך מוסמך (בטיחות). מדריכים מעטים באזור",
+        bookAhead: "2-4 שבועות מראש",
+        price: "40-70€ כולל ציוד ומדריך",
+        ages: {baby: false, kids: "10+", teens: true, adults: true},
+        website: "https://www.adventoura.eu/en/via-ferrata",
+        location: "Martinské Hole / Skalka",
+        distance: "40-60 ק\"מ"
+      },
+      {
+        name: "זיפליין (Zip Line) ענק",
+        description: "המעוף הארוך ביותר באזור - עד 1 ק\"מ אורך! גלישה על כבל מעל עמקים ויערות במהירות גבוהה. אדרנלין טהור!",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Zipline_adventure.jpg/1280px-Zipline_adventure.jpg",
+        reason: "מיקום אחד, תפוקה מוגבלת (אדם אחד בכל פעם). תורים ארוכים בקיץ",
+        bookAhead: "שבוע-שבועיים מראש (או להגיע מוקדם)",
+        price: "15-30€",
+        ages: {baby: false, kids: "10+", teens: true, adults: true},
+        website: "https://www.jasna.sk/en/summer/zipline",
+        location: "Jasná / Chopok",
+        distance: "40 ק\"מ"
+      },
+      {
+        name: "סיור קיאקים בשקיעה",
+        description: "שייט קיאקים רומנטי בשעת שקיעה על אגם ליפטובסקה מארה. מסלול שקט ומרגיע עם נוף הרים מדהים.",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Liptovsk%C3%A1_Mara.jpg/1280px-Liptovsk%C3%A1_Mara.jpg",
+        reason: "סיור מודרך בשעה ספציפית, מקומות מוגבלים (10-15 קיאקים)",
+        bookAhead: "שבוע מראש",
+        price: "20-30€ כולל ציוד",
+        ages: {baby: false, kids: "8+", teens: true, adults: true},
+        website: "https://www.visitliptov.sk",
+        location: "אגם ליפטובסקה מארה",
+        distance: "15 ק\"מ"
+      },
+      {
+        name: "טיול ג'יפים בהרי הטטרה",
+        description: "סיור בג'יפ 4x4 בשבילים הרריים של הטטרה הנמוכה. מגיעים למקומות שאי אפשר להגיע אליהם ברגל. מתאים לכל המשפחה!",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Low_Tatras_panorama.jpg/1280px-Low_Tatras_panorama.jpg",
+        reason: "ג'יפ אחד = משפחה אחת. מספר ג'יפים מוגבל",
+        bookAhead: "2 שבועות מראש",
+        price: "60-100€ לג'יפ (עד 4 אנשים)",
+        ages: {baby: true, kids: "0+", teens: true, adults: true},
+        website: "https://www.tatrymotion.sk",
+        location: "הרי הטטרה הנמוכה",
+        distance: "20-40 ק\"מ"
+      },
+      {
+        name: "פארק חבלים - Tarzánia Jasná",
+        description: "פארק חבלים ענק ביערות ליד יאסנה. מסלולים ברמות קושי שונות - מקטנטנים ועד מבוגרים אמיצים. כולל מסלול ילדים מגיל 4!",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Rope_park.jpg/1280px-Rope_park.jpg",
+        reason: "בסופ\"ש ובחגים מתמלא. מומלץ להזמין מקום",
+        bookAhead: "שבוע מראש (חובה בסופ\"ש)",
+        price: "15-25€ לפי מסלול",
+        ages: {baby: false, kids: "4+", teens: true, adults: true},
+        website: "https://www.jasna.sk/en/summer/rope-park",
+        location: "Jasná",
+        distance: "35 ק\"מ"
+      },
+      {
+        name: "Adventoura - יום הרפתקאות מלא",
+        description: "חבילת הרפתקאות: רפטינג + קניונינג + אוכל מקומי. יום שלם של אדרנלין עם מדריכים מקצועיים.",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Canyoning_Slovakia.jpg/800px-Canyoning_Slovakia.jpg",
+        reason: "חבילות ליום שלם - מקומות מוגבלים מאוד (4-8 אנשים)",
+        bookAhead: "חודש מראש!",
+        price: "80-120€ לאדם (יום שלם)",
+        ages: {baby: false, kids: "12+", teens: true, adults: true},
+        website: "https://www.adventoura.eu",
+        location: "ליפטובסקי מיקולאש",
+        distance: "20 ק\"מ"
+      }
+    ];
+
+    function renderBookingCards() {
+      const grid = document.getElementById('booking-grid');
+
+      mustBookAttractions.forEach(function(attraction) {
+        const card = document.createElement('div');
+        card.className = 'booking-card';
+
+        // Build ages badges
+        let agesBadges = '';
+        if (attraction.ages.baby) {
+          agesBadges += '<span class="booking-age-badge yes">👶 מתאים לתינוק</span>';
+        } else {
+          agesBadges += '<span class="booking-age-badge no">👶 לא לתינוק</span>';
+        }
+        if (attraction.ages.kids) {
+          agesBadges += '<span class="booking-age-badge yes">👦 ילדים ' + attraction.ages.kids + '</span>';
+        }
+        if (attraction.ages.teens) {
+          const teensText = attraction.ages.teens === true ? '13+' : attraction.ages.teens;
+          agesBadges += '<span class="booking-age-badge yes">🧑 נוער ' + teensText + '</span>';
+        }
+        if (attraction.ages.adults) {
+          agesBadges += '<span class="booking-age-badge yes">👨 מבוגרים</span>';
+        }
+
+        card.innerHTML =
+          '<div class="booking-card-image" style="background-image: url(\'' + attraction.image + '\')">' +
+            '<span class="booking-card-urgency">📅 ' + attraction.bookAhead + '</span>' +
+          '</div>' +
+          '<div class="booking-card-body">' +
+            '<h3 class="booking-card-title">' + attraction.name + '</h3>' +
+            '<p class="booking-card-desc">' + attraction.description + '</p>' +
+            '<div class="booking-card-reason">' +
+              '<div class="booking-card-reason-title">🚨 למה חובה להזמין?</div>' +
+              '<div class="booking-card-reason-text">' + attraction.reason + '</div>' +
+            '</div>' +
+            '<div class="booking-card-details">' +
+              '<div class="booking-detail"><strong>💰 מחיר</strong>' + attraction.price + '</div>' +
+              '<div class="booking-detail"><strong>📍 מיקום</strong>' + attraction.location + '</div>' +
+              '<div class="booking-detail"><strong>🚗 מרחק</strong>' + attraction.distance + '</div>' +
+              '<div class="booking-detail"><strong>⏰ מתי להזמין</strong>' + attraction.bookAhead + '</div>' +
+            '</div>' +
+            '<div class="booking-card-ages">' + agesBadges + '</div>' +
+            '<div class="booking-card-actions">' +
+              '<a href="' + attraction.website + '" target="_blank" class="booking-btn booking-btn-primary">🎫 להזמנה</a>' +
+              '<a href="https://www.google.com/maps/search/' + encodeURIComponent(attraction.location + ' Slovakia') + '" target="_blank" class="booking-btn booking-btn-secondary">🗺️ מפה</a>' +
+            '</div>' +
+          '</div>';
+
+        grid.appendChild(card);
+      });
+    }
+
+    // Navigation (same logic as other pages)
+    document.addEventListener('DOMContentLoaded', function() {
+      renderBookingCards();
+
+      // Hamburger menu
+      const hamburger = document.getElementById('hamburger-btn');
+      const navMobile = document.getElementById('nav-mobile');
+      const navOverlay = document.getElementById('nav-overlay');
+      const navClose = document.getElementById('nav-mobile-close');
+
+      if (hamburger) {
+        hamburger.addEventListener('click', function() {
+          navMobile.classList.add('open');
+          navOverlay.classList.add('open');
+          document.body.style.overflow = 'hidden';
+        });
+      }
+
+      function closeNav() {
+        navMobile.classList.remove('open');
+        navOverlay.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      if (navClose) navClose.addEventListener('click', closeNav);
+      if (navOverlay) navOverlay.addEventListener('click', closeNav);
+    });
+  </script>
+
+</body>
+</html>
