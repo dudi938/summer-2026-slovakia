@@ -9112,7 +9112,7 @@
     "distanceFromMalatiny": "110 ק\"מ, כ-שעה ו-30 דקות נסיעה",
     "familyScore": 5,
     "dayTripCluster": "zakopane-poland",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Termy_Malta%C5%84skie_16.JPG/1280px-Termy_Malta%C5%84skie_16.JPG",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/SZA%C5%81ASY_NA_POLANIE_PODK%C3%93LNA_W_JURGOWIE%2C_fot._M._Klag_%28MIK%2C_2001%29_%283508460206%29.jpg/1280px-SZA%C5%81ASY_NA_POLANIE_PODK%C3%93LNA_W_JURGOWIE%2C_fot._M._Klag_%28MIK%2C_2001%29_%283508460206%29.jpg",
     "googleMapsUrl": "https://www.google.com/maps?q=49.382,20.108",
     "tags": [
       "מעיינות חמים",
@@ -9123,5 +9123,742 @@
       "ילדים"
     ],
     "source": "https://www.termabania.pl/"
+  },
+  {
+    "id": "zoom-kindermuseum-vienna",
+    "name": "ZOOM Children's Museum",
+    "nameHebrew": "מוזיאון זום לילדים - וינה",
+    "category": "indoor",
+    "area": "vienna",
+    "description": "Interactive children's museum in Vienna's MuseumsQuartier with hands-on exhibits for ages 0-14. Features creative workshops, immersive installations, and the Ocean zone for toddlers.",
+    "descriptionHebrew": "מוזיאון אינטראקטיבי לילדים ברובע המוזיאונים של וינה. כולל סדנאות יצירה, מיצבים סוחפים, ואזור האוקיינוס לפעוטות. מתאים לגילאי 0-14 עם תחנות משחק חווייתיות שמעודדות סקרנות וגילוי.",
+    "address": "Museumsplatz 1, 1070 Wien, Austria",
+    "website": "https://www.kindermuseum.at",
+    "priceAdult": "€7",
+    "priceChild": "€7",
+    "coordinates": {
+      "lat": 48.2033,
+      "lng": 16.3586
+    },
+    "suitableFor": [
+      "פעוטות",
+      "ילדים 4+",
+      "ילדים 8+"
+    ],
+    "suitableForBaby": true,
+    "notes": "Must book time slots in advance. The Ocean zone is for ages 0-6 only. Workshops require separate booking.",
+    "notesHebrew": "חובה להזמין חלון זמן מראש. אזור האוקיינוס לגילאי 0-6 בלבד. סדנאות דורשות הזמנה נפרדת. סגור בימי שני.",
+    "distanceFromMalatiny": "320 ק\"מ, כ-3.5 שעות נסיעה",
+    "familyScore": 5,
+    "dayTripCluster": "vienna",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Zoom_Kindermuseum_MQ_Wien_Rueckseite.jpg/1280px-Zoom_Kindermuseum_MQ_Wien_Rueckseite.jpg",
+    "googleMapsUrl": "https://maps.google.com/?q=48.2033,16.3586",
+    "tags": [
+      "מוזיאון",
+      "ילדים",
+      "אינטראקטיבי",
+      "יצירה",
+      "וינה"
+    ],
+    "source": "https://www.kindermuseum.at"
+  },
+  {
+    "id": "haus-des-meeres-vienna",
+    "name": "Haus des Meeres Aquarium",
+    "nameHebrew": "בית הים - אקווריום וינה",
+    "category": "indoor",
+    "area": "vienna",
+    "description": "A 50-meter high former WWII flak tower converted into a 10-floor aquarium and terrarium. Home to 10,000 animals including sharks, sea turtles, crocodiles, and tropical fish.",
+    "descriptionHebrew": "מגדל פלאק מלחמת העולם השנייה בגובה 50 מטר שהוסב לאקווריום בן 10 קומות. בית ל-10,000 בעלי חיים כולל כרישים, צבי ים, תנינים ודגים טרופיים. גג תצפית פנורמי על וינה.",
+    "address": "Fritz-Grünbaum-Platz 1, 1060 Wien, Austria",
+    "website": "https://www.haus-des-meeres.at",
+    "priceAdult": "€22.90",
+    "priceChild": "€9.50 (6-15), חינם מתחת ל-6",
+    "coordinates": {
+      "lat": 48.1993,
+      "lng": 16.3536
+    },
+    "suitableFor": [
+      "פעוטות",
+      "ילדים 4+",
+      "ילדים 8+",
+      "נוער",
+      "מבוגרים"
+    ],
+    "suitableForBaby": true,
+    "notes": "Open daily 9:00-20:00. Rooftop terrace with panoramic view of Vienna. Feeding times are a highlight - check schedule.",
+    "notesHebrew": "פתוח כל יום 9:00-20:00. מרפסת גג עם נוף פנורמי על וינה. זמני האכלה הם שיא הביקור - בדקו לוח זמנים. נגיש לעגלות.",
+    "distanceFromMalatiny": "320 ק\"מ, כ-3.5 שעות נסיעה",
+    "familyScore": 5,
+    "dayTripCluster": "vienna",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Blick_auf_die_begr%C3%BCnte_Wand_des_Haus_des_Meeres_%28Wien%29%2C_2024-04-12.jpeg/1280px-Blick_auf_die_begr%C3%BCnte_Wand_des_Haus_des_Meeres_%28Wien%29%2C_2024-04-12.jpeg",
+    "googleMapsUrl": "https://maps.google.com/?q=48.1993,16.3536",
+    "tags": [
+      "אקווריום",
+      "בעלי חיים",
+      "תצפית",
+      "וינה",
+      "כרישים"
+    ],
+    "source": "https://www.haus-des-meeres.at"
+  },
+  {
+    "id": "technisches-museum-vienna",
+    "name": "Technisches Museum Wien",
+    "nameHebrew": "מוזיאון הטכנולוגיה - וינה",
+    "category": "indoor",
+    "area": "vienna",
+    "description": "Vienna's science and technology museum with interactive exhibits, a mini railway, flight simulators, and a special children's area called 'das mini'.",
+    "descriptionHebrew": "מוזיאון המדע והטכנולוגיה של וינה עם מוצגים אינטראקטיביים, רכבת מיניאטורית, סימולטורי טיסה ואזור ילדים מיוחד 'das mini' לגילאי 2-6. תערוכות מרתקות על אנרגיה, תחבורה וחלל.",
+    "address": "Mariahilfer Str. 212, 1140 Wien, Austria",
+    "website": "https://www.technischesmuseum.at",
+    "priceAdult": "€16",
+    "priceChild": "חינם מתחת ל-19",
+    "coordinates": {
+      "lat": 48.1912,
+      "lng": 16.3185
+    },
+    "suitableFor": [
+      "פעוטות",
+      "ילדים 4+",
+      "ילדים 8+",
+      "נוער",
+      "מבוגרים"
+    ],
+    "suitableForBaby": true,
+    "notes": "Free for under 19! das mini area for ages 2-6. High-voltage show and mini railway are highlights.",
+    "notesHebrew": "כניסה חינם מתחת לגיל 19! אזור 'das mini' לגילאי 2-6. מופע המתח הגבוה והרכבת המיניאטורית הם חובה. פתוח 9:00-18:00, סגור בימי שלישי.",
+    "distanceFromMalatiny": "320 ק\"מ, כ-3.5 שעות נסיעה",
+    "familyScore": 5,
+    "dayTripCluster": "vienna",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Technisches_Museum%2C_Mariahilfer_Stra%C3%9Fe_212%2C_1140_Wien_1.JPG/1280px-Technisches_Museum%2C_Mariahilfer_Stra%C3%9Fe_212%2C_1140_Wien_1.JPG",
+    "googleMapsUrl": "https://maps.google.com/?q=48.1912,16.3185",
+    "tags": [
+      "מוזיאון",
+      "מדע",
+      "טכנולוגיה",
+      "אינטראקטיבי",
+      "חינם לילדים"
+    ],
+    "source": "https://www.technischesmuseum.at"
+  },
+  {
+    "id": "haus-der-musik-vienna",
+    "name": "Haus der Musik",
+    "nameHebrew": "בית המוזיקה - וינה",
+    "category": "indoor",
+    "area": "vienna",
+    "description": "Interactive sound museum where visitors can conduct the Vienna Philharmonic (virtually), compose music, explore sound physics, and play giant instruments.",
+    "descriptionHebrew": "מוזיאון צלילים אינטראקטיבי בו מבקרים יכולים לנצח על הפילהרמונית של וינה (וירטואלית), להלחין מוזיקה, לחקור פיזיקה של צליל ולנגן על כלי נגינה ענקיים. חוויה סוחפת לכל המשפחה.",
+    "address": "Seilerstätte 30, 1010 Wien, Austria",
+    "website": "https://www.hausdermusik.com",
+    "priceAdult": "€16",
+    "priceChild": "€6 (3-11), חינם מתחת ל-3",
+    "coordinates": {
+      "lat": 48.2021,
+      "lng": 16.3732
+    },
+    "suitableFor": [
+      "ילדים 4+",
+      "ילדים 8+",
+      "נוער",
+      "מבוגרים"
+    ],
+    "suitableForBaby": false,
+    "notes": "Open daily 10:00-22:00. The virtual conductor experience is the highlight. Combined ticket with Mozart House available.",
+    "notesHebrew": "פתוח כל יום 10:00-22:00. חוויית הניצוח הוירטואלית היא שיא הביקור. כרטיס משולב עם בית מוצרט זמין. מתאים לילדים מגיל 4.",
+    "distanceFromMalatiny": "320 ק\"מ, כ-3.5 שעות נסיעה",
+    "familyScore": 4,
+    "dayTripCluster": "vienna",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Haus_der_Musik_Unterferrieden_3.jpg/1280px-Haus_der_Musik_Unterferrieden_3.jpg",
+    "googleMapsUrl": "https://maps.google.com/?q=48.2021,16.3732",
+    "tags": [
+      "מוזיקה",
+      "אינטראקטיבי",
+      "מוזיאון",
+      "וינה"
+    ],
+    "source": "https://www.hausdermusik.com"
+  },
+  {
+    "id": "time-travel-vienna",
+    "name": "Time Travel Vienna",
+    "nameHebrew": "מסע בזמן - וינה",
+    "category": "indoor",
+    "area": "vienna",
+    "description": "Immersive 5D experience through 2000 years of Vienna's history. Features animatronics, special effects, VR elements, and a simulated aerial bombing.",
+    "descriptionHebrew": "חוויה סוחפת ב-5D דרך 2000 שנות ההיסטוריה של וינה. כולל בובות אנימטרוניות, אפקטים מיוחדים, מציאות מדומה וסימולציית הפצצה אווירית. סיור מודרך בן 50 דקות במרתפים מימי הביניים.",
+    "address": "Habsburgergasse 10A, 1010 Wien, Austria",
+    "website": "https://www.timetravel-vienna.at",
+    "priceAdult": "€22",
+    "priceChild": "€17 (5-14), חינם מתחת ל-5",
+    "coordinates": {
+      "lat": 48.2082,
+      "lng": 16.367
+    },
+    "suitableFor": [
+      "ילדים 4+",
+      "ילדים 8+",
+      "נוער",
+      "מבוגרים"
+    ],
+    "suitableForBaby": false,
+    "notes": "Guided tours every 20 minutes. Available in multiple languages including English. Not suitable for children under 5 or those afraid of dark spaces.",
+    "notesHebrew": "סיורים מודרכים כל 20 דקות. זמין באנגלית ושפות נוספות. לא מתאים לילדים מתחת ל-5 או לפוחדים ממקומות חשוכים. מומלץ להזמין מראש באתר.",
+    "distanceFromMalatiny": "320 ק\"מ, כ-3.5 שעות נסיעה",
+    "familyScore": 4,
+    "dayTripCluster": "vienna",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Wien_Graben_1890.jpg",
+    "googleMapsUrl": "https://maps.google.com/?q=48.2082,16.3670",
+    "tags": [
+      "היסטוריה",
+      "5D",
+      "מרתפים",
+      "וינה",
+      "חוויתי"
+    ],
+    "source": "https://www.timetravel-vienna.at"
+  },
+  {
+    "id": "madame-tussauds-vienna",
+    "name": "Madame Tussauds Vienna",
+    "nameHebrew": "מדאם טוסו - וינה",
+    "category": "indoor",
+    "area": "vienna",
+    "description": "World-famous wax museum in the Prater with lifelike figures of celebrities, historical figures, and interactive zones including a VR roller coaster experience.",
+    "descriptionHebrew": "מוזיאון השעווה המפורסם בעולם בפראטר של וינה. דמויות תלת-ממדיות של סלבריטאים, דמויות היסטוריות ואזורים אינטראקטיביים כולל חוויית רכבת הרים במציאות מדומה.",
+    "address": "Riesenradplatz 5, 1020 Wien, Austria",
+    "website": "https://www.madametussauds.com/vienna",
+    "priceAdult": "€26",
+    "priceChild": "€20 (3-14), חינם מתחת ל-3",
+    "coordinates": {
+      "lat": 48.2166,
+      "lng": 16.3964
+    },
+    "suitableFor": [
+      "ילדים 4+",
+      "ילדים 8+",
+      "נוער",
+      "מבוגרים"
+    ],
+    "suitableForBaby": false,
+    "notes": "Located at the Prater amusement park entrance. Combine with Prater rides. Book online for cheaper tickets.",
+    "notesHebrew": "ממוקם בכניסה לפארק השעשועים פראטר. שלבו עם הרכיבות בפראטר. הזמינו אונליין למחיר מוזל. פתוח 10:00-18:00.",
+    "distanceFromMalatiny": "320 ק\"מ, כ-3.5 שעות נסיעה",
+    "familyScore": 4,
+    "dayTripCluster": "vienna",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Drake_Madame_Tussauds_London_Wax_Figure.jpg/1280px-Drake_Madame_Tussauds_London_Wax_Figure.jpg",
+    "googleMapsUrl": "https://maps.google.com/?q=48.2166,16.3964",
+    "tags": [
+      "מוזיאון שעווה",
+      "פראטר",
+      "סלבריטאים",
+      "וינה"
+    ],
+    "source": "https://www.madametussauds.com/vienna"
+  },
+  {
+    "id": "tropicarium-budapest",
+    "name": "Tropicarium Budapest",
+    "nameHebrew": "טרופיקריום - בודפשט",
+    "category": "indoor",
+    "area": "budapest",
+    "description": "Central Europe's largest tropical aquarium and zoo. Features a shark tunnel, rainforest section, reptile house, and ray pool. Over 300 species.",
+    "descriptionHebrew": "האקווריום הטרופי והגן הזואולוגי הגדול ביותר במרכז אירופה. כולל מנהרת כרישים, אזור יער גשם, בית זוחלים ובריכת חתולי ים. מעל 300 מינים. חוויה מרשימה לכל המשפחה.",
+    "address": "Nagytétényi út 37-45, Budapest 1222, Hungary",
+    "website": "https://www.tropicarium.hu",
+    "priceAdult": "4,200 HUF (~€11)",
+    "priceChild": "2,900 HUF (~€7.50) (3-14), חינם מתחת ל-3",
+    "coordinates": {
+      "lat": 47.4057,
+      "lng": 19.0173
+    },
+    "suitableFor": [
+      "פעוטות",
+      "ילדים 4+",
+      "ילדים 8+",
+      "נוער",
+      "מבוגרים"
+    ],
+    "suitableForBaby": true,
+    "notes": "Open daily 10:00-20:00. Shark feeding on Thursdays at 15:00. Located in Campona Shopping Center - combine with shopping.",
+    "notesHebrew": "פתוח כל יום 10:00-20:00. האכלת כרישים בימי חמישי ב-15:00. ממוקם בקניון קמפונה - שלבו עם קניות. נגיש לעגלות.",
+    "distanceFromMalatiny": "280 ק\"מ, כ-3 שעות נסיעה",
+    "familyScore": 5,
+    "dayTripCluster": "budapest",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Tropicarium_Oceanarium_Budapest_-_panoramio.jpg/1280px-Tropicarium_Oceanarium_Budapest_-_panoramio.jpg",
+    "googleMapsUrl": "https://maps.google.com/?q=47.4057,19.0173",
+    "tags": [
+      "אקווריום",
+      "כרישים",
+      "יער גשם",
+      "בודפשט",
+      "בעלי חיים"
+    ],
+    "source": "https://www.tropicarium.hu"
+  },
+  {
+    "id": "miniversum-budapest",
+    "name": "Miniversum Budapest",
+    "nameHebrew": "מיניברסום - עולם מיניאטורי בודפשט",
+    "category": "indoor",
+    "area": "budapest",
+    "description": "Europe's largest interactive miniature exhibition showcasing Hungary, Austria, and Germany in 1:100 scale. Over 100 sq meters of detailed scenery with moving trains.",
+    "descriptionHebrew": "התערוכה המיניאטורית האינטראקטיבית הגדולה באירופה. מציגה את הונגריה, אוסטריה וגרמניה בקנה מידה 1:100. מעל 100 מ\"ר של נוף מפורט עם רכבות נעות, אורות משתנים ואלפי פרטים קטנים.",
+    "address": "Andrássy út 12, Budapest 1061, Hungary",
+    "website": "https://www.miniversum.hu",
+    "priceAdult": "3,900 HUF (~€10)",
+    "priceChild": "2,500 HUF (~€6.50) (4-14), חינם מתחת ל-4",
+    "coordinates": {
+      "lat": 47.5027,
+      "lng": 19.0603
+    },
+    "suitableFor": [
+      "ילדים 4+",
+      "ילדים 8+",
+      "נוער",
+      "מבוגרים"
+    ],
+    "suitableForBaby": false,
+    "notes": "Open daily 9:00-19:00. Interactive buttons let kids control trains and lights. Great on rainy days.",
+    "notesHebrew": "פתוח כל יום 9:00-19:00. כפתורים אינטראקטיביים מאפשרים לילדים לשלוט ברכבות ואורות. מושלם ליום גשום. ממוקם בשדרות אנדראשי ליד האופרה.",
+    "distanceFromMalatiny": "280 ק\"מ, כ-3 שעות נסיעה",
+    "familyScore": 4,
+    "dayTripCluster": "budapest",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Trainfest_2022_077_%28Swallow_Cliff_Model_Railroad%29.jpg/1280px-Trainfest_2022_077_%28Swallow_Cliff_Model_Railroad%29.jpg",
+    "googleMapsUrl": "https://maps.google.com/?q=47.5027,19.0603",
+    "tags": [
+      "מיניאטורות",
+      "רכבות",
+      "אינטראקטיבי",
+      "בודפשט"
+    ],
+    "source": "https://www.miniversum.hu"
+  },
+  {
+    "id": "tricklandia-tatras",
+    "name": "Tricklandia - Museum of Illusions",
+    "nameHebrew": "טריקלנדיה - מוזיאון אשליות",
+    "category": "indoor",
+    "area": "high-tatras",
+    "description": "Optical illusion art museum in Starý Smokovec with 3D rooms, infinite mirror corridors, anti-gravity rooms, and the Magic Library. Great for photos.",
+    "descriptionHebrew": "מוזיאון אמנות אשליות אופטיות בסטארי סמוקובץ עם חדרי תלת-ממד, מסדרונות מראות אינסופיות, חדרי אנטי-כבידה והספרייה הקסומה. מושלם לצילומים מדהימים ולכיף משפחתי.",
+    "address": "Starý Smokovec 26, 062 01 Vysoké Tatry, Slovakia",
+    "website": "https://www.tricklandia.sk",
+    "priceAdult": "€14",
+    "priceChild": "€9 (4-15), חינם מתחת ל-4",
+    "coordinates": {
+      "lat": 49.138,
+      "lng": 20.2218
+    },
+    "suitableFor": [
+      "ילדים 4+",
+      "ילדים 8+",
+      "נוער",
+      "מבוגרים"
+    ],
+    "suitableForBaby": false,
+    "notes": "Booking required. Visit takes 45-60 minutes. No strollers allowed inside. 20% discount with Tatry Card.",
+    "notesHebrew": "חובה להזמין מראש! הביקור אורך 45-60 דקות. לא ניתן להיכנס עם עגלה. הנחה 20% עם כרטיס טטרה. סגור בימי שני.",
+    "distanceFromMalatiny": "85 ק\"מ, כ-1:15 שעות נסיעה",
+    "familyScore": 4,
+    "dayTripCluster": "high-tatras",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Brinkley_-_The_Art_of_Japan%2C_vol._1.djvu/page1-1280px-Brinkley_-_The_Art_of_Japan%2C_vol._1.djvu.jpg",
+    "googleMapsUrl": "https://maps.google.com/?q=49.1380,20.2218",
+    "tags": [
+      "אשליות",
+      "תלת-ממד",
+      "צילום",
+      "הרי טטרה",
+      "מוזיאון"
+    ],
+    "source": "https://www.tricklandia.sk"
+  },
+  {
+    "id": "fundiland-bratislava",
+    "name": "Fundiland Indoor Playground",
+    "nameHebrew": "פנדילנד - גן שעשועים מקורה ברטיסלבה",
+    "category": "indoor",
+    "area": "bratislava",
+    "description": "Large indoor playground in Bratislava with trampolines, climbing walls, ball pits, slides, and dedicated toddler area. Great for rainy days.",
+    "descriptionHebrew": "גן שעשועים מקורה גדול בברטיסלבה עם טרמפולינות, קירות טיפוס, בריכות כדורים, מגלשות ואזור ייעודי לפעוטות. מושלם לימים גשומים. מתקנים לכל הגילאים.",
+    "address": "Ivanská cesta 16, 821 04 Bratislava, Slovakia",
+    "website": "https://www.fundiland.sk",
+    "priceAdult": "חינם (מלווה)",
+    "priceChild": "€10-15 (תלוי בשעות)",
+    "coordinates": {
+      "lat": 48.1558,
+      "lng": 17.1775
+    },
+    "suitableFor": [
+      "פעוטות",
+      "ילדים 4+",
+      "ילדים 8+"
+    ],
+    "suitableForBaby": true,
+    "notes": "Socks required for children. Cafe area for parents. Open daily 10:00-20:00.",
+    "notesHebrew": "חובה גרביים לילדים. אזור קפה להורים. פתוח כל יום 10:00-20:00. מומלץ להגיע בבוקר כי מתמלא מהר בסופ\"ש.",
+    "distanceFromMalatiny": "230 ק\"מ, כ-2.5 שעות נסיעה",
+    "familyScore": 4,
+    "dayTripCluster": "bratislava",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Children_enjoy_playtime_in_a_colorful_ball_pit_during_a_joyful_activity_session_at_a_local_indoor_playground.jpg/1280px-Children_enjoy_playtime_in_a_colorful_ball_pit_during_a_joyful_activity_session_at_a_local_indoor_playground.jpg",
+    "googleMapsUrl": "https://maps.google.com/?q=48.1558,17.1775",
+    "tags": [
+      "גן שעשועים",
+      "מקורה",
+      "ברטיסלבה",
+      "טרמפולינות",
+      "פעוטות"
+    ],
+    "source": "https://www.fundiland.sk"
+  },
+  {
+    "id": "sea-life-aquarium-prague",
+    "name": "Sea Life Prague",
+    "nameHebrew": "סי לייף אקווריום - פראג",
+    "category": "indoor",
+    "area": "czech",
+    "description": "Aquarium with ocean tunnel, touch pools, and over 5,000 sea creatures. Interactive exhibits about marine conservation and a behind-the-scenes tour.",
+    "descriptionHebrew": "אקווריום עם מנהרת אוקיינוס, בריכות מגע ומעל 5,000 יצורי ים. תערוכות אינטראקטיביות על שימור ימי וסיור מאחורי הקלעים. מנהרת הזכוכית עם כרישים היא שיא הביקור.",
+    "address": "Výstaviště 262, 170 00 Praha 7, Czech Republic",
+    "website": "https://www.visitsealife.com/prague",
+    "priceAdult": "350 CZK (~€14)",
+    "priceChild": "250 CZK (~€10) (3-14), חינם מתחת ל-3",
+    "coordinates": {
+      "lat": 50.105,
+      "lng": 14.432
+    },
+    "suitableFor": [
+      "פעוטות",
+      "ילדים 4+",
+      "ילדים 8+",
+      "נוער",
+      "מבוגרים"
+    ],
+    "suitableForBaby": true,
+    "notes": "Open daily 10:00-19:00. Book online for 10-20% discount. Feeding shows at scheduled times.",
+    "notesHebrew": "פתוח כל יום 10:00-19:00. הזמינו אונליין להנחה 10-20%. מופעי האכלה בזמנים קבועים. נגיש לעגלות. מומלץ לשלב עם ביקור בגן הבוטני הסמוך.",
+    "distanceFromMalatiny": "400 ק\"מ, כ-4 שעות נסיעה",
+    "familyScore": 4,
+    "dayTripCluster": "czech",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Ripley%27s_Aquarium_of_Canada%2C_Toronto%2C_Ontario_%2829920083091%29.jpg/1280px-Ripley%27s_Aquarium_of_Canada%2C_Toronto%2C_Ontario_%2829920083091%29.jpg",
+    "googleMapsUrl": "https://maps.google.com/?q=50.1050,14.4320",
+    "tags": [
+      "אקווריום",
+      "כרישים",
+      "ימי",
+      "פראג",
+      "צ'כיה"
+    ],
+    "source": "https://www.visitsealife.com/prague"
+  },
+  {
+    "id": "prater-indoor-attractions",
+    "name": "Prater Indoor Attractions",
+    "nameHebrew": "אטרקציות מקורות בפראטר - וינה",
+    "category": "indoor",
+    "area": "vienna",
+    "description": "Indoor attractions at Vienna's Prater park including the Prater Museum, 5D cinema, laser arena, VR experiences, and Chocolate Museum.",
+    "descriptionHebrew": "אטרקציות מקורות בפארק הפראטר של וינה: מוזיאון הפראטר, קולנוע 5D, זירת לייזר, חוויות מציאות מדומה ומוזיאון השוקולד. מושלם בשילוב עם רכיבות חיצוניות בפארק.",
+    "address": "Prater, 1020 Wien, Austria",
+    "website": "https://www.praterwien.com",
+    "priceAdult": "€5-15 לכל אטרקציה",
+    "priceChild": "€4-12 לכל אטרקציה",
+    "coordinates": {
+      "lat": 48.2162,
+      "lng": 16.3972
+    },
+    "suitableFor": [
+      "ילדים 4+",
+      "ילדים 8+",
+      "נוער",
+      "מבוגרים"
+    ],
+    "suitableForBaby": false,
+    "notes": "Each indoor attraction is separately priced. The Chocolate Museum includes tasting. Open year-round.",
+    "notesHebrew": "כל אטרקציה מקורה בתשלום נפרד. מוזיאון השוקולד כולל טעימות. פתוח כל השנה. מתחם הלייזר מגיל 7. VR מגיל 10.",
+    "distanceFromMalatiny": "320 ק\"מ, כ-3.5 שעות נסיעה",
+    "familyScore": 4,
+    "dayTripCluster": "vienna",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Kaffee-Restaurant_Konstantinhuegel_im_Wiener_k._k._Prater.jpg/1280px-Kaffee-Restaurant_Konstantinhuegel_im_Wiener_k._k._Prater.jpg",
+    "googleMapsUrl": "https://maps.google.com/?q=48.2162,16.3972",
+    "tags": [
+      "פראטר",
+      "לייזר",
+      "VR",
+      "שוקולד",
+      "5D",
+      "וינה"
+    ],
+    "source": "https://www.praterwien.com"
+  },
+  {
+    "id": "climbing-wall-k2-bratislava",
+    "name": "K2 Climbing Center Bratislava",
+    "nameHebrew": "מרכז טיפוס K2 - ברטיסלבה",
+    "category": "indoor",
+    "area": "bratislava",
+    "description": "Large indoor climbing center with walls up to 14 meters, bouldering area, and children's climbing zone. Professional instruction available.",
+    "descriptionHebrew": "מרכז טיפוס מקורה גדול עם קירות בגובה עד 14 מטר, אזור בולדרינג ואזור טיפוס לילדים. הדרכה מקצועית זמינה. מתאים למתחילים ומתקדמים כאחד.",
+    "address": "Prievozská 18, 821 09 Bratislava, Slovakia",
+    "website": "https://www.k2lezenie.sk",
+    "priceAdult": "€12",
+    "priceChild": "€8 (6-15)",
+    "coordinates": {
+      "lat": 48.1483,
+      "lng": 17.1368
+    },
+    "suitableFor": [
+      "ילדים 4+",
+      "ילדים 8+",
+      "נוער",
+      "מבוגרים"
+    ],
+    "suitableForBaby": false,
+    "notes": "Equipment rental available. Kids' zone from age 4. Check website for open hours and group booking.",
+    "notesHebrew": "השכרת ציוד זמינה. אזור ילדים מגיל 4. בדקו באתר שעות פתיחה והזמנות קבוצתיות. קורסי טיפוס למתחילים בסופ\"ש.",
+    "distanceFromMalatiny": "230 ק\"מ, כ-2.5 שעות נסיעה",
+    "familyScore": 4,
+    "dayTripCluster": "bratislava",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Man_climbing_in_bouldering_gym.jpg/1280px-Man_climbing_in_bouldering_gym.jpg",
+    "googleMapsUrl": "https://maps.google.com/?q=48.1483,17.1368",
+    "tags": [
+      "טיפוס",
+      "ספורט",
+      "מקורה",
+      "ברטיסלבה"
+    ],
+    "source": "https://www.k2lezenie.sk"
+  },
+  {
+    "id": "jump-arena-bratislava",
+    "name": "Jump Arena Bratislava",
+    "nameHebrew": "ג'אמפ ארנה - פארק טרמפולינות ברטיסלבה",
+    "category": "indoor",
+    "area": "bratislava",
+    "description": "Large trampoline park with free jump area, foam pit, dodgeball court, slam dunk zone, and ninja warrior course. Dedicated area for small children.",
+    "descriptionHebrew": "פארק טרמפולינות גדול עם אזור קפיצה חופשית, בור ספוג, מגרש כדור נקמה, אזור סלאם דאנק ומסלול נינג'ה ווריור. אזור ייעודי לילדים קטנים. שריפת אנרגיה מובטחת!",
+    "address": "Panónska cesta 6, 851 04 Bratislava, Slovakia",
+    "website": "https://www.jumparena.sk",
+    "priceAdult": "€12/שעה",
+    "priceChild": "€10/שעה (4+), חינם מתחת ל-4 עם מבוגר",
+    "coordinates": {
+      "lat": 48.1339,
+      "lng": 17.0851
+    },
+    "suitableFor": [
+      "ילדים 4+",
+      "ילדים 8+",
+      "נוער",
+      "מבוגרים"
+    ],
+    "suitableForBaby": false,
+    "notes": "Special socks required (can buy there). Book online for weekend visits. Age 4+ for main areas.",
+    "notesHebrew": "חובה גרביים מיוחדות (ניתן לקנות במקום). הזמינו אונליין לסופ\"ש. אזור ראשי מגיל 4. מומלץ לשריפת אנרגיה ביום גשום!",
+    "distanceFromMalatiny": "230 ק\"מ, כ-2.5 שעות נסיעה",
+    "familyScore": 4,
+    "dayTripCluster": "bratislava",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Balloons_jumping_games_at_local_fair_07.jpg/1280px-Balloons_jumping_games_at_local_fair_07.jpg",
+    "googleMapsUrl": "https://maps.google.com/?q=48.1339,17.0851",
+    "tags": [
+      "טרמפולינות",
+      "קפיצה",
+      "ספורט",
+      "ברטיסלבה",
+      "מקורה"
+    ],
+    "source": "https://www.jumparena.sk"
+  },
+  {
+    "id": "go-kart-bratislava",
+    "name": "Kart One Arena Bratislava",
+    "nameHebrew": "קארט וואן ארנה - גו-קארט ברטיסלבה",
+    "category": "indoor",
+    "area": "bratislava",
+    "description": "Indoor go-kart track with electric karts for adults and children. Professional track, timing system, and separate junior karts for ages 7+.",
+    "descriptionHebrew": "מסלול גו-קארט מקורה עם קארטים חשמליים למבוגרים ולילדים. מסלול מקצועי, מערכת מדידת זמנים וקארטים ג'וניור נפרדים לגילאי 7+. חוויית מרוצים מרגשת לכל המשפחה.",
+    "address": "Kopčianska 92, 851 01 Bratislava, Slovakia",
+    "website": "https://www.kartone.sk",
+    "priceAdult": "€25/מרוץ (10 דקות)",
+    "priceChild": "€18/מרוץ (7+)",
+    "coordinates": {
+      "lat": 48.1247,
+      "lng": 17.1073
+    },
+    "suitableFor": [
+      "ילדים 8+",
+      "נוער",
+      "מבוגרים"
+    ],
+    "suitableForBaby": false,
+    "notes": "Junior karts from age 7, must be 120cm+. Full karts from age 14. Booking recommended for weekends.",
+    "notesHebrew": "קארטים ג'וניור מגיל 7, גובה מינימלי 120 ס\"מ. קארטים מלאים מגיל 14. מומלץ להזמין מראש לסופ\"ש. ציוד מלא מסופק.",
+    "distanceFromMalatiny": "230 ק\"מ, כ-2.5 שעות נסיעה",
+    "familyScore": 4,
+    "dayTripCluster": "bratislava",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Go_Karting_track_in_Bia%C5%82ystok_%28Carrefou%29.jpg/1280px-Go_Karting_track_in_Bia%C5%82ystok_%28Carrefou%29.jpg",
+    "googleMapsUrl": "https://maps.google.com/?q=48.1247,17.1073",
+    "tags": [
+      "גו-קארט",
+      "מרוצים",
+      "מקורה",
+      "ברטיסלבה"
+    ],
+    "source": "https://www.kartone.sk"
+  },
+  {
+    "id": "palatinus-strand-budapest",
+    "name": "Palatinus Strand Budapest",
+    "nameHebrew": "פלטינוס סטרנד - בריכות מרגרט איילנד",
+    "category": "indoor",
+    "area": "budapest",
+    "description": "Historic open-air bath complex on Margaret Island with wave pool, water slides, thermal pools, and children's pools. Budapest's most popular summer bath.",
+    "descriptionHebrew": "מתחם בריכות היסטורי על אי מרגרט עם בריכת גלים, מגלשות מים, בריכות תרמליות ובריכות ילדים. הבריכות הפופולריות ביותר של בודפשט בקיץ. אטמוספירה משפחתית מדהימה.",
+    "address": "Soó Rezső stny. 1, Budapest 1138, Hungary",
+    "website": "https://www.palatinusstrand.hu",
+    "priceAdult": "3,800 HUF (~€10)",
+    "priceChild": "2,400 HUF (~€6) (6-14), חינם מתחת ל-6",
+    "coordinates": {
+      "lat": 47.5303,
+      "lng": 19.0497
+    },
+    "suitableFor": [
+      "פעוטות",
+      "ילדים 4+",
+      "ילדים 8+",
+      "נוער",
+      "מבוגרים"
+    ],
+    "suitableForBaby": true,
+    "notes": "Open May-September only. Very crowded on weekends - arrive early. Lockers and changing rooms available.",
+    "notesHebrew": "פתוח מאי-ספטמבר בלבד. צפוף מאוד בסופ\"ש - הגיעו מוקדם. לוקרים וחדרי הלבשה זמינים. שלבו עם טיול באי מרגרט.",
+    "distanceFromMalatiny": "280 ק\"מ, כ-3 שעות נסיעה",
+    "familyScore": 5,
+    "dayTripCluster": "budapest",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/A%26FRC_provides_deployed_service_members%E2%80%99_families_fun%2C_food_%285278693%29.jpg/1280px-A%26FRC_provides_deployed_service_members%E2%80%99_families_fun%2C_food_%285278693%29.jpg",
+    "googleMapsUrl": "https://maps.google.com/?q=47.5303,19.0497",
+    "tags": [
+      "בריכות",
+      "מגלשות",
+      "תרמלי",
+      "בודפשט",
+      "קיץ"
+    ],
+    "source": "https://www.palatinusstrand.hu"
+  },
+  {
+    "id": "ninja-park-vienna",
+    "name": "Ninja Warrior Park Vienna",
+    "nameHebrew": "פארק נינג'ה ווריור - וינה",
+    "category": "indoor",
+    "area": "vienna",
+    "description": "Indoor obstacle course park inspired by Ninja Warrior TV show. Features climbing walls, rope courses, balance challenges, and timed runs.",
+    "descriptionHebrew": "פארק מכשולים מקורה בהשראת תוכנית הטלוויזיה נינג'ה ווריור. כולל קירות טיפוס, מסלולי חבלים, אתגרי שיווי משקל וריצות מתוזמנות. אתגר פיזי מרגש לילדים ומבוגרים.",
+    "address": "Perfektastr. 73, 1230 Wien, Austria",
+    "website": "https://www.ninjawarriorgym.at",
+    "priceAdult": "€18",
+    "priceChild": "€14 (6-14)",
+    "coordinates": {
+      "lat": 48.1475,
+      "lng": 16.3253
+    },
+    "suitableFor": [
+      "ילדים 8+",
+      "נוער",
+      "מבוגרים"
+    ],
+    "suitableForBaby": false,
+    "notes": "Minimum age 6. Closed-toe shoes required. Sessions are 2 hours. Great for active kids.",
+    "notesHebrew": "גיל מינימלי 6. חובה נעליים סגורות. משמרות של שעתיים. מעולה לילדים אנרגטיים. הזמינו מראש לסופ\"ש.",
+    "distanceFromMalatiny": "320 ק\"מ, כ-3.5 שעות נסיעה",
+    "familyScore": 4,
+    "dayTripCluster": "vienna",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/American_Ninja_Warrior_course_construction_Indianapolis_2016.jpg/1280px-American_Ninja_Warrior_course_construction_Indianapolis_2016.jpg",
+    "googleMapsUrl": "https://maps.google.com/?q=48.1475,16.3253",
+    "tags": [
+      "נינג'ה",
+      "מכשולים",
+      "ספורט",
+      "אתגר",
+      "וינה"
+    ],
+    "source": "https://www.ninjawarriorgym.at"
+  },
+  {
+    "id": "lego-museum-prague",
+    "name": "Museum of LEGO Prague",
+    "nameHebrew": "מוזיאון לגו - פראג",
+    "category": "indoor",
+    "area": "czech",
+    "description": "Largest private LEGO exhibition in the world with over 3,000 models and 1 million bricks. Interactive play areas for children.",
+    "descriptionHebrew": "תערוכת הלגו הפרטית הגדולה בעולם עם מעל 3,000 דגמים ומיליון קוביות. אזורי משחק אינטראקטיביים לילדים. דגמים מרהיבים כולל עיר שלמה, מלחמת הכוכבים והארי פוטר.",
+    "address": "Národní 31, 110 00 Praha 1, Czech Republic",
+    "website": "https://www.muzeumlega.cz",
+    "priceAdult": "290 CZK (~€12)",
+    "priceChild": "220 CZK (~€9) (3-15), חינם מתחת ל-3",
+    "coordinates": {
+      "lat": 50.0815,
+      "lng": 14.4178
+    },
+    "suitableFor": [
+      "ילדים 4+",
+      "ילדים 8+",
+      "נוער",
+      "מבוגרים"
+    ],
+    "suitableForBaby": false,
+    "notes": "Open daily 10:00-20:00. Play area where kids can build freely. Shop with rare LEGO sets.",
+    "notesHebrew": "פתוח כל יום 10:00-20:00. אזור משחק בו ילדים יכולים לבנות בחופשיות. חנות עם סטים נדירים. ממוקם במרכז פראג, שלבו עם סיור בעיר.",
+    "distanceFromMalatiny": "400 ק\"מ, כ-4 שעות נסיעה",
+    "familyScore": 4,
+    "dayTripCluster": "czech",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Pod%C4%9Bbrady%2C_Ji%C5%99%C3%ADho_n%C3%A1m%C4%9Bst%C3%AD_2%2C_Museum_of_Bricks.jpg/1280px-Pod%C4%9Bbrady%2C_Ji%C5%99%C3%ADho_n%C3%A1m%C4%9Bst%C3%AD_2%2C_Museum_of_Bricks.jpg",
+    "googleMapsUrl": "https://maps.google.com/?q=50.0815,14.4178",
+    "tags": [
+      "לגו",
+      "מוזיאון",
+      "בנייה",
+      "פראג",
+      "צ'כיה"
+    ],
+    "source": "https://www.muzeumlega.cz"
+  },
+  {
+    "id": "vr-park-budapest",
+    "name": "VR Park Budapest",
+    "nameHebrew": "פארק מציאות מדומה - בודפשט",
+    "category": "indoor",
+    "area": "budapest",
+    "description": "Virtual reality entertainment center with multiplayer games, VR escape rooms, racing simulators, and flight experiences. Over 30 different VR attractions.",
+    "descriptionHebrew": "מרכז בידור מציאות מדומה עם משחקים מרובי שחקנים, חדרי בריחה VR, סימולטורי מרוצים וחוויות טיסה. מעל 30 אטרקציות VR שונות. חוויה עתידנית לכל המשפחה.",
+    "address": "Váci út 1-3, Budapest 1062, Hungary",
+    "website": "https://www.vrpark.hu",
+    "priceAdult": "5,000-8,000 HUF (~€13-21)",
+    "priceChild": "4,000-6,000 HUF (~€10-16) (8+)",
+    "coordinates": {
+      "lat": 47.5112,
+      "lng": 19.0625
+    },
+    "suitableFor": [
+      "ילדים 8+",
+      "נוער",
+      "מבוגרים"
+    ],
+    "suitableForBaby": false,
+    "notes": "Minimum age varies by attraction (8-12). Sessions from 30 min to 2 hours. Book online.",
+    "notesHebrew": "גיל מינימלי משתנה לפי אטרקציה (8-12). משמרות מ-30 דקות עד שעתיים. הזמינו אונליין. לא מומלץ לסובלים מסחרחורת.",
+    "distanceFromMalatiny": "280 ק\"מ, כ-3 שעות נסיעה",
+    "familyScore": 4,
+    "dayTripCluster": "budapest",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/InclusiveGameLab_Person-Playing-Virtual-Reality_4_CC-BY-SA.jpg/1280px-InclusiveGameLab_Person-Playing-Virtual-Reality_4_CC-BY-SA.jpg",
+    "googleMapsUrl": "https://maps.google.com/?q=47.5112,19.0625",
+    "tags": [
+      "מציאות מדומה",
+      "VR",
+      "משחקים",
+      "בודפשט",
+      "טכנולוגיה"
+    ],
+    "source": "https://www.vrpark.hu"
   }
 ]

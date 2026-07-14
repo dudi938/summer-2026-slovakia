@@ -64,6 +64,7 @@ const CATEGORY_LABELS = {
   'water-sports': 'ספורט מים',
   'cycling': 'אופניים',
   'family': 'משפחה',
+  'indoor': 'מקומות סגורים',
   'shabbat': 'שבת ויהדות',
   'other': 'אחר'
 };
@@ -799,6 +800,7 @@ function getCategoryIcon(category) {
     'cycling': '🚴',
     'shabbat': '✡️',
     'family': '👨‍👩‍👧‍👦',
+    'indoor': '🏢',
     'other': '📍'
   };
   return icons[category] || '📍';
@@ -813,6 +815,7 @@ function getCategoryColor(category) {
     'cycling': '#FF9800',
     'shabbat': '#9C27B0',
     'family': '#E91E63',
+    'indoor': '#795548',
     'other': '#6B7280'
   };
   return colors[category] || '#6B7280';
