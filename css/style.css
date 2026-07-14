@@ -71,6 +71,17 @@ img {
   display: block;
 }
 
+/* Fix: Leaflet map tiles must not be affected by global img rules */
+.leaflet-container img {
+  max-width: none !important;
+  height: auto;
+  display: inline;
+}
+.leaflet-tile {
+  width: 256px !important;
+  height: 256px !important;
+}
+
 button {
   cursor: pointer;
   border: none;

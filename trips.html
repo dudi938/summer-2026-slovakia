@@ -183,7 +183,16 @@
     /* Ensure header stays above Leaflet maps and other positioned content */
     .header { z-index: 9999; }
 
-    /* Leaflet popup override */
+    /* Leaflet overrides - fix global img rule breaking tiles */
+    .leaflet-container img {
+      max-width: none !important;
+      height: auto !important;
+      display: inline !important;
+    }
+    .leaflet-tile {
+      width: 256px !important;
+      height: 256px !important;
+    }
     .leaflet-popup-content { direction: rtl; font-family: 'Heebo', sans-serif; }
     .leaflet-popup-content h4 { margin: 0 0 4px; font-size: 0.9rem; }
     .leaflet-popup-content p { margin: 0; font-size: 0.8rem; color: #555; }
@@ -394,75 +403,107 @@
     const tatrasContainer = document.getElementById('tatras-trips');
     tatrasContainer.innerHTML = tatrasTrips.map((t, i) => renderTripCard(t, i, 'tatras-gradient')).join('');
 
-    // Initialize maps
+    // Initialize maps - with slight delay to ensure DOM is ready
     function initTripMap(trip) {
       const mapId = 'map-' + trip.id;
       const mapEl = document.getElementById(mapId);
-      if (!mapEl) return;
+      if (!mapEl) { console.warn('Map element not found:', mapId); return; }
 
-      const map = L.map(mapId, { scrollWheelZoom: false, zoomControl: true });
+      // Ensure element has dimensions
+      if (mapEl.clientHeight === 0) {
+        mapEl.style.height = '280px';
+      }
+
+      var map;
+      try {
+        map = L.map(mapId, { scrollWheelZoom: false, zoomControl: true, dragging: !L.Browser.mobile });
+      } catch(e) { console.error('Map init error:', mapId, e); return; }
+
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; OSM', maxZoom: 16
       }).addTo(map);
 
-      const bounds = L.latLngBounds();
-      const mainA = byId[trip.mainAttraction];
-      const secondaries = trip.secondaryAttractions.map(id => byId[id]).filter(Boolean);
-      const alts = (trip.alternatives || []).map(id => byId[id]).filter(Boolean);
+      var bounds = L.latLngBounds();
+      var mainA = byId[trip.mainAttraction];
+      var secondaries = trip.secondaryAttractions.map(function(id) { return byId[id]; }).filter(Boolean);
+      var alts = (trip.alternatives || []).map(function(id) { return byId[id]; }).filter(Boolean);
 
-      // Base marker
-      const baseMarker = L.marker(MALATINY, { icon: createMarkerIcon('#4caf50', '🏠') }).addTo(map);
-      baseMarker.bindPopup('<h4>🏠 בסיס - Malatiny</h4><p>נקודת היציאה</p>');
+      // Base marker (green house)
+      var baseIcon = L.divIcon({
+        className: '',
+        html: '<div style="background:#4caf50;color:white;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;border:3px solid white;box-shadow:0 2px 8px rgba(0,0,0,0.4);">🏠</div>',
+        iconSize: [32, 32], iconAnchor: [16, 16]
+      });
+      L.marker(MALATINY, { icon: baseIcon }).addTo(map)
+        .bindPopup('<h4>🏠 בסיס - Malatiny</h4><p>נקודת היציאה</p>');
       bounds.extend(MALATINY);
 
       // Route points for polyline
-      const routePoints = [MALATINY];
+      var routePoints = [MALATINY];
 
-      // Main attraction
+      // Main attraction (orange, number 1)
       if (mainA && mainA.coordinates) {
-        const pos = [mainA.coordinates.lat, mainA.coordinates.lng];
-        const m = L.marker(pos, { icon: createMarkerIcon('#e65100', '1') }).addTo(map);
-        m.bindPopup('<h4>⭐ ' + (mainA.nameHebrew || mainA.name) + '</h4><p>אטרקציה ראשית</p>');
+        var pos = [mainA.coordinates.lat, mainA.coordinates.lng];
+        var mainIcon = L.divIcon({
+          className: '',
+          html: '<div style="background:#e65100;color:white;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:bold;border:3px solid white;box-shadow:0 3px 10px rgba(230,81,0,0.5);">⭐</div>',
+          iconSize: [34, 34], iconAnchor: [17, 17]
+        });
+        L.marker(pos, { icon: mainIcon }).addTo(map)
+          .bindPopup('<h4>⭐ ' + (mainA.nameHebrew || mainA.name) + '</h4><p>אטרקציה ראשית</p>');
         bounds.extend(pos);
         routePoints.push(pos);
       }
 
-      // Secondary attractions
-      secondaries.forEach((a, i) => {
+      // Secondary attractions (blue, numbered)
+      secondaries.forEach(function(a, i) {
         if (a && a.coordinates) {
-          const pos = [a.coordinates.lat, a.coordinates.lng];
-          const m = L.marker(pos, { icon: createMarkerIcon('#1565c0', String(i + 2)) }).addTo(map);
-          m.bindPopup('<h4>' + (a.nameHebrew || a.name) + '</h4><p>אטרקציה ' + (i + 2) + '</p>');
+          var pos = [a.coordinates.lat, a.coordinates.lng];
+          var secIcon = L.divIcon({
+            className: '',
+            html: '<div style="background:#1565c0;color:white;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:bold;border:3px solid white;box-shadow:0 2px 8px rgba(21,101,192,0.4);">' + (i + 2) + '</div>',
+            iconSize: [30, 30], iconAnchor: [15, 15]
+          });
+          L.marker(pos, { icon: secIcon }).addTo(map)
+            .bindPopup('<h4>' + (a.nameHebrew || a.name) + '</h4><p>אטרקציה ' + (i + 2) + '</p>');
           bounds.extend(pos);
           routePoints.push(pos);
         }
       });
 
-      // Draw route line
+      // Draw route line (dashed blue)
       if (routePoints.length > 1) {
-        L.polyline(routePoints, { color: '#1565c0', weight: 3, opacity: 0.6, dashArray: '8, 8' }).addTo(map);
+        L.polyline(routePoints, { color: '#1565c0', weight: 3, opacity: 0.7, dashArray: '10, 8' }).addTo(map);
       }
 
-      // Alternative markers (smaller, gray)
-      alts.forEach(a => {
+      // Alternative markers (gray circles with refresh icon)
+      alts.forEach(function(a) {
         if (a && a.coordinates) {
-          const pos = [a.coordinates.lat, a.coordinates.lng];
-          const icon = L.divIcon({
-            className: 'custom-marker',
-            html: '<div style="background:#9e9e9e;color:white;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;border:2px solid white;box-shadow:0 1px 4px rgba(0,0,0,0.2);">⟳</div>',
-            iconSize: [22, 22], iconAnchor: [11, 11]
+          var pos = [a.coordinates.lat, a.coordinates.lng];
+          var altIcon = L.divIcon({
+            className: '',
+            html: '<div style="background:#757575;color:white;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;border:2px solid white;box-shadow:0 1px 4px rgba(0,0,0,0.3);opacity:0.85;">🔄</div>',
+            iconSize: [24, 24], iconAnchor: [12, 12]
           });
-          const m = L.marker(pos, { icon: icon }).addTo(map);
-          m.bindPopup('<h4>🔄 ' + (a.nameHebrew || a.name) + '</h4><p>חלופה בסביבה</p>');
+          L.marker(pos, { icon: altIcon }).addTo(map)
+            .bindPopup('<h4>🔄 ' + (a.nameHebrew || a.name) + '</h4><p>חלופה בסביבה</p>');
           bounds.extend(pos);
         }
       });
 
-      map.fitBounds(bounds, { padding: [30, 30] });
+      // Fit bounds with padding
+      try {
+        map.fitBounds(bounds, { padding: [40, 40] });
+      } catch(e) { map.setView(MALATINY, 10); }
+
+      // Force resize after a brief delay (fixes mobile rendering)
+      setTimeout(function() { map.invalidateSize(); }, 300);
     }
 
-    // Init all maps
-    trips.forEach(trip => initTripMap(trip));
+    // Init maps with a slight delay so DOM is painted
+    setTimeout(function() {
+      trips.forEach(function(trip) { initTripMap(trip); });
+    }, 200);
   })();
 
   // Mobile menu
