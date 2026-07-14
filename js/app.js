@@ -349,7 +349,9 @@ function renderAttractionCard(attraction, index) {
   areaDiv.className = 'card-area';
   areaDiv.textContent = '📍 ' + areaLabel;
   if (attraction.distanceFromMalatiny) {
-    areaDiv.textContent += ' • ' + attraction.distanceFromMalatiny;
+    const distText = attraction.distanceFromMalatiny;
+    const suffix = /malat/i.test(distText) ? '' : ' מ-Malatíny';
+    areaDiv.textContent += ' • ' + distText + suffix;
   }
   cardBody.appendChild(areaDiv);
 
@@ -1065,7 +1067,11 @@ function openAttractionModal(attraction) {
     if (attraction.priceAdult) details.push('💰 מבוגר: ' + attraction.priceAdult);
     if (attraction.priceChild) details.push('👧 ילד: ' + attraction.priceChild);
     if (attraction.address) details.push('📍 ' + attraction.address);
-    if (attraction.distanceFromMalatiny) details.push('🚗 ' + attraction.distanceFromMalatiny);
+    if (attraction.distanceFromMalatiny) {
+      const distText = attraction.distanceFromMalatiny;
+      const suffix = /malat/i.test(distText) ? '' : ' מ-Malatíny';
+      details.push('🚗 ' + distText + suffix);
+    }
     details.forEach(function(d) {
       const p = document.createElement('p');
       p.className = 'modal-detail-line';
