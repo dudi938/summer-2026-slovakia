@@ -22,6 +22,41 @@ let activeFilters = {
 // Current sort
 let currentSort = 'name';
 
+// ===== Age Badge Detection =====
+function getAgeBadges(attraction) {
+  const badges = [];
+  const suitableFor = (attraction.suitableFor || []).map(function(s) { return s.toLowerCase(); });
+  const joined = suitableFor.join(' ');
+
+  // Baby (0-3)
+  if (attraction.suitableForBaby === true ||
+      /baby|infant|0-3|תינוק/.test(joined)) {
+    badges.push({ emoji: '👶', label: 'תינוקות (0-3)', color: '#FFE0E6' });
+  }
+
+  // Small kids (4-7)
+  if (/toddler|3\+|4\+|5\+|6\+|7\+|פעוט|קטנים/.test(joined)) {
+    badges.push({ emoji: '👦', label: 'קטנים (4-7)', color: '#E0F0FF' });
+  }
+
+  // Children (8-12)
+  if (/children|8\+|9\+|10\+|11\+|12\+|ילדים/.test(joined)) {
+    badges.push({ emoji: '🧒', label: 'ילדים (8-12)', color: '#E0FFE8' });
+  }
+
+  // Teens (13+)
+  if (/teens|13\+|14\+|15\+|נוער/.test(joined)) {
+    badges.push({ emoji: '🧑', label: 'נוער (13+)', color: '#FFF0E0' });
+  }
+
+  // Adults
+  if (/adults|מבוגרים|elderly|קשישים/.test(joined)) {
+    badges.push({ emoji: '👨', label: 'מבוגרים', color: '#F0F0F0' });
+  }
+
+  return badges;
+}
+
 // ===== Constants =====
 const CATEGORY_LABELS = {
   'nature': 'טבע',
@@ -204,6 +239,15 @@ function applyFilters() {
   if (currentView === 'map' && map) {
     renderMarkers();
   }
+
+  // Scroll to top smoothly when filters are applied
+  const hasFilters = activeFilters.area || activeFilters.category || activeFilters.babyFriendly || activeFilters.minFamilyScore > 0 || activeFilters.suitableFor;
+  if (hasFilters) {
+    const banner = document.querySelector('.attractions-count-banner');
+    if (banner) {
+      banner.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 }
 
 // ===== Render Functions =====
@@ -328,6 +372,21 @@ function renderAttractionCard(attraction, index) {
   }
   cardBody.appendChild(starsDiv);
 
+  // Age badges
+  const ageBadges = getAgeBadges(attraction);
+  if (ageBadges.length > 0) {
+    const badgesDiv = document.createElement('div');
+    badgesDiv.className = 'age-badges';
+    ageBadges.forEach(function (b) {
+      const span = document.createElement('span');
+      span.className = 'age-badge';
+      span.style.background = b.color;
+      span.textContent = b.emoji + ' ' + b.label;
+      badgesDiv.appendChild(span);
+    });
+    cardBody.appendChild(badgesDiv);
+  }
+
   // Tags (suitableFor)
   if (tags.length > 0) {
     const tagsDiv = document.createElement('div');
@@ -389,6 +448,13 @@ function renderAttractionCard(attraction, index) {
   footer.appendChild(actions);
   cardBody.appendChild(footer);
   card.appendChild(cardBody);
+
+  // Click card to open modal (skip if clicking action buttons)
+  card.style.cursor = 'pointer';
+  card.addEventListener('click', function(e) {
+    if (e.target.closest('.card-btn')) return;
+    openAttractionModal(attraction);
+  });
 
   return card;
 }
@@ -799,6 +865,50 @@ function updateResultCount() {
   if (countEl) {
     countEl.textContent = filteredAttractions.length + ' מתוך ' + allAttractions.length + ' אטרקציות';
   }
+
+  // Update count banner
+  const filterCount = document.getElementById('filter-count');
+  if (filterCount) {
+    filterCount.textContent = filteredAttractions.length;
+    filterCount.classList.remove('count-pulse');
+    void filterCount.offsetWidth;
+    filterCount.classList.add('count-pulse');
+  }
+
+  // Active filters text
+  const filtersText = document.getElementById('active-filters-text');
+  if (filtersText) {
+    const hasFilters = activeFilters.area || activeFilters.category || activeFilters.babyFriendly || activeFilters.minFamilyScore > 0 || activeFilters.search || activeFilters.suitableFor;
+    if (hasFilters && filteredAttractions.length !== allAttractions.length) {
+      let filterDesc = 'מציג ' + filteredAttractions.length + ' מתוך ' + allAttractions.length + ' אטרקציות | מסוננות לפי: ';
+      const parts = [];
+      if (activeFilters.babyFriendly) parts.push('מתאים לתינוק 👶');
+      if (activeFilters.area) parts.push(AREA_LABELS[activeFilters.area] || activeFilters.area);
+      if (activeFilters.category) parts.push(CATEGORY_LABELS[activeFilters.category] || activeFilters.category);
+      if (activeFilters.minFamilyScore > 0) parts.push('ציון ' + activeFilters.minFamilyScore + '+');
+      if (activeFilters.search) parts.push('חיפוש: "' + activeFilters.search + '"');
+      filtersText.textContent = filterDesc + parts.join(', ');
+      filtersText.style.display = 'block';
+    } else {
+      filtersText.textContent = '';
+      filtersText.style.display = 'none';
+    }
+  }
+
+  // Show/hide clear filters button
+  const clearBtn = document.getElementById('clear-filters-btn');
+  if (clearBtn) {
+    const hasFilters = activeFilters.area || activeFilters.category || activeFilters.babyFriendly || activeFilters.minFamilyScore > 0 || activeFilters.search || activeFilters.suitableFor;
+    clearBtn.style.display = hasFilters ? 'inline-flex' : 'none';
+  }
+
+  // Flash banner on filter change
+  const banner = document.querySelector('.attractions-count-banner');
+  if (banner) {
+    banner.classList.remove('banner-flash');
+    void banner.offsetWidth;
+    banner.classList.add('banner-flash');
+  }
 }
 
 function updateDayPlanBadge() {
@@ -882,6 +992,215 @@ function renderDayPlanItems() {
     itemDiv.appendChild(removeBtn);
 
     list.appendChild(itemDiv);
+  });
+}
+
+// ===== Clear All Filters =====
+function clearAllFilters() {
+  activeFilters.search = '';
+  activeFilters.area = '';
+  activeFilters.category = '';
+  activeFilters.suitableFor = '';
+  activeFilters.babyFriendly = false;
+  activeFilters.minFamilyScore = 0;
+
+  // Reset UI chips
+  document.querySelectorAll('.filter-chip').forEach(function(c) { c.classList.remove('active'); });
+  var allArea = document.querySelector('.filter-chip[data-area="all"]');
+  if (allArea) allArea.classList.add('active');
+  var allCat = document.querySelector('.filter-chip[data-category="all"]');
+  if (allCat) allCat.classList.add('active');
+
+  var searchInput = document.getElementById('search-input');
+  if (searchInput) searchInput.value = '';
+
+  applyFilters();
+}
+
+// ===== Attraction Modal =====
+function openAttractionModal(attraction) {
+  const modal = document.getElementById('attraction-modal');
+  if (!modal) return;
+
+  // Populate image
+  const modalImage = modal.querySelector('.modal-image');
+  if (modalImage) {
+    if (attraction.imageUrl) {
+      modalImage.style.backgroundImage = 'url(' + attraction.imageUrl + ')';
+      modalImage.style.backgroundSize = 'cover';
+      modalImage.style.backgroundPosition = 'center';
+    } else {
+      const color = getCategoryColor(attraction.category);
+      modalImage.style.backgroundImage = '';
+      modalImage.style.background = 'linear-gradient(135deg, ' + color + '22, ' + color + '44)';
+    }
+  }
+
+  // Title
+  const modalTitle = modal.querySelector('.modal-title');
+  if (modalTitle) modalTitle.textContent = attraction.nameHebrew || attraction.name;
+
+  // Age badges
+  const modalBadges = modal.querySelector('.modal-age-badges');
+  if (modalBadges) {
+    modalBadges.textContent = '';
+    const badges = getAgeBadges(attraction);
+    badges.forEach(function(b) {
+      const span = document.createElement('span');
+      span.className = 'age-badge';
+      span.style.background = b.color;
+      span.textContent = b.emoji + ' ' + b.label;
+      modalBadges.appendChild(span);
+    });
+  }
+
+  // Full description
+  const modalDesc = modal.querySelector('.modal-description');
+  if (modalDesc) modalDesc.textContent = attraction.descriptionHebrew || attraction.description || '';
+
+  // Details (price, address, distance)
+  const modalDetails = modal.querySelector('.modal-details');
+  if (modalDetails) {
+    modalDetails.textContent = '';
+    const details = [];
+    if (attraction.priceAdult) details.push('💰 מבוגר: ' + attraction.priceAdult);
+    if (attraction.priceChild) details.push('👧 ילד: ' + attraction.priceChild);
+    if (attraction.address) details.push('📍 ' + attraction.address);
+    if (attraction.distanceFromMalatiny) details.push('🚗 ' + attraction.distanceFromMalatiny);
+    details.forEach(function(d) {
+      const p = document.createElement('p');
+      p.className = 'modal-detail-line';
+      p.textContent = d;
+      modalDetails.appendChild(p);
+    });
+  }
+
+  // Notes
+  const modalNotes = modal.querySelector('.modal-notes');
+  if (modalNotes) {
+    const notes = attraction.notesHebrew || attraction.notes || '';
+    if (notes) {
+      modalNotes.textContent = '';
+      const notesTitle = document.createElement('h4');
+      notesTitle.textContent = '📝 הערות';
+      modalNotes.appendChild(notesTitle);
+      const notesP = document.createElement('p');
+      notesP.textContent = notes;
+      modalNotes.appendChild(notesP);
+    } else {
+      modalNotes.textContent = '';
+    }
+  }
+
+  // Score
+  const modalScore = modal.querySelector('.modal-score');
+  if (modalScore) {
+    modalScore.textContent = '';
+    const familyScore = attraction.familyScore || 0;
+    const scoreDiv = document.createElement('div');
+    scoreDiv.className = 'modal-stars';
+    for (let i = 1; i <= 5; i++) {
+      const star = document.createElement('span');
+      star.textContent = i <= familyScore ? '★' : '☆';
+      star.className = i <= familyScore ? 'star filled' : 'star empty';
+      scoreDiv.appendChild(star);
+    }
+    const scoreLabel = document.createElement('span');
+    scoreLabel.className = 'modal-score-label';
+    scoreLabel.textContent = ' ציון משפחתיות: ' + familyScore + '/5';
+    modalScore.appendChild(scoreDiv);
+    modalScore.appendChild(scoreLabel);
+  }
+
+  // Actions
+  const modalActions = modal.querySelector('.modal-actions');
+  if (modalActions) {
+    modalActions.textContent = '';
+
+    // Maps button
+    let mapsUrl = '#';
+    if (attraction.coordinates && attraction.coordinates.lat && attraction.coordinates.lng) {
+      mapsUrl = 'https://www.google.com/maps/dir/?api=1&destination=' + attraction.coordinates.lat + ',' + attraction.coordinates.lng;
+    } else if (attraction.googleMapsUrl) {
+      mapsUrl = attraction.googleMapsUrl;
+    }
+    const mapsBtn = document.createElement('a');
+    mapsBtn.className = 'modal-action-btn modal-btn-primary';
+    mapsBtn.href = mapsUrl;
+    mapsBtn.target = '_blank';
+    mapsBtn.rel = 'noopener';
+    mapsBtn.textContent = '🗺️ נווט בגוגל מפות';
+    modalActions.appendChild(mapsBtn);
+
+    // Website button
+    if (attraction.website) {
+      const webBtn = document.createElement('a');
+      webBtn.className = 'modal-action-btn modal-btn-secondary';
+      webBtn.href = attraction.website;
+      webBtn.target = '_blank';
+      webBtn.rel = 'noopener';
+      webBtn.textContent = '🌐 אתר';
+      modalActions.appendChild(webBtn);
+    }
+
+    // Add to plan button
+    const isInPlan = dayPlan.some(function(item) { return item.name === attraction.name; });
+    const planBtn = document.createElement('button');
+    planBtn.className = 'modal-action-btn modal-btn-outline' + (isInPlan ? ' added' : '');
+    planBtn.textContent = isInPlan ? '✓ בתוכנית' : '➕ הוסף לתוכנית';
+    planBtn.addEventListener('click', function() {
+      addToPlan(attraction.id || attraction.name);
+      closeAttractionModal();
+    });
+    modalActions.appendChild(planBtn);
+  }
+
+  // Source
+  const modalSource = modal.querySelector('.modal-source');
+  if (modalSource) {
+    modalSource.textContent = '';
+    if (attraction.sourceUrl || attraction.website) {
+      const sourceLink = document.createElement('a');
+      sourceLink.className = 'modal-source-link';
+      sourceLink.href = attraction.sourceUrl || attraction.website;
+      sourceLink.target = '_blank';
+      sourceLink.rel = 'noopener';
+      sourceLink.textContent = '🔗 מקור מידע';
+      modalSource.appendChild(sourceLink);
+    }
+  }
+
+  // Show modal
+  modal.classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeAttractionModal() {
+  const modal = document.getElementById('attraction-modal');
+  if (modal) {
+    modal.classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+}
+
+function setupModal() {
+  const modal = document.getElementById('attraction-modal');
+  if (!modal) return;
+
+  // Close button
+  const closeBtn = modal.querySelector('.modal-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeAttractionModal);
+  }
+
+  // Click overlay to close
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) closeAttractionModal();
+  });
+
+  // Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeAttractionModal();
   });
 }
 
@@ -1137,5 +1456,18 @@ document.addEventListener('DOMContentLoaded', async function () {
   setupNavigation();
   setupDayPlan();
   setupFloatingButtons();
+  setupModal();
   applyFilters();
+
+  // Update hero stat dynamically
+  const heroCount = document.getElementById('total-attractions-count');
+  if (heroCount) heroCount.textContent = allAttractions.length;
+
+  // Update footer count dynamically
+  const footer = document.querySelector('footer p[data-footer-count]');
+  if (footer) footer.textContent = allAttractions.length + ' אטרקציות | ספורט מים, הרפתקאות, טבע, אופניים ועוד';
+
+  // Setup clear filters button
+  const clearBtn = document.getElementById('clear-filters-btn');
+  if (clearBtn) clearBtn.addEventListener('click', clearAllFilters);
 });
