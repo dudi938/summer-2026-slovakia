@@ -180,6 +180,9 @@
 
     .trips-footer { margin-bottom: 4.5rem; }
 
+    /* Ensure header stays above Leaflet maps and other positioned content */
+    .header { z-index: 9999; }
+
     /* Leaflet popup override */
     .leaflet-popup-content { direction: rtl; font-family: 'Heebo', sans-serif; }
     .leaflet-popup-content h4 { margin: 0 0 4px; font-size: 0.9rem; }
