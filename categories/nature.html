@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>טבע ונופים - חופשה בסלובקיה 2026</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-filter-type="category" data-filter-value="nature">
+    <header class="site-header">
+        <nav class="navbar">
+            <a href="../index.html" class="logo">🇸🇰 חופשה בסלובקיה 2026</a>
+            <button class="menu-toggle" onclick="toggleMobileMenu()">☰</button>
+            <ul class="nav-links">
+                <li><a href="../index.html">בית</a></li>
+                <li><a href="../map.html">מפה</a></li>
+                <li class="dropdown">
+                    <a href="#">אזורים ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../areas/high-tatras.html">הרי הטטרה</a></li>
+                        <li><a href="../areas/bratislava.html">ברטיסלבה</a></li>
+                        <li><a href="../areas/vienna.html">וינה</a></li>
+                        <li><a href="../areas/budapest.html">בודפשט</a></li>
+                        <li><a href="../areas/czech.html">צ'כיה</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="active">קטגוריות ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="water-sports.html">ספורט מים</a></li>
+                        <li><a href="adventure.html">הרפתקאות</a></li>
+                        <li><a href="nature.html">טבע ונופים</a></li>
+                        <li><a href="cycling.html">אופניים</a></li>
+                    </ul>
+                </li>
+                <li><a href="../shabbat.html">שבת וכשרות</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero hero-category">
+        <div class="hero-content">
+            <h1>🌲 טבע ונופים</h1>
+            <p class="hero-subtitle">מפלים, נופים עוצרי נשימה, אגמים אלפיניים וטיולים</p>
+            <p class="hero-stats"><span id="area-count"></span> אטרקציות בקטגוריה</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <section class="filters-section">
+            <input type="text" id="search-input" class="search-input" placeholder="חפש אטרקציה..." oninput="searchAttractions(this.value)">
+            <div class="filter-chips">
+                <button class="chip active" onclick="filterByArea('')">כל האזורים</button>
+                <button class="chip" onclick="filterByArea('high-tatras')">🏔️ הטטרה</button>
+                <button class="chip" onclick="filterByArea('bratislava')">🏙️ ברטיסלבה</button>
+                <button class="chip" onclick="filterByArea('vienna')">🎡 וינה</button>
+                <button class="chip" onclick="filterByArea('budapest')">🇭🇺 בודפשט</button>
+                <label class="chip toggle"><input type="checkbox" onchange="filterByBabyFriendly(this.checked)"> 👶 מתאים לתינוק</label>
+            </div>
+        </section>
+
+        <div class="view-toggle">
+            <button class="view-btn active" onclick="toggleView('grid')">📋 רשימה</button>
+            <button class="view-btn" onclick="toggleView('map')">🗺️ מפה</button>
+            <span class="results-count" id="results-count"></span>
+        </div>
+
+        <div id="attractions-grid" class="attractions-grid"></div>
+        <div id="map" class="map-container" style="display:none;"></div>
+    </main>
+
+    <footer class="site-footer">
+        <p>חופשה משפחתית בסלובקיה - קיץ 2026 | נוצר עם ❤️</p>
+    </footer>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+</html>

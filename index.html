@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="מדריך אטרקציות למשפחה בסלובקיה - קיץ 2026. הרי הטטרה, ברטיסלבה, וינה, בודפשט וצ'כיה.">
+  <meta name="theme-color" content="#4A90D9">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>חופשה משפחתית בסלובקיה - קיץ 2026</title>
+
+  <!-- Google Fonts - Heebo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin="">
+
+  <!-- App CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Dropdown & inline styles -->
+  <style>
+    .nav-dropdown {
+      position: relative;
+    }
+
+    .nav-dropdown-trigger {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-sm);
+      font-weight: 500;
+      color: var(--color-gray-600);
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .nav-dropdown-trigger:hover {
+      color: var(--color-primary);
+      background-color: rgba(74, 144, 217, 0.08);
+    }
+
+    .nav-dropdown-menu {
+      position: absolute;
+      top: calc(100% + 4px);
+      right: 0;
+      background: var(--color-white);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-lg);
+      padding: 0.5rem;
+      min-width: 180px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-8px);
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 1100;
+    }
+
+    .nav-dropdown-menu.open {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.6rem 1rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--color-gray-700);
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .nav-dropdown-menu a:hover {
+      background-color: rgba(74, 144, 217, 0.08);
+      color: var(--color-primary);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Header & Navigation ===== -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">&#x1F1F8;&#x1F1F0;</span>
+        <span class="logo-text">חופשה בסלובקיה 2026</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-desktop">
+        <a href="index.html" class="active">בית</a>
+        <a href="map.html">מפה</a>
+        <div class="nav-dropdown">
+          <a href="#" class="nav-dropdown-trigger">אזורים &#x25BE;</a>
+          <div class="nav-dropdown-menu">
+            <a href="areas/high-tatras.html">הרי הטטרה</a>
+            <a href="areas/bratislava.html">ברטיסלבה</a>
+            <a href="areas/vienna.html">וינה</a>
+            <a href="areas/budapest.html">בודפשט</a>
+            <a href="areas/czech.html">צ'כיה</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <a href="#" class="nav-dropdown-trigger">קטגוריות &#x25BE;</a>
+          <div class="nav-dropdown-menu">
+            <a href="categories/water-sports.html">ספורט מים</a>
+            <a href="categories/adventure.html">הרפתקאות</a>
+            <a href="categories/nature.html">טבע ונופים</a>
+            <a href="categories/cycling.html">אופניים</a>
+          </div>
+        </div>
+        <a href="shabbat.html">שבת וכשרות</a>
+      </nav>
+
+      <!-- Mobile Hamburger -->
+      <button class="hamburger" id="hamburger-btn" aria-label="תפריט">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="nav-overlay" id="nav-overlay"></div>
+
+  <!-- Mobile Side Menu -->
+  <nav class="nav-mobile" id="nav-mobile">
+    <button class="nav-mobile-close" id="nav-mobile-close" aria-label="סגור תפריט">&times;</button>
+    <a href="index.html" class="active">בית</a>
+    <a href="map.html">מפה</a>
+    <a href="areas/high-tatras.html">הרי הטטרה</a>
+    <a href="areas/bratislava.html">ברטיסלבה</a>
+    <a href="areas/vienna.html">וינה</a>
+    <a href="areas/budapest.html">בודפשט</a>
+    <a href="areas/czech.html">צ'כיה</a>
+    <a href="categories/water-sports.html">ספורט מים</a>
+    <a href="categories/adventure.html">הרפתקאות</a>
+    <a href="categories/nature.html">טבע ונופים</a>
+    <a href="categories/cycling.html">אופניים</a>
+    <a href="shabbat.html">שבת וכשרות</a>
+  </nav>
+
+  <!-- ===== Page Content ===== -->
+  <div class="page-content">
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>חופשה משפחתית בסלובקיה</h1>
+        <p>קיץ 2026 | הרי הטטרה &bull; ברטיסלבה &bull; וינה</p>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-number">204</span>
+            <span class="hero-stat-label">אטרקציות</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-number">5</span>
+            <span class="hero-stat-label">אזורים</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-number">&#x1F3C4; &#x1F3D4; &#x1F333;</span>
+            <span class="hero-stat-label">ספורט מים &bull; הרפתקה &bull; טבע</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search & Filters -->
+    <section class="search-section">
+      <div class="search-container">
+        <div class="search-input-wrapper">
+          <span class="search-icon">&#x1F50D;</span>
+          <input type="text" id="search-input" class="search-input"
+                 placeholder="חפש אטרקציה..." aria-label="חיפוש אטרקציות" autocomplete="off">
+        </div>
+
+        <div class="filters-section">
+          <!-- Area filters -->
+          <div class="filter-row">
+            <span class="filter-label">אזור:</span>
+            <div class="filter-chips" id="area-filters">
+              <button class="filter-chip active" data-area="all">הכל</button>
+              <button class="filter-chip" data-area="high-tatras">הרי הטטרה</button>
+              <button class="filter-chip" data-area="bratislava">ברטיסלבה</button>
+              <button class="filter-chip" data-area="vienna">וינה</button>
+              <button class="filter-chip" data-area="budapest">בודפשט</button>
+              <button class="filter-chip" data-area="czech">צ'כיה</button>
+            </div>
+          </div>
+
+          <!-- Category filters -->
+          <div class="filter-row">
+            <span class="filter-label">קטגוריה:</span>
+            <div class="filter-chips" id="category-filters">
+              <button class="filter-chip active" data-category="all">הכל</button>
+              <button class="filter-chip" data-category="water-sports">ספורט מים</button>
+              <button class="filter-chip" data-category="adventure">הרפתקאות</button>
+              <button class="filter-chip" data-category="nature">טבע ונופים</button>
+              <button class="filter-chip" data-category="cycling">אופניים</button>
+              <button class="filter-chip" data-category="family">משפחה</button>
+              <button class="filter-chip" data-category="shabbat">שבת וכשרות</button>
+            </div>
+          </div>
+
+          <!-- Additional filters -->
+          <div class="filter-row">
+            <span class="filter-label">סינון נוסף:</span>
+            <div class="filter-chips">
+              <button class="filter-chip" id="baby-filter" data-filter="baby">&#x1F476; מתאים לתינוקות</button>
+              <button class="filter-chip" id="score-filter-4" data-score="4">&#x2B50; ציון 4+</button>
+              <button class="filter-chip" id="score-filter-5" data-score="5">&#x2B50; ציון 5</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Controls Bar -->
+    <div class="controls-bar">
+      <span class="results-count" id="results-count">טוען אטרקציות...</span>
+      <div class="controls-right">
+        <select class="sort-select" id="sort-select" aria-label="מיון">
+          <option value="score">מיון: ציון משפחתי</option>
+          <option value="name">מיון: שם</option>
+          <option value="distance">מיון: מרחק</option>
+          <option value="area">מיון: אזור</option>
+        </select>
+        <div class="view-toggle">
+          <button class="view-btn active" id="view-grid-btn" aria-label="תצוגת רשימה">&#x1F4CB;</button>
+          <button class="view-btn" id="view-map-btn" aria-label="תצוגת מפה">&#x1F5FA;</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Attractions Grid -->
+    <section class="attractions-section" id="attractions-section">
+      <div class="attractions-grid" id="attractions-grid">
+        <div class="loading-spinner"><div class="spinner"></div></div>
+      </div>
+    </section>
+
+    <!-- Map Section (hidden by default) -->
+    <section class="map-section" id="map-section">
+      <div class="map-container">
+        <div id="map"></div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Day Plan FAB -->
+  <button class="day-plan-fab" id="day-plan-fab" aria-label="תוכנית יום">
+    &#x1F4C5;
+    <span class="day-plan-badge" id="day-plan-badge" style="display:none;">0</span>
+  </button>
+
+  <!-- Day Plan Panel -->
+  <div class="day-plan-panel" id="day-plan-panel">
+    <div class="day-plan-header">
+      <h2>&#x1F4C5; תוכנית היום שלי</h2>
+      <button class="day-plan-close" id="day-plan-close" aria-label="סגור">&times;</button>
+    </div>
+    <div class="day-plan-empty" id="day-plan-empty">
+      <div class="empty-state-icon">&#x1F4CB;</div>
+      <p>לחצו "הוסף לתוכנית" בכרטיס אטרקציה כדי להתחיל לתכנן את היום</p>
+    </div>
+    <div id="day-plan-items"></div>
+    <div class="day-plan-actions" id="day-plan-actions" style="display: none;">
+      <button class="btn-clear-plan" id="btn-clear-plan">נקה הכל</button>
+      <button class="btn-share-plan" id="btn-share-plan">שתף תוכנית</button>
+    </div>
+  </div>
+
+  <!-- Bottom Navigation (Mobile) -->
+  <nav class="bottom-nav">
+    <a href="index.html" class="bottom-nav-item active">
+      <span class="nav-icon">&#x1F3E0;</span>
+      <span>בית</span>
+    </a>
+    <a href="map.html" class="bottom-nav-item">
+      <span class="nav-icon">&#x1F5FA;</span>
+      <span>מפה</span>
+    </a>
+    <a href="#" class="bottom-nav-item" id="bottom-nav-search">
+      <span class="nav-icon">&#x1F50D;</span>
+      <span>חיפוש</span>
+    </a>
+    <a href="shabbat.html" class="bottom-nav-item">
+      <span class="nav-icon">&#x1F54E;</span>
+      <span>שבת</span>
+    </a>
+  </nav>
+
+  <!-- ===== Footer ===== -->
+  <footer style="background: var(--color-gray-800); color: var(--color-gray-300); padding: 2.5rem 1.5rem; text-align: center; margin-bottom: 4.5rem;">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <p style="font-size: 1.1rem; font-weight: 600; color: var(--color-white); margin-bottom: 0.5rem;">&#x1F1F8;&#x1F1F0; חופשה משפחתית בסלובקיה - קיץ 2026</p>
+      <p style="font-size: 0.85rem; opacity: 0.8; margin-bottom: 0.75rem;">הרי הטטרה &bull; ברטיסלבה &bull; וינה &bull; בודפשט &bull; צ'כיה</p>
+      <p style="font-size: 0.8rem; opacity: 0.7; margin-bottom: 1rem;">204 אטרקציות | ספורט מים, הרפתקאות, טבע, אופניים ועוד</p>
+      <p style="font-size: 0.75rem; opacity: 0.5;">נבנה באהבה למשפחה | כל המידע לצורכי תכנון בלבד</p>
+    </div>
+  </footer>
+
+  <!-- ===== Scripts ===== -->
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+          crossorigin=""></script>
+
+  <!-- App JS -->
+  <script src="js/app.js"></script>
+
+  <!-- Navigation & UI Script -->
+  <script>
+    (function() {
+      // Mobile menu toggle
+      const hamburgerBtn = document.getElementById('hamburger-btn');
+      const navMobile = document.getElementById('nav-mobile');
+      const navOverlay = document.getElementById('nav-overlay');
+      const navMobileClose = document.getElementById('nav-mobile-close');
+
+      function openMobileNav() {
+        navMobile.classList.add('open');
+        navOverlay.classList.add('visible');
+        hamburgerBtn.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeMobileNav() {
+        navMobile.classList.remove('open');
+        navOverlay.classList.remove('visible');
+        hamburgerBtn.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      hamburgerBtn.addEventListener('click', openMobileNav);
+      navMobileClose.addEventListener('click', closeMobileNav);
+      navOverlay.addEventListener('click', closeMobileNav);
+
+      // Desktop dropdown menus
+      document.querySelectorAll('.nav-dropdown').forEach(function(dropdown) {
+        var trigger = dropdown.querySelector('.nav-dropdown-trigger');
+        var menu = dropdown.querySelector('.nav-dropdown-menu');
+
+        trigger.addEventListener('click', function(e) {
+          e.preventDefault();
+          document.querySelectorAll('.nav-dropdown-menu.open').forEach(function(m) {
+            if (m !== menu) m.classList.remove('open');
+          });
+          menu.classList.toggle('open');
+        });
+      });
+
+      // Close dropdowns when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.nav-dropdown')) {
+          document.querySelectorAll('.nav-dropdown-menu.open').forEach(function(m) {
+            m.classList.remove('open');
+          });
+        }
+      });
+
+      // Bottom nav search button - scroll to search
+      var bottomNavSearch = document.getElementById('bottom-nav-search');
+      if (bottomNavSearch) {
+        bottomNavSearch.addEventListener('click', function(e) {
+          e.preventDefault();
+          var searchInput = document.getElementById('search-input');
+          searchInput.scrollIntoView({ behavior: 'smooth' });
+          setTimeout(function() { searchInput.focus(); }, 400);
+        });
+      }
+
+      // View toggle (grid/map)
+      var viewGridBtn = document.getElementById('view-grid-btn');
+      var viewMapBtn = document.getElementById('view-map-btn');
+      var attractionsSection = document.getElementById('attractions-section');
+      var mapSection = document.getElementById('map-section');
+
+      if (viewGridBtn && viewMapBtn) {
+        viewGridBtn.addEventListener('click', function() {
+          viewGridBtn.classList.add('active');
+          viewMapBtn.classList.remove('active');
+          attractionsSection.style.display = '';
+          mapSection.classList.remove('visible');
+        });
+
+        viewMapBtn.addEventListener('click', function() {
+          viewMapBtn.classList.add('active');
+          viewGridBtn.classList.remove('active');
+          attractionsSection.style.display = 'none';
+          mapSection.classList.add('visible');
+          // Trigger map resize if map exists
+          if (window.map) {
+            setTimeout(function() { window.map.invalidateSize(); }, 100);
+          }
+        });
+      }
+
+      // Day Plan FAB
+      var dayPlanFab = document.getElementById('day-plan-fab');
+      var dayPlanPanel = document.getElementById('day-plan-panel');
+      var dayPlanClose = document.getElementById('day-plan-close');
+
+      if (dayPlanFab && dayPlanPanel) {
+        dayPlanFab.addEventListener('click', function() {
+          dayPlanPanel.classList.toggle('open');
+        });
+        dayPlanClose.addEventListener('click', function() {
+          dayPlanPanel.classList.remove('open');
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
