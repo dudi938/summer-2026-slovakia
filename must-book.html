@@ -725,18 +725,23 @@
       const navOverlay = document.getElementById('nav-overlay');
       const navClose = document.getElementById('nav-mobile-close');
 
-      if (hamburger) {
-        hamburger.addEventListener('click', function() {
-          navMobile.classList.add('open');
-          navOverlay.classList.add('open');
-          document.body.style.overflow = 'hidden';
-        });
+      function openNav() {
+        navMobile.classList.add('open');
+        navOverlay.classList.add('visible');
+        if (hamburger) hamburger.classList.add('active');
+        document.body.style.overflow = 'hidden';
       }
 
       function closeNav() {
         navMobile.classList.remove('open');
-        navOverlay.classList.remove('open');
+        navOverlay.classList.remove('visible');
+        if (hamburger) hamburger.classList.remove('active');
         document.body.style.overflow = '';
+      }
+
+      if (hamburger) {
+        hamburger.addEventListener('click', openNav);
+        hamburger.addEventListener('touchend', function(e) { e.preventDefault(); openNav(); });
       }
 
       if (navClose) navClose.addEventListener('click', closeNav);

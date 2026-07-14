@@ -6,6 +6,8 @@ let allAttractions = [];
 let filteredAttractions = [];
 let map = null;
 let markers = [];
+let fullscreenMap = null;
+let fsMarkers = [];
 let currentView = 'grid'; // 'grid' or 'map'
 let dayPlan = JSON.parse(localStorage.getItem('dayPlan') || '[]');
 
@@ -296,7 +298,7 @@ function renderAttractionCard(attraction, index) {
   // Google Maps link
   let mapsUrl = '#';
   if (attraction.coordinates && attraction.coordinates.lat && attraction.coordinates.lng) {
-    mapsUrl = 'https://www.google.com/maps/dir/?api=1&destination=' + attraction.coordinates.lat + ',' + attraction.coordinates.lng;
+    mapsUrl = 'https://www.google.com/maps/search/?api=1&query=' + attraction.coordinates.lat + ',' + attraction.coordinates.lng;
   } else if (attraction.googleMapsUrl) {
     mapsUrl = attraction.googleMapsUrl;
   }
@@ -420,8 +422,8 @@ function renderAttractionCard(attraction, index) {
   navBtn.href = mapsUrl;
   navBtn.target = '_blank';
   navBtn.rel = 'noopener';
-  navBtn.title = 'נווט בגוגל מפות';
-  navBtn.textContent = '🗺️';
+  navBtn.title = 'פתח את הנקודה בגוגל מפות';
+  navBtn.textContent = '📍';
   actions.appendChild(navBtn);
 
   // Website link button
@@ -501,8 +503,90 @@ function initMap() {
   // Fix map rendering in hidden containers
   setTimeout(function () { map.invalidateSize(); }, 300);
 
+  // Add a "fullscreen" button to inline maps. Skip the dedicated full-page
+  // map (map.html), which is already full-screen and keeps its own controls.
+  if (!document.body.classList.contains('map-page')) {
+    addFullscreenControl(map);
+  }
+
   // Render initial markers
   renderMarkers();
+}
+
+// Build one Leaflet marker (custom category icon + RTL popup with price/stars/
+// point-link/website) for an attraction. Shared by the inline map and the
+// fullscreen map so the popup content is defined exactly once.
+function buildAttractionMarker(attraction) {
+  if (!attraction.coordinates || !attraction.coordinates.lat || !attraction.coordinates.lng) return null;
+
+  const color = getCategoryColor(attraction.category);
+  const iconEmoji = getCategoryIcon(attraction.category);
+
+  // Color coded custom marker by category
+  const icon = L.divIcon({
+    className: 'custom-marker',
+    html: '<div style="' +
+      'background:' + color + ';' +
+      'width:32px;height:32px;' +
+      'border-radius:50%;' +
+      'display:flex;align-items:center;justify-content:center;' +
+      'font-size:16px;' +
+      'box-shadow:0 2px 8px rgba(0,0,0,0.3);' +
+      'border:2px solid white;' +
+      'cursor:pointer;' +
+      '">' + iconEmoji + '</div>',
+    iconSize: [32, 32],
+    iconAnchor: [16, 16],
+    popupAnchor: [0, -16]
+  });
+
+  const marker = L.marker(
+    [attraction.coordinates.lat, attraction.coordinates.lng],
+    { icon: icon }
+  );
+
+  // Popup with Hebrew content. The map link opens the POINT on Google Maps
+  // (search/query drops a pin) rather than launching turn-by-turn navigation.
+  const categoryLabel = CATEGORY_LABELS[attraction.category] || attraction.category;
+  const areaLabel = AREA_LABELS[attraction.area] || attraction.area;
+  const desc = (attraction.descriptionHebrew || attraction.description || '').substring(0, 150);
+  const navUrl = 'https://www.google.com/maps/search/?api=1&query=' + attraction.coordinates.lat + ',' + attraction.coordinates.lng;
+  const familyScore = attraction.familyScore || 0;
+
+  // Build stars HTML
+  let starsHtml = '';
+  for (let i = 1; i <= 5; i++) {
+    starsHtml += i <= familyScore ? '★' : '☆';
+  }
+
+  // Website button
+  const websiteBtn = attraction.website
+    ? '<a href="' + escapeAttr(attraction.website) + '" target="_blank" rel="noopener" style="display:inline-block;margin-top:6px;margin-left:8px;padding:4px 10px;background:#4CAF50;color:white;border-radius:4px;text-decoration:none;font-size:12px;">🌐 אתר</a>'
+    : '';
+
+  const popupContent = '<div dir="rtl" style="font-family:Heebo,sans-serif;text-align:right;max-width:280px;">' +
+    '<div style="font-weight:700;font-size:15px;margin-bottom:4px;color:#1a1a1a;">' + escapeHtml(attraction.nameHebrew || attraction.name) + '</div>' +
+    '<div style="margin-bottom:4px;">' +
+      '<span style="display:inline-block;background:' + color + ';color:white;padding:2px 8px;border-radius:12px;font-size:11px;">' + iconEmoji + ' ' + escapeHtml(categoryLabel) + '</span>' +
+      '<span style="margin-right:8px;color:#666;font-size:12px;">📍 ' + escapeHtml(areaLabel) + '</span>' +
+    '</div>' +
+    '<div style="color:#F59E0B;font-size:14px;margin-bottom:4px;">' + starsHtml + '</div>' +
+    '<div style="font-size:13px;color:#444;line-height:1.5;margin-bottom:6px;">' + escapeHtml(desc) + (desc.length >= 150 ? '...' : '') + '</div>' +
+    (attraction.priceAdult ? '<div style="font-size:12px;color:#666;margin-bottom:4px;">💰 ' + escapeHtml(attraction.priceAdult) + '</div>' : '') +
+    (attraction.distanceFromMalatiny ? '<div style="font-size:12px;color:#666;margin-bottom:6px;">🚗 ' + escapeHtml(attraction.distanceFromMalatiny) + '</div>' : '') +
+    '<div style="margin-top:8px;">' +
+      '<a href="' + escapeAttr(navUrl) + '" target="_blank" rel="noopener" style="display:inline-block;padding:6px 12px;background:#4A90D9;color:white;border-radius:4px;text-decoration:none;font-size:12px;font-weight:500;">📍 פתח במפה</a>' +
+      websiteBtn +
+    '</div>' +
+  '</div>';
+
+  marker.bindPopup(popupContent, {
+    maxWidth: 300,
+    minWidth: 200,
+    className: 'rtl-popup'
+  });
+
+  return marker;
 }
 
 function renderMarkers() {
@@ -514,74 +598,9 @@ function renderMarkers() {
 
   // Add new ones for filteredAttractions
   filteredAttractions.forEach(function (attraction) {
-    if (!attraction.coordinates || !attraction.coordinates.lat || !attraction.coordinates.lng) return;
-
-    const color = getCategoryColor(attraction.category);
-    const iconEmoji = getCategoryIcon(attraction.category);
-
-    // Color coded custom marker by category
-    const icon = L.divIcon({
-      className: 'custom-marker',
-      html: '<div style="' +
-        'background:' + color + ';' +
-        'width:32px;height:32px;' +
-        'border-radius:50%;' +
-        'display:flex;align-items:center;justify-content:center;' +
-        'font-size:16px;' +
-        'box-shadow:0 2px 8px rgba(0,0,0,0.3);' +
-        'border:2px solid white;' +
-        'cursor:pointer;' +
-        '">' + iconEmoji + '</div>',
-      iconSize: [32, 32],
-      iconAnchor: [16, 16],
-      popupAnchor: [0, -16]
-    });
-
-    const marker = L.marker(
-      [attraction.coordinates.lat, attraction.coordinates.lng],
-      { icon: icon }
-    ).addTo(map);
-
-    // Popup with Hebrew content and Google Maps link
-    const categoryLabel = CATEGORY_LABELS[attraction.category] || attraction.category;
-    const areaLabel = AREA_LABELS[attraction.area] || attraction.area;
-    const desc = (attraction.descriptionHebrew || attraction.description || '').substring(0, 150);
-    const navUrl = 'https://www.google.com/maps/dir/?api=1&destination=' + attraction.coordinates.lat + ',' + attraction.coordinates.lng;
-    const familyScore = attraction.familyScore || 0;
-
-    // Build stars HTML
-    let starsHtml = '';
-    for (let i = 1; i <= 5; i++) {
-      starsHtml += i <= familyScore ? '★' : '☆';
-    }
-
-    // Website button
-    const websiteBtn = attraction.website
-      ? '<a href="' + escapeAttr(attraction.website) + '" target="_blank" rel="noopener" style="display:inline-block;margin-top:6px;margin-left:8px;padding:4px 10px;background:#4CAF50;color:white;border-radius:4px;text-decoration:none;font-size:12px;">🌐 אתר</a>'
-      : '';
-
-    const popupContent = '<div dir="rtl" style="font-family:Heebo,sans-serif;text-align:right;max-width:280px;">' +
-      '<div style="font-weight:700;font-size:15px;margin-bottom:4px;color:#1a1a1a;">' + escapeHtml(attraction.nameHebrew || attraction.name) + '</div>' +
-      '<div style="margin-bottom:4px;">' +
-        '<span style="display:inline-block;background:' + color + ';color:white;padding:2px 8px;border-radius:12px;font-size:11px;">' + iconEmoji + ' ' + escapeHtml(categoryLabel) + '</span>' +
-        '<span style="margin-right:8px;color:#666;font-size:12px;">📍 ' + escapeHtml(areaLabel) + '</span>' +
-      '</div>' +
-      '<div style="color:#F59E0B;font-size:14px;margin-bottom:4px;">' + starsHtml + '</div>' +
-      '<div style="font-size:13px;color:#444;line-height:1.5;margin-bottom:6px;">' + escapeHtml(desc) + (desc.length >= 150 ? '...' : '') + '</div>' +
-      (attraction.priceAdult ? '<div style="font-size:12px;color:#666;margin-bottom:4px;">💰 ' + escapeHtml(attraction.priceAdult) + '</div>' : '') +
-      (attraction.distanceFromMalatiny ? '<div style="font-size:12px;color:#666;margin-bottom:6px;">🚗 ' + escapeHtml(attraction.distanceFromMalatiny) + '</div>' : '') +
-      '<div style="margin-top:8px;">' +
-        '<a href="' + escapeAttr(navUrl) + '" target="_blank" rel="noopener" style="display:inline-block;padding:6px 12px;background:#4A90D9;color:white;border-radius:4px;text-decoration:none;font-size:12px;font-weight:500;">🗺️ ניווט</a>' +
-        websiteBtn +
-      '</div>' +
-    '</div>';
-
-    marker.bindPopup(popupContent, {
-      maxWidth: 300,
-      minWidth: 200,
-      className: 'rtl-popup'
-    });
-
+    const marker = buildAttractionMarker(attraction);
+    if (!marker) return;
+    marker.addTo(map);
     markers.push(marker);
   });
 
@@ -590,7 +609,141 @@ function renderMarkers() {
     const group = L.featureGroup(markers);
     map.fitBounds(group.getBounds().pad(0.1));
   }
+
+  // Keep the fullscreen map in sync if it is currently open
+  if (fullscreenMap) renderFullscreenMarkers();
 }
+
+// ===== Fullscreen Map (attraction pages) =====
+// Adds a Leaflet control button (⛶) to an inline map that opens an
+// interactive fullscreen overlay: pinch-zoom, drag, scroll-zoom, and the
+// same price/point popups as the inline map.
+function addFullscreenControl(targetMap) {
+  if (typeof L === 'undefined' || !targetMap) return;
+
+  const FullscreenControl = L.Control.extend({
+    options: { position: 'topright' },
+    onAdd: function () {
+      const btn = L.DomUtil.create('button', 'map-fullscreen-btn');
+      btn.type = 'button';
+      btn.title = 'פתח מפה במסך מלא';
+      btn.setAttribute('aria-label', 'פתח מפה במסך מלא');
+      btn.innerHTML = '⛶';
+      // Stop the click from panning/zooming the underlying map.
+      L.DomEvent.disableClickPropagation(btn);
+      L.DomEvent.on(btn, 'click', function (e) {
+        L.DomEvent.stop(e);
+        openMapFullscreen();
+      });
+      return btn;
+    }
+  });
+  targetMap.addControl(new FullscreenControl());
+}
+
+// Lazily create the fullscreen overlay DOM (once) and return the map element.
+function ensureFullscreenOverlay() {
+  let overlay = document.getElementById('app-map-fullscreen-overlay');
+  if (overlay) return overlay;
+
+  overlay = document.createElement('div');
+  overlay.className = 'app-map-fullscreen-overlay';
+  overlay.id = 'app-map-fullscreen-overlay';
+
+  const header = document.createElement('div');
+  header.className = 'app-map-fullscreen-header';
+  const title = document.createElement('h4');
+  title.textContent = '🗺️ מפת אטרקציות';
+  const closeBtn = document.createElement('button');
+  closeBtn.className = 'app-map-fullscreen-close';
+  closeBtn.type = 'button';
+  closeBtn.setAttribute('aria-label', 'סגור');
+  closeBtn.textContent = '✕';
+  closeBtn.addEventListener('click', closeMapFullscreen);
+  header.appendChild(title);
+  header.appendChild(closeBtn);
+
+  const body = document.createElement('div');
+  body.className = 'app-map-fullscreen-body';
+  const mapEl = document.createElement('div');
+  mapEl.className = 'app-fullscreen-map';
+  mapEl.id = 'app-fullscreen-map';
+  body.appendChild(mapEl);
+
+  overlay.appendChild(header);
+  overlay.appendChild(body);
+  document.body.appendChild(overlay);
+
+  // Close when clicking the dark backdrop (only the overlay itself, not children)
+  overlay.addEventListener('click', function (e) {
+    if (e.target === overlay) closeMapFullscreen();
+  });
+
+  return overlay;
+}
+
+function renderFullscreenMarkers() {
+  if (!fullscreenMap) return;
+
+  fsMarkers.forEach(function (m) { fullscreenMap.removeLayer(m); });
+  fsMarkers = [];
+
+  filteredAttractions.forEach(function (attraction) {
+    const marker = buildAttractionMarker(attraction);
+    if (!marker) return;
+    marker.addTo(fullscreenMap);
+    fsMarkers.push(marker);
+  });
+
+  if (fsMarkers.length > 0) {
+    const group = L.featureGroup(fsMarkers);
+    fullscreenMap.fitBounds(group.getBounds().pad(0.1));
+  } else {
+    fullscreenMap.setView([48.9, 19.1], 7);
+  }
+}
+
+function openMapFullscreen() {
+  if (typeof L === 'undefined') return;
+  const overlay = ensureFullscreenOverlay();
+  overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+
+  // Rebuild the map fresh each open so it sizes correctly to the overlay.
+  if (fullscreenMap) { fullscreenMap.remove(); fullscreenMap = null; fsMarkers = []; }
+
+  fullscreenMap = L.map('app-fullscreen-map', {
+    scrollWheelZoom: true,
+    zoomControl: true,
+    dragging: true,
+    touchZoom: true,
+    doubleClickZoom: true,
+    boxZoom: true
+  }).setView([48.9, 19.1], 7);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    maxZoom: 18
+  }).addTo(fullscreenMap);
+
+  renderFullscreenMarkers();
+  setTimeout(function () { if (fullscreenMap) fullscreenMap.invalidateSize(); }, 100);
+}
+
+function closeMapFullscreen() {
+  const overlay = document.getElementById('app-map-fullscreen-overlay');
+  if (overlay) overlay.classList.remove('active');
+  document.body.style.overflow = '';
+  if (fullscreenMap) { fullscreenMap.remove(); fullscreenMap = null; fsMarkers = []; }
+}
+
+// Global Escape-to-close for the fullscreen map
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    const overlay = document.getElementById('app-map-fullscreen-overlay');
+    if (overlay && overlay.classList.contains('active')) closeMapFullscreen();
+  }
+});
 
 // ===== View Toggle =====
 function toggleView(view) {
@@ -1277,7 +1430,7 @@ function openAttractionModal(attraction) {
     // Maps button
     let mapsUrl = '#';
     if (attraction.coordinates && attraction.coordinates.lat && attraction.coordinates.lng) {
-      mapsUrl = 'https://www.google.com/maps/dir/?api=1&destination=' + attraction.coordinates.lat + ',' + attraction.coordinates.lng;
+      mapsUrl = 'https://www.google.com/maps/search/?api=1&query=' + attraction.coordinates.lat + ',' + attraction.coordinates.lng;
     } else if (attraction.googleMapsUrl) {
       mapsUrl = attraction.googleMapsUrl;
     }
@@ -1286,7 +1439,7 @@ function openAttractionModal(attraction) {
     mapsBtn.href = mapsUrl;
     mapsBtn.target = '_blank';
     mapsBtn.rel = 'noopener';
-    mapsBtn.textContent = '🗺️ נווט בגוגל מפות';
+    mapsBtn.textContent = '📍 פתח את הנקודה בגוגל מפות';
     modalActions.appendChild(mapsBtn);
 
     // Website button
@@ -1510,15 +1663,24 @@ function setupNavigation() {
   const closeBtn = document.getElementById('nav-mobile-close');
   const overlay = document.getElementById('nav-overlay');
 
-  if (hamburger) hamburger.addEventListener('click', toggleMobileMenu);
+  // Single source of truth for the hamburger. touchend+preventDefault suppresses
+  // the synthetic click on mobile so the toggle fires exactly once; desktop uses click.
+  if (hamburger) {
+    hamburger.addEventListener('click', toggleMobileMenu);
+    hamburger.addEventListener('touchend', function (e) { e.preventDefault(); toggleMobileMenu(); });
+  }
   if (closeBtn) closeBtn.addEventListener('click', closeMobileMenu);
   if (overlay) overlay.addEventListener('click', closeMobileMenu);
 
-  // Bottom nav items
+  // Bottom nav items: only intercept in-page view actions (map/list/plan).
+  // Plain link items (no data-target) must navigate normally — don't preventDefault them.
   document.querySelectorAll('.bottom-nav-item').forEach(function (item) {
     item.addEventListener('click', function (e) {
-      e.preventDefault();
       const target = this.dataset.target;
+      if (target !== 'map' && target !== 'list' && target !== 'plan') {
+        return; // real navigation link — let the browser follow href
+      }
+      e.preventDefault();
 
       document.querySelectorAll('.bottom-nav-item').forEach(function (i) { i.classList.remove('active'); });
       this.classList.add('active');

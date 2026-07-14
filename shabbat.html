@@ -92,20 +92,5 @@
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="js/app.js"></script>
-    <script>
-(function() {
-  var hamburgerBtn = document.getElementById('hamburger-btn');
-  var navMobile = document.getElementById('nav-mobile');
-  var navOverlay = document.getElementById('nav-overlay');
-  var navMobileClose = document.getElementById('nav-mobile-close');
-  if (!hamburgerBtn) return;
-  function open() { navMobile.classList.add('open'); navOverlay.classList.add('visible'); hamburgerBtn.classList.add('active'); document.body.style.overflow = 'hidden'; }
-  function close() { navMobile.classList.remove('open'); navOverlay.classList.remove('visible'); hamburgerBtn.classList.remove('active'); document.body.style.overflow = ''; }
-  hamburgerBtn.addEventListener('click', open);
-  hamburgerBtn.addEventListener('touchend', function(e) { e.preventDefault(); open(); });
-  navMobileClose.addEventListener('click', close);
-  navOverlay.addEventListener('click', close);
-})();
-</script>
 </body>
 </html>

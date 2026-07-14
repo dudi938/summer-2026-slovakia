@@ -359,29 +359,9 @@
   <!-- Navigation & UI Script -->
   <script>
     (function() {
-      // Mobile menu toggle
-      const hamburgerBtn = document.getElementById('hamburger-btn');
-      const navMobile = document.getElementById('nav-mobile');
-      const navOverlay = document.getElementById('nav-overlay');
-      const navMobileClose = document.getElementById('nav-mobile-close');
-
-      function openMobileNav() {
-        navMobile.classList.add('open');
-        navOverlay.classList.add('visible');
-        hamburgerBtn.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      }
-
-      function closeMobileNav() {
-        navMobile.classList.remove('open');
-        navOverlay.classList.remove('visible');
-        hamburgerBtn.classList.remove('active');
-        document.body.style.overflow = '';
-      }
-
-      hamburgerBtn.addEventListener('click', openMobileNav);
-      navMobileClose.addEventListener('click', closeMobileNav);
-      navOverlay.addEventListener('click', closeMobileNav);
+      // Mobile hamburger menu is handled by setupNavigation() in js/app.js
+      // (single source of truth — click + touchend). No inline binding here to
+      // avoid double-binding the toggle (which caused open-then-close).
 
       // Desktop dropdown menus
       document.querySelectorAll('.nav-dropdown').forEach(function(dropdown) {
@@ -433,45 +413,10 @@
         });
       }
 
-      // View toggle (grid/map)
-      var viewGridBtn = document.getElementById('view-grid-btn');
-      var viewMapBtn = document.getElementById('view-map-btn');
-      var attractionsSection = document.getElementById('attractions-section');
-      var mapSection = document.getElementById('map-section');
-
-      if (viewGridBtn && viewMapBtn) {
-        viewGridBtn.addEventListener('click', function() {
-          viewGridBtn.classList.add('active');
-          viewMapBtn.classList.remove('active');
-          attractionsSection.style.display = '';
-          mapSection.classList.remove('visible');
-        });
-
-        viewMapBtn.addEventListener('click', function() {
-          viewMapBtn.classList.add('active');
-          viewGridBtn.classList.remove('active');
-          attractionsSection.style.display = 'none';
-          mapSection.classList.add('visible');
-          // Trigger map resize if map exists
-          if (window.map) {
-            setTimeout(function() { window.map.invalidateSize(); }, 100);
-          }
-        });
-      }
-
-      // Day Plan FAB
-      var dayPlanFab = document.getElementById('day-plan-fab');
-      var dayPlanPanel = document.getElementById('day-plan-panel');
-      var dayPlanClose = document.getElementById('day-plan-close');
-
-      if (dayPlanFab && dayPlanPanel) {
-        dayPlanFab.addEventListener('click', function() {
-          dayPlanPanel.classList.toggle('open');
-        });
-        dayPlanClose.addEventListener('click', function() {
-          dayPlanPanel.classList.remove('open');
-        });
-      }
+      // View toggle (grid/map) and Day Plan FAB are handled by js/app.js
+      // (setupViewToggle + setupDayPlan). Binding them here too double-fired the
+      // handlers and threw "window.map.invalidateSize is not a function"
+      // (the #map DIV shadows the Leaflet map on window). Single source of truth.
     })();
   </script>
 </body>
