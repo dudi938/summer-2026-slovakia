@@ -904,11 +904,11 @@ function setupFilters() {
   document.querySelectorAll('.filter-chip[data-area]').forEach(function (chip) {
     chip.addEventListener('click', function () {
       const area = this.dataset.area;
-      if (activeFilters.area === area) {
+      document.querySelectorAll('.filter-chip[data-area]').forEach(function (c) { c.classList.remove('active'); });
+      if (area === 'all' || activeFilters.area === area) {
         activeFilters.area = '';
-        this.classList.remove('active');
+        document.querySelector('.filter-chip[data-area="all"]').classList.add('active');
       } else {
-        document.querySelectorAll('.filter-chip[data-area]').forEach(function (c) { c.classList.remove('active'); });
         activeFilters.area = area;
         this.classList.add('active');
       }
@@ -920,11 +920,11 @@ function setupFilters() {
   document.querySelectorAll('.filter-chip[data-category]').forEach(function (chip) {
     chip.addEventListener('click', function () {
       const category = this.dataset.category;
-      if (activeFilters.category === category) {
+      document.querySelectorAll('.filter-chip[data-category]').forEach(function (c) { c.classList.remove('active'); });
+      if (category === 'all' || activeFilters.category === category) {
         activeFilters.category = '';
-        this.classList.remove('active');
+        document.querySelector('.filter-chip[data-category="all"]').classList.add('active');
       } else {
-        document.querySelectorAll('.filter-chip[data-category]').forEach(function (c) { c.classList.remove('active'); });
         activeFilters.category = category;
         this.classList.add('active');
       }
@@ -947,6 +947,49 @@ function setupFilters() {
       applyFilters();
     });
   });
+
+  // Baby-friendly filter
+  var babyFilter = document.getElementById('baby-filter');
+  if (babyFilter) {
+    babyFilter.addEventListener('click', function () {
+      activeFilters.babyFriendly = !activeFilters.babyFriendly;
+      this.classList.toggle('active', activeFilters.babyFriendly);
+      applyFilters();
+    });
+  }
+
+  // Family score filters
+  var scoreFilter4 = document.getElementById('score-filter-4');
+  if (scoreFilter4) {
+    scoreFilter4.addEventListener('click', function () {
+      if (activeFilters.minFamilyScore === 4) {
+        activeFilters.minFamilyScore = 0;
+        this.classList.remove('active');
+      } else {
+        activeFilters.minFamilyScore = 4;
+        this.classList.add('active');
+        var s5 = document.getElementById('score-filter-5');
+        if (s5) s5.classList.remove('active');
+      }
+      applyFilters();
+    });
+  }
+
+  var scoreFilter5 = document.getElementById('score-filter-5');
+  if (scoreFilter5) {
+    scoreFilter5.addEventListener('click', function () {
+      if (activeFilters.minFamilyScore === 5) {
+        activeFilters.minFamilyScore = 0;
+        this.classList.remove('active');
+      } else {
+        activeFilters.minFamilyScore = 5;
+        this.classList.add('active');
+        var s4 = document.getElementById('score-filter-4');
+        if (s4) s4.classList.remove('active');
+      }
+      applyFilters();
+    });
+  }
 }
 
 function setupSort() {
@@ -1040,19 +1083,20 @@ window.SlovakiaTrip = {
 
 // ===== Floating Buttons (Back to Top + Home) =====
 function setupFloatingButtons() {
-  // Check if buttons already exist (added in index.html)
-  if (document.getElementById('back-to-top-btn')) return;
+  // Remove any existing floating buttons first
+  const existing = document.querySelector('.floating-btns');
+  if (existing) existing.remove();
 
-  // Create floating buttons dynamically for subpages
+  // Create floating buttons container
   const container = document.createElement('div');
   container.className = 'floating-btns';
+  container.id = 'floating-btns';
 
   const topBtn = document.createElement('button');
   topBtn.className = 'float-btn';
-  topBtn.id = 'back-to-top-btn';
   topBtn.setAttribute('aria-label', 'חזרה למעלה');
   topBtn.title = 'חזרה למעלה';
-  topBtn.textContent = '⬆';
+  topBtn.textContent = '⬆️';
   container.appendChild(topBtn);
 
   // Determine home path based on current page depth
@@ -1061,7 +1105,6 @@ function setupFloatingButtons() {
 
   const homeBtn = document.createElement('a');
   homeBtn.className = 'float-btn home-btn';
-  homeBtn.id = 'home-btn';
   homeBtn.href = homePath;
   homeBtn.setAttribute('aria-label', 'דף הבית');
   homeBtn.title = 'דף הבית';
@@ -1070,14 +1113,12 @@ function setupFloatingButtons() {
 
   document.body.appendChild(container);
 
-  // Scroll listener
+  // Show/hide the whole container based on scroll
   window.addEventListener('scroll', function () {
-    if (window.scrollY > 400) {
-      topBtn.classList.add('visible');
-      homeBtn.classList.add('visible');
+    if (window.scrollY > 300) {
+      container.classList.add('visible');
     } else {
-      topBtn.classList.remove('visible');
-      homeBtn.classList.remove('visible');
+      container.classList.remove('visible');
     }
   });
 

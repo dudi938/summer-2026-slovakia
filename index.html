@@ -375,17 +375,15 @@
         }
       });
 
-      // Floating back-to-top button
+      // Floating buttons - show/hide container on scroll
+      var floatingBtns = document.querySelector('.floating-btns');
       var backToTopBtn = document.getElementById('back-to-top-btn');
-      var homeBtn = document.getElementById('home-btn');
-      if (backToTopBtn) {
+      if (floatingBtns && backToTopBtn) {
         window.addEventListener('scroll', function() {
-          if (window.scrollY > 400) {
-            backToTopBtn.classList.add('visible');
-            if (homeBtn) homeBtn.classList.add('visible');
+          if (window.scrollY > 300) {
+            floatingBtns.classList.add('visible');
           } else {
-            backToTopBtn.classList.remove('visible');
-            if (homeBtn) homeBtn.classList.remove('visible');
+            floatingBtns.classList.remove('visible');
           }
         });
         backToTopBtn.addEventListener('click', function() {
