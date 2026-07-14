@@ -8531,5 +8531,597 @@
       "קיץ"
     ],
     "source": "https://www.martinky.sk"
+  },
+  {
+    "id": "parndorf-designer-outlet",
+    "name": "Parndorf Designer Outlet (McArthurGlen)",
+    "nameHebrew": "אאוטלט פארנדורף - מרכז קניות מעצבים",
+    "category": "family",
+    "area": "vienna",
+    "description": "McArthurGlen Designer Outlet Parndorf offers over 170 designer and brand stores with discounts of 30-70% year-round. Located just 30 minutes from Bratislava, it's a popular stop for families looking for quality shopping at great prices. Has a large playground area for kids.",
+    "descriptionHebrew": "אאוטלט מעצבים עם למעלה מ-170 חנויות ברנד בהנחות של 30-70% כל השנה. נמצא רק 30 דקות מברטיסלבה. יש מתחם משחקים גדול לילדים וזה מקום מושלם לשילוב קניות עם טיול. מותגים כמו Nike, Adidas, Puma, Lego ועוד.",
+    "address": "Designer Outlet Parndorf, 7111 Parndorf, Austria",
+    "website": "https://www.mcarthurglen.com/en/outlets/at/designer-outlet-parndorf/",
+    "priceAdult": "Free entry",
+    "priceChild": "Free entry",
+    "coordinates": {
+      "lat": 47.993,
+      "lng": 16.857
+    },
+    "suitableFor": [
+      "משפחות",
+      "ילדים",
+      "מבוגרים"
+    ],
+    "suitableForBaby": true,
+    "notes": "Open Mon-Sat 9:30-20:00, Sun closed. Huge playground for kids. Restaurants and cafes on site. Stroller-friendly. Free parking for over 3500 cars.",
+    "notesHebrew": "פתוח ראשון-שישי 9:30-20:00, שבת סגור. מגרש משחקים ענק לילדים. מסעדות ובתי קפה במקום. נגיש לעגלות. חניה חינם ל-3500 מכוניות. 30 דקות מברטיסלבה.",
+    "distanceFromMalatiny": "250 ק\"מ, כ-2.5 שעות נסיעה",
+    "familyScore": 3,
+    "dayTripCluster": "bratislava-area",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Klein_aber_oho-_Ledert%C3%A4schchen_mit_verstellbarem_Schulterriemen_von_Tommy_Hilfiger._Gesehen_im_Designer_Outlet_Parndorf..jpg/1280px-Klein_aber_oho-_Ledert%C3%A4schchen_mit_verstellbarem_Schulterriemen_von_Tommy_Hilfiger._Gesehen_im_Designer_Outlet_Parndorf..jpg",
+    "googleMapsUrl": "https://www.google.com/maps?q=47.993,16.857",
+    "tags": [
+      "קניות",
+      "אאוטלט",
+      "מעצבים",
+      "ילדים",
+      "אוסטריה"
+    ],
+    "source": "https://www.mcarthurglen.com/en/outlets/at/designer-outlet-parndorf/"
+  },
+  {
+    "id": "thermalbad-mosonmagyarovar",
+    "name": "Flexum Thermal & Spa Mosonmagyaróvár",
+    "nameHebrew": "מעיינות חמים מושונמג'רובר - ספא ובריכות",
+    "category": "water-sports",
+    "area": "bratislava",
+    "description": "Large thermal bath complex in Mosonmagyaróvár, Hungary, just 40 minutes from Bratislava. Features multiple thermal pools (33-38°C), children's pools with slides, wave pool, and wellness area. Natural thermal water with healing properties.",
+    "descriptionHebrew": "מתחם מעיינות חמים ענק במושונמג'רובר, הונגריה - רק 40 דקות מברטיסלבה. כולל בריכות תרמליות רבות (33-38 מעלות), בריכות ילדים עם מגלשות, בריכת גלים ואזור ספא. מים תרמליים טבעיים עם סגולות ריפוי. מחירים זולים מאוד בהשוואה לאוסטריה.",
+    "address": "Kolbai Károly tér 10, Mosonmagyaróvár 9200, Hungary",
+    "website": "https://www.flexumthermal.hu/",
+    "priceAdult": "~€12-15 (full day)",
+    "priceChild": "~€8-10 (full day)",
+    "coordinates": {
+      "lat": 47.872,
+      "lng": 17.269
+    },
+    "suitableFor": [
+      "משפחות",
+      "ילדים 3+",
+      "תינוקות",
+      "מבוגרים"
+    ],
+    "suitableForBaby": true,
+    "notes": "Thermal water is 33-38°C. Baby pool available. Very affordable compared to Austrian thermal baths. Bring own towels to save money. Changing rooms with lockers.",
+    "notesHebrew": "מים תרמליים 33-38 מעלות. יש בריכת תינוקות. זול מאוד בהשוואה למרחצאות באוסטריה. כדאי להביא מגבות. חדרי הלבשה עם לוקרים. 40 דקות מברטיסלבה.",
+    "distanceFromMalatiny": "260 ק\"מ, כ-2.5 שעות נסיעה",
+    "familyScore": 5,
+    "dayTripCluster": "bratislava-area",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9a/BIO_Flexum-Term%C3%A1l_Gy%C3%B3gyf%C3%BCrd%C5%91%2C_bej%C3%A1rat%2C_2017_Mosonmagyar%C3%B3v%C3%A1r.jpg",
+    "googleMapsUrl": "https://www.google.com/maps?q=47.872,17.269",
+    "tags": [
+      "מעיינות חמים",
+      "בריכות",
+      "ספא",
+      "ילדים",
+      "הונגריה",
+      "ספורט מים"
+    ],
+    "source": "https://www.flexumthermal.hu/"
+  },
+  {
+    "id": "gyor-zoo-xantus-janos",
+    "name": "Xantus János Zoo Győr",
+    "nameHebrew": "גן החיות של ג'ר (Győr) - קומפקטי ומשפחתי",
+    "category": "family",
+    "area": "bratislava",
+    "description": "Compact and family-friendly zoo in Győr, Hungary. Home to over 100 species. Small enough for young children to enjoy without getting tired, with petting zoo, playground, and train ride.",
+    "descriptionHebrew": "גן חיות קומפקטי ומשפחתי בעיר ג'ר שבהונגריה. מעל 100 מינים של בעלי חיים. קטן מספיק שילדים צעירים לא מתעייפים, עם פינת ליטוף, מגרש משחקים ורכבת קטנה. שעה נסיעה מברטיסלבה.",
+    "address": "Kiskút liget, Győr 9027, Hungary",
+    "website": "https://www.zoogyor.com/",
+    "priceAdult": "~€5-7 (2200 HUF)",
+    "priceChild": "~€3-5 (1500 HUF)",
+    "coordinates": {
+      "lat": 47.683,
+      "lng": 17.617
+    },
+    "suitableFor": [
+      "משפחות",
+      "ילדים 2+",
+      "תינוקות",
+      "מבוגרים"
+    ],
+    "suitableForBaby": true,
+    "notes": "Small zoo perfect for toddlers. Petting zoo with goats and rabbits. Small train ride. Playground on premises. Can combine with Győr old town visit.",
+    "notesHebrew": "גן חיות קטן מושלם לפעוטות. פינת ליטוף עם עיזים וארנבות. רכבת קטנה. מגרש משחקים. אפשר לשלב עם ביקור בעיר העתיקה של ג'ר. שעה מברטיסלבה.",
+    "distanceFromMalatiny": "270 ק\"מ, כ-2.5 שעות נסיעה",
+    "familyScore": 4,
+    "dayTripCluster": "bratislava-area",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Xantus_J%C3%A1nos_ZOO%2C_entry%2C_2018_Gy%C5%91r.jpg/1280px-Xantus_J%C3%A1nos_ZOO%2C_entry%2C_2018_Gy%C5%91r.jpg",
+    "googleMapsUrl": "https://www.google.com/maps?q=47.683,17.617",
+    "tags": [
+      "גן חיות",
+      "בעלי חיים",
+      "ילדים",
+      "הונגריה",
+      "משפחה"
+    ],
+    "source": "https://www.zoogyor.com/"
+  },
+  {
+    "id": "gyor-old-town-family",
+    "name": "Győr Old Town & Baroque City Center",
+    "nameHebrew": "העיר העתיקה של ג'ר - מרכז בארוקי יפהפה",
+    "category": "family",
+    "area": "bratislava",
+    "description": "Győr's beautiful baroque old town is the third largest city in Hungary. Features stunning architecture, Széchenyi Square, the Bishop's Castle, and family-friendly atmosphere with ice cream shops and playgrounds.",
+    "descriptionHebrew": "העיר העתיקה של ג'ר היא אחת היפות בהונגריה - ארכיטקטורה בארוקית מרהיבה, כיכר סצ'ני הגדולה, טירת הבישוף, וחנויות גלידה מעולות. אווירה משפחתית נעימה. אפשר לשלב עם גן החיות. שעה מברטיסלבה.",
+    "address": "Széchenyi tér, Győr 9021, Hungary",
+    "website": "https://www.gyor.hu/",
+    "priceAdult": "Free (walking)",
+    "priceChild": "Free",
+    "coordinates": {
+      "lat": 47.687,
+      "lng": 17.634
+    },
+    "suitableFor": [
+      "משפחות",
+      "ילדים",
+      "תינוקות",
+      "מבוגרים"
+    ],
+    "suitableForBaby": true,
+    "notes": "Free to explore. Great ice cream and pastry shops. Combine with zoo visit. Pedestrian-friendly center. Parking available near old town.",
+    "notesHebrew": "חינם לטיול. גלידות ומאפים מעולים. לשלב עם גן החיות. מרכז ידידותי להולכי רגל. יש חניה ליד העיר העתיקה. שעה מברטיסלבה.",
+    "distanceFromMalatiny": "270 ק\"מ, כ-2.5 שעות נסיעה",
+    "familyScore": 4,
+    "dayTripCluster": "bratislava-area",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Gy%C5%91r%2C_V%C3%A1rosh%C3%A1za.jpg/1280px-Gy%C5%91r%2C_V%C3%A1rosh%C3%A1za.jpg",
+    "googleMapsUrl": "https://www.google.com/maps?q=47.687,17.634",
+    "tags": [
+      "עיר עתיקה",
+      "ארכיטקטורה",
+      "טיול",
+      "הונגריה",
+      "גלידה"
+    ],
+    "source": "https://www.gyor.hu/"
+  },
+  {
+    "id": "lednice-castle-gardens-unesco",
+    "name": "Lednice Castle & Gardens (UNESCO)",
+    "nameHebrew": "טירת לדניצה וגנים - אתר מורשת עולמית",
+    "category": "nature",
+    "area": "czech",
+    "description": "UNESCO World Heritage Site. Neo-gothic fairytale castle surrounded by the largest park in Czech Republic (200 hectares). Features beautiful gardens, a minaret, palm greenhouse, boat trips on castle ponds, and children's activities.",
+    "descriptionHebrew": "אתר מורשת עולמית של יונסקו. טירה ניאו-גותית כמו מהאגדות מוקפת בפארק הגדול ביותר בצ'כיה (200 דונם). גנים מרהיבים, מגדל מינרט, חממת דקלים, שייט בסירה באגמי הטירה, ופעילויות לילדים. שעה מברטיסלבה.",
+    "address": "Zámek 1, 691 44 Lednice, Czech Republic",
+    "website": "https://www.zamek-lednice.com/en",
+    "priceAdult": "~€8-12 (castle tour)",
+    "priceChild": "~€5-8 (castle tour)",
+    "coordinates": {
+      "lat": 48.8,
+      "lng": 16.804
+    },
+    "suitableFor": [
+      "משפחות",
+      "ילדים 3+",
+      "תינוקות (גנים)",
+      "מבוגרים"
+    ],
+    "suitableForBaby": true,
+    "notes": "Castle tours require booking in summer. Gardens are free to walk. Boat trips available. Combined ticket with Valtice castle. Multiple tour routes of different lengths.",
+    "notesHebrew": "סיורים בטירה דורשים הזמנה בקיץ. הגנים חינם לטיול. שייט בסירה זמין. כרטיס משולב עם טירת ולטיצה. מספר מסלולי סיור באורכים שונים. שעה מברטיסלבה.",
+    "distanceFromMalatiny": "290 ק\"מ, כ-3 שעות נסיעה",
+    "familyScore": 5,
+    "dayTripCluster": "bratislava-area",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Lednice_%28Eisgrub%29_-_z%C3%A1mek.JPG/1280px-Lednice_%28Eisgrub%29_-_z%C3%A1mek.JPG",
+    "googleMapsUrl": "https://www.google.com/maps?q=48.800,16.804",
+    "tags": [
+      "טירה",
+      "גנים",
+      "יונסקו",
+      "צ'כיה",
+      "טבע",
+      "שייט"
+    ],
+    "source": "https://www.zamek-lednice.com/en"
+  },
+  {
+    "id": "valtice-castle-moravia",
+    "name": "Valtice Castle & Wine Cellars",
+    "nameHebrew": "טירת ולטיצה - ארמון בארוקי ומרתפי יין",
+    "category": "nature",
+    "area": "czech",
+    "description": "Baroque castle that is part of the Lednice-Valtice Cultural Landscape (UNESCO). Features beautiful interiors, herb garden, wine salon, and cycling paths connecting to Lednice.",
+    "descriptionHebrew": "ארמון בארוקי שהוא חלק ממרחב התרבות לדניצה-ולטיצה (יונסקו). פנים מרהיב, גן תבלינים, סלון יינות, ושבילי אופניים המחברים ללדניצה. אפשר לרכב אופניים בין שתי הטירות. שעה מברטיסלבה.",
+    "address": "Zámek 1, 691 42 Valtice, Czech Republic",
+    "website": "https://www.zamek-valtice.cz/en",
+    "priceAdult": "~€7-10",
+    "priceChild": "~€4-6",
+    "coordinates": {
+      "lat": 48.741,
+      "lng": 16.756
+    },
+    "suitableFor": [
+      "משפחות",
+      "ילדים 5+",
+      "מבוגרים"
+    ],
+    "suitableForBaby": true,
+    "notes": "Can cycle between Lednice and Valtice (7km flat path). Wine salon for parents. Herb garden free to visit. Nice cafes in town square.",
+    "notesHebrew": "אפשר לרכב אופניים בין לדניצה לולטיצה (7 ק\"מ שטוח). סלון יינות להורים. גן תבלינים חינם. בתי קפה נחמדים בכיכר העיירה. שעה מברטיסלבה.",
+    "distanceFromMalatiny": "290 ק\"מ, כ-3 שעות נסיעה",
+    "familyScore": 3,
+    "dayTripCluster": "bratislava-area",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Zamek_Valtice.jpg/1280px-Zamek_Valtice.jpg",
+    "googleMapsUrl": "https://www.google.com/maps?q=48.741,16.756",
+    "tags": [
+      "טירה",
+      "יונסקו",
+      "צ'כיה",
+      "יין",
+      "אופניים"
+    ],
+    "source": "https://www.zamek-valtice.cz/en"
+  },
+  {
+    "id": "lednice-boat-trip",
+    "name": "Boat Trip on Castle Ponds (Lednice)",
+    "nameHebrew": "שייט בסירה באגמי טירת לדניצה",
+    "category": "water-sports",
+    "area": "czech",
+    "description": "Scenic boat trips on the beautiful ponds within Lednice castle park. Pass by the famous Minaret, John's Castle ruin, and lush gardens. Relaxing 30-minute ride suitable for all ages.",
+    "descriptionHebrew": "שייט בסירה באגמים היפים שבתוך הפארק של טירת לדניצה. עוברים ליד המינרט המפורסם, חורבות טירת ג'ון, וגנים מלבלבים. שייט רגוע של 30 דקות מתאים לכל הגילאים.",
+    "address": "Zámecký park Lednice, Czech Republic",
+    "website": "https://www.zamek-lednice.com/en",
+    "priceAdult": "~€5-7",
+    "priceChild": "~€3-4",
+    "coordinates": {
+      "lat": 48.798,
+      "lng": 16.808
+    },
+    "suitableFor": [
+      "משפחות",
+      "ילדים 2+",
+      "תינוקות",
+      "מבוגרים"
+    ],
+    "suitableForBaby": true,
+    "notes": "Boats depart every 30 min in summer. No booking needed but can wait in peak season. Life jackets provided. Strollers can stay at dock.",
+    "notesHebrew": "סירות יוצאות כל 30 דקות בקיץ. לא צריך הזמנה אבל עלול להיות תור בעונה. אפודי הצלה מסופקים. עגלות אפשר להשאיר ברציף. שעה מברטיסלבה.",
+    "distanceFromMalatiny": "290 ק\"מ, כ-3 שעות נסיעה",
+    "familyScore": 5,
+    "dayTripCluster": "bratislava-area",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/57/Z%C3%A1mek_Lednice.jpg",
+    "googleMapsUrl": "https://www.google.com/maps?q=48.798,16.808",
+    "tags": [
+      "שייט",
+      "סירה",
+      "טירה",
+      "צ'כיה",
+      "טבע",
+      "ילדים"
+    ],
+    "source": "https://www.zamek-lednice.com/en"
+  },
+  {
+    "id": "vida-science-center-brno",
+    "name": "VIDA! Science Center Brno",
+    "nameHebrew": "VIDA! מרכז מדע אינטראקטיבי - ברנו",
+    "category": "family",
+    "area": "czech",
+    "description": "Interactive science museum in Brno with over 170 exhibits. Perfect for rainy days or hot weather. Hands-on experiments in physics, biology, geography. Indoor playground for toddlers.",
+    "descriptionHebrew": "מוזיאון מדע אינטראקטיבי בברנו עם למעלה מ-170 תערוכות. מושלם ליום גשום או חם מדי. ניסויים מעשיים בפיזיקה, ביולוגיה, גיאוגרפיה. מתחם משחקים מקורה לפעוטות. שעה וחצי מברטיסלבה.",
+    "address": "Křížkovského 554/12, 603 00 Brno, Czech Republic",
+    "website": "https://www.vida.cz/en",
+    "priceAdult": "~€10-12 (290 CZK)",
+    "priceChild": "~€7-9 (190 CZK, ages 3-15)",
+    "coordinates": {
+      "lat": 49.191,
+      "lng": 16.584
+    },
+    "suitableFor": [
+      "ילדים 3+",
+      "נוער",
+      "מבוגרים",
+      "משפחות"
+    ],
+    "suitableForBaby": true,
+    "notes": "Indoor attraction - great for bad weather. Allow 3-4 hours. Toddler area for ages 1-5. Cafe on premises. Planetarium shows available.",
+    "notesHebrew": "אטרקציה מקורה - מצוין למזג אוויר גרוע. להקדיש 3-4 שעות. אזור פעוטות לגילאי 1-5. בית קפה במקום. מופעי פלנטריום זמינים. שעה וחצי מברטיסלבה.",
+    "distanceFromMalatiny": "300 ק\"מ, כ-3 שעות נסיעה",
+    "familyScore": 5,
+    "dayTripCluster": "bratislava-area",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Vida%21_science_centrum%2C_Brno%2C_Czech_Republic.jpg/1280px-Vida%21_science_centrum%2C_Brno%2C_Czech_Republic.jpg",
+    "googleMapsUrl": "https://www.google.com/maps?q=49.191,16.584",
+    "tags": [
+      "מוזיאון",
+      "מדע",
+      "אינטראקטיבי",
+      "ילדים",
+      "צ'כיה",
+      "מקורה"
+    ],
+    "source": "https://www.vida.cz/en"
+  },
+  {
+    "id": "niedzica-castle-czorsztyn-lake",
+    "name": "Niedzica Castle & Lake Czorsztyn (Poland)",
+    "nameHebrew": "טירת נידז'יצה ואגם צ'ורשטין - פולין",
+    "category": "nature",
+    "area": "high-tatras",
+    "description": "Medieval castle perched on a cliff above Lake Czorsztyn in Poland. Beautiful views, castle tours, boat trips on the lake, and water activities. 1 hour from Poprad.",
+    "descriptionHebrew": "טירה מימי הביניים על צוק מעל אגם צ'ורשטין בפולין. נופים מרהיבים, סיורים בטירה, שייט באגם ופעילויות מים. שעה מפופרד. אפשר לשלב עם שייט רפסודות בדונייץ.",
+    "address": "Zamkowa 1, 34-441 Niedzica, Poland",
+    "website": "https://www.niedzica.pl/",
+    "priceAdult": "~€5 (25 PLN castle tour)",
+    "priceChild": "~€3 (15 PLN)",
+    "coordinates": {
+      "lat": 49.41,
+      "lng": 20.313
+    },
+    "suitableFor": [
+      "משפחות",
+      "ילדים 3+",
+      "מבוגרים"
+    ],
+    "suitableForBaby": true,
+    "notes": "Castle courtyard free to visit. Tours run every hour in summer. Lake has pedal boats and kayak rentals. Combine with Dunajec rafting. Nice restaurant with lake views.",
+    "notesHebrew": "חצר הטירה חינם. סיורים כל שעה בקיץ. באגם יש פדלים וקיאקים להשכרה. לשלב עם שייט רפסודות בדונייץ. מסעדה נחמדה עם נוף לאגם. שעה מפופרד.",
+    "distanceFromMalatiny": "130 ק\"מ, כ-שעה ו-45 דקות נסיעה",
+    "familyScore": 5,
+    "dayTripCluster": "pieniny-poland",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Poland_2025_407_Niedzica_Castle_-_Tourist_Info.jpg/1280px-Poland_2025_407_Niedzica_Castle_-_Tourist_Info.jpg",
+    "googleMapsUrl": "https://www.google.com/maps?q=49.410,20.313",
+    "tags": [
+      "טירה",
+      "אגם",
+      "פולין",
+      "שייט",
+      "נוף",
+      "היסטוריה"
+    ],
+    "source": "https://www.niedzica.pl/"
+  },
+  {
+    "id": "zakopane-gubalowka-funicular",
+    "name": "Gubałówka Funicular & Mountain Top, Zakopane",
+    "nameHebrew": "רכבל גובאלובקה - נוף פנורמי מעל זקופנה",
+    "category": "adventure",
+    "area": "high-tatras",
+    "description": "Funicular railway to the top of Gubałówka mountain (1,126m) in Zakopane, Poland. Panoramic views of the Tatras, alpine coaster, zip line, mountain slides, and traditional food stalls at the top.",
+    "descriptionHebrew": "רכבל לפסגת הר גובאלובקה (1,126 מ') בזקופנה שבפולין. נוף פנורמי על הטטרה, רכבת אלפינית, זיפליין, מגלשות הרים ודוכני אוכל מסורתי בפסגה. שעה ו-10 דקות מפופרד.",
+    "address": "ul. Droga Zubka, 34-500 Zakopane, Poland",
+    "website": "https://www.pkl.pl/gubalowka/",
+    "priceAdult": "~€6 (30 PLN round trip)",
+    "priceChild": "~€4 (20 PLN round trip)",
+    "coordinates": {
+      "lat": 49.296,
+      "lng": 19.948
+    },
+    "suitableFor": [
+      "משפחות",
+      "ילדים 4+",
+      "נוער",
+      "מבוגרים"
+    ],
+    "suitableForBaby": true,
+    "notes": "Funicular runs every 5 minutes in summer. Can walk down (30 min) or take funicular back. Alpine coaster at top (extra fee). Food stalls with oscypek (smoked cheese). Very popular - go early!",
+    "notesHebrew": "הרכבל יוצא כל 5 דקות בקיץ. אפשר לרדת ברגל (30 דקות) או ברכבל. רכבת אלפינית בפסגה (תשלום נוסף). דוכני אוכל עם גבינה מעושנת. מאוד פופולרי - להגיע מוקדם! שעה ו-10 מפופרד.",
+    "distanceFromMalatiny": "120 ק\"מ, כ-שעה ו-40 דקות נסיעה",
+    "familyScore": 5,
+    "dayTripCluster": "zakopane-poland",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Zakopane_kolej_na_Gubalowke_3.jpg/1280px-Zakopane_kolej_na_Gubalowke_3.jpg",
+    "googleMapsUrl": "https://www.google.com/maps?q=49.296,19.948",
+    "tags": [
+      "רכבל",
+      "נוף",
+      "פולין",
+      "זקופנה",
+      "הרפתקה",
+      "רכבת אלפינית"
+    ],
+    "source": "https://www.pkl.pl/gubalowka/"
+  },
+  {
+    "id": "zakopane-krupowki-market",
+    "name": "Zakopane Krupówki Street & Market",
+    "nameHebrew": "רחוב קרופובקי - שוק ומדרחוב זקופנה",
+    "category": "family",
+    "area": "high-tatras",
+    "description": "The main pedestrian street in Zakopane, Poland. Lively market with traditional handicrafts, smoked cheese (oscypek), souvenirs, and street performers. Great atmosphere for families.",
+    "descriptionHebrew": "המדרחוב הראשי בזקופנה, פולין. שוק תוסס עם מלאכת יד מסורתית, גבינה מעושנת (אוסציפק), מזכרות ואמני רחוב. אווירה נהדרת למשפחות. מסעדות עם אוכל הררי מסורתי. שעה ו-10 מפופרד.",
+    "address": "ul. Krupówki, 34-500 Zakopane, Poland",
+    "website": "https://www.zakopane.pl/",
+    "priceAdult": "Free (shopping extra)",
+    "priceChild": "Free",
+    "coordinates": {
+      "lat": 49.295,
+      "lng": 19.952
+    },
+    "suitableFor": [
+      "משפחות",
+      "ילדים",
+      "תינוקות",
+      "מבוגרים"
+    ],
+    "suitableForBaby": true,
+    "notes": "Pedestrian street - stroller friendly. Try oscypek (grilled smoked cheese). Great ice cream shops. Visit during late afternoon for best atmosphere. Polish zloty needed.",
+    "notesHebrew": "מדרחוב - נגיש לעגלות. לנסות אוסציפק (גבינה מעושנת צלויה). גלידות מעולות. לבקר בשעות אחה\"צ לאווירה הכי טובה. צריך זלוטי פולני. שעה ו-10 מפופרד.",
+    "distanceFromMalatiny": "120 ק\"מ, כ-שעה ו-40 דקות נסיעה",
+    "familyScore": 4,
+    "dayTripCluster": "zakopane-poland",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Zakopane_-_ul_Krupowki_%282%29.JPG/1280px-Zakopane_-_ul_Krupowki_%282%29.JPG",
+    "googleMapsUrl": "https://www.google.com/maps?q=49.295,19.952",
+    "tags": [
+      "שוק",
+      "קניות",
+      "פולין",
+      "זקופנה",
+      "אוכל",
+      "מדרחוב"
+    ],
+    "source": "https://www.zakopane.pl/"
+  },
+  {
+    "id": "termy-chocholowskie-thermal-baths",
+    "name": "Termy Chochołowskie (Thermal Baths)",
+    "nameHebrew": "טרמי חוחולובסקיה - מעיינות חמים ומגלשות",
+    "category": "water-sports",
+    "area": "high-tatras",
+    "description": "Poland's newest and largest thermal bath complex. Massive water park with 30+ pools, thrilling water slides, thermal pools (36°C), children's zone, and mountain views. Much cheaper than Slovak equivalents.",
+    "descriptionHebrew": "מתחם המעיינות החמים הגדול והחדש ביותר בפולין. פארק מים ענק עם 30+ בריכות, מגלשות מים מרגשות, בריכות תרמליות (36 מעלות), אזור ילדים, ונוף להרים. הרבה יותר זול מהמקבילות בסלובקיה. שעה ו-15 מפופרד.",
+    "address": "Chochołowskie Termy, ul. Długa 1, 34-513 Chochołów, Poland",
+    "website": "https://www.termychocholowskie.pl/",
+    "priceAdult": "~€15-20 (75-100 PLN)",
+    "priceChild": "~€10-13 (50-65 PLN)",
+    "coordinates": {
+      "lat": 49.36,
+      "lng": 19.812
+    },
+    "suitableFor": [
+      "משפחות",
+      "ילדים 3+",
+      "תינוקות",
+      "נוער",
+      "מבוגרים"
+    ],
+    "suitableForBaby": true,
+    "notes": "Very popular - arrive early or buy online tickets. Indoor and outdoor pools. Baby zone with warm shallow pools. Slides suitable from age 4+. Lockers and changing rooms. Bring own food or eat at food court.",
+    "notesHebrew": "מאוד פופולרי - להגיע מוקדם או לקנות כרטיסים אונליין. בריכות פנים וחוץ. אזור תינוקות עם בריכות רדודות וחמות. מגלשות מגיל 4+. לוקרים וחדרי הלבשה. להביא אוכל או לאכול בפוד קורט. שעה ו-15 מפופרד.",
+    "distanceFromMalatiny": "130 ק\"מ, כ-שעה ו-50 דקות נסיעה",
+    "familyScore": 5,
+    "dayTripCluster": "zakopane-poland",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Termy_Malta%C5%84skie_16.JPG/1280px-Termy_Malta%C5%84skie_16.JPG",
+    "googleMapsUrl": "https://www.google.com/maps?q=49.360,19.812",
+    "tags": [
+      "מעיינות חמים",
+      "מגלשות",
+      "בריכות",
+      "פולין",
+      "ספורט מים",
+      "ילדים"
+    ],
+    "source": "https://www.termychocholowskie.pl/"
+  },
+  {
+    "id": "aggtelek-baradla-cave-hungary",
+    "name": "Baradla Cave - Aggtelek National Park (UNESCO)",
+    "nameHebrew": "מערת ברדלה - פארק לאומי אגטלק (יונסקו)",
+    "category": "nature",
+    "area": "high-tatras",
+    "description": "UNESCO World Heritage Site. The largest stalactite cave in Central Europe (25 km long). Guided tours of 1-7 hours through stunning formations. Located on the Hungary-Slovakia border, 1.5 hours from Poprad.",
+    "descriptionHebrew": "אתר מורשת עולמית של יונסקו. מערת הנטיפים הגדולה ביותר במרכז אירופה (25 ק\"מ אורך). סיורים מודרכים של 1-7 שעות בין תצורות מרהיבות. נמצאת על גבול הונגריה-סלובקיה, שעה וחצי מפופרד.",
+    "address": "Aggtelek National Park, Aggtelek, Hungary",
+    "website": "https://www.anp.hu/en",
+    "priceAdult": "~€8-15 (depending on tour length)",
+    "priceChild": "~€5-10",
+    "coordinates": {
+      "lat": 48.469,
+      "lng": 20.497
+    },
+    "suitableFor": [
+      "ילדים 5+",
+      "נוער",
+      "מבוגרים",
+      "משפחות"
+    ],
+    "suitableForBaby": false,
+    "notes": "Multiple tour options: 1-hour short tour, 2-hour medium, 5-hour adventure. Temperature inside 10°C - bring warm clothes! Not suitable for babies/toddlers (stairs, darkness). Book in advance in summer.",
+    "notesHebrew": "מספר אפשרויות סיור: קצר (שעה), בינוני (שעתיים), הרפתקה (5 שעות). טמפרטורה בפנים 10 מעלות - להביא בגדים חמים! לא מתאים לתינוקות (מדרגות, חושך). להזמין מראש בקיץ. שעה וחצי מפופרד.",
+    "distanceFromMalatiny": "200 ק\"מ, כ-2.5 שעות נסיעה",
+    "familyScore": 4,
+    "dayTripCluster": "eastern-slovakia",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Baradla_Cave_%2801%29_%28Hungary%29.jpg",
+    "googleMapsUrl": "https://www.google.com/maps?q=48.469,20.497",
+    "tags": [
+      "מערה",
+      "נטיפים",
+      "יונסקו",
+      "הונגריה",
+      "טבע",
+      "סיור מודרך"
+    ],
+    "source": "https://www.anp.hu/en"
+  },
+  {
+    "id": "alpine-coaster-gubalowka-zakopane",
+    "name": "Alpine Coaster Gubałówka (Zakopane)",
+    "nameHebrew": "רכבת אלפינית גובאלובקה - זקופנה",
+    "category": "adventure",
+    "area": "high-tatras",
+    "description": "Thrilling alpine coaster at the top of Gubałówka mountain in Zakopane. 1,000 meter track with mountain views. Riders control their own speed. Combined with the funicular ride up.",
+    "descriptionHebrew": "רכבת אלפינית מרגשת בפסגת הר גובאלובקה בזקופנה. מסלול של 1,000 מטר עם נוף להרים. הרוכב שולט במהירות בעצמו. משולב עם נסיעת הרכבל לפסגה. שעה ו-10 מפופרד.",
+    "address": "Gubałówka summit, Zakopane, Poland",
+    "website": "https://www.pkl.pl/gubalowka/",
+    "priceAdult": "~€4 (20 PLN per ride)",
+    "priceChild": "~€3 (15 PLN, min height 110cm)",
+    "coordinates": {
+      "lat": 49.299,
+      "lng": 19.945
+    },
+    "suitableFor": [
+      "ילדים 6+ (גובה 110 ס\"מ)",
+      "נוער",
+      "מבוגרים"
+    ],
+    "suitableForBaby": false,
+    "notes": "Minimum height 110cm to ride alone, 90cm with adult. Open weather permitting. Queue can be long in peak summer - go early morning. Buy combined ticket with funicular.",
+    "notesHebrew": "גובה מינימום 110 ס\"מ לבד, 90 ס\"מ עם מבוגר. פתוח תלוי מזג אוויר. תור ארוך בשיא הקיץ - ללכת מוקדם בבוקר. לקנות כרטיס משולב עם הרכבל. שעה ו-10 מפופרד.",
+    "distanceFromMalatiny": "120 ק\"מ, כ-שעה ו-40 דקות נסיעה",
+    "familyScore": 4,
+    "dayTripCluster": "zakopane-poland",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Guba%C5%82%C3%B3wka_02.jpg/1280px-Guba%C5%82%C3%B3wka_02.jpg",
+    "googleMapsUrl": "https://www.google.com/maps?q=49.299,19.945",
+    "tags": [
+      "רכבת אלפינית",
+      "הרפתקה",
+      "פולין",
+      "זקופנה",
+      "מגלשות"
+    ],
+    "source": "https://www.pkl.pl/gubalowka/"
+  },
+  {
+    "id": "terma-bania-bialka-tatrzanska",
+    "name": "Terma Bania - Białka Tatrzańska Thermal Baths",
+    "nameHebrew": "טרמה בניה - מעיינות חמים ביאלקה טטז'נסקה",
+    "category": "water-sports",
+    "area": "high-tatras",
+    "description": "Popular thermal bath complex in Białka Tatrzańska, Poland. Indoor and outdoor pools with Tatra mountain views, water slides, children's pool, and relaxation zone. Closer to the border than Chochołowskie.",
+    "descriptionHebrew": "מתחם מעיינות חמים פופולרי בביאלקה טטז'נסקה, פולין. בריכות פנים וחוץ עם נוף להרי הטטרה, מגלשות מים, בריכת ילדים ואזור מנוחה. קרוב יותר לגבול מטרמי חוחולובסקיה. שעה מפופרד.",
+    "address": "Środkowa 181, 34-405 Białka Tatrzańska, Poland",
+    "website": "https://www.termabania.pl/",
+    "priceAdult": "~€12-18 (60-90 PLN)",
+    "priceChild": "~€8-12 (40-60 PLN)",
+    "coordinates": {
+      "lat": 49.382,
+      "lng": 20.108
+    },
+    "suitableFor": [
+      "משפחות",
+      "ילדים 2+",
+      "תינוקות",
+      "מבוגרים"
+    ],
+    "suitableForBaby": true,
+    "notes": "Closer to Slovak border than Chochołowskie. Outdoor pools have amazing Tatra views. Less crowded on weekdays. Baby-friendly with shallow warm pools. Wooden highland architecture.",
+    "notesHebrew": "קרוב יותר לגבול הסלובקי מחוחולובסקיה. בריכות חוץ עם נוף מדהים לטטרה. פחות צפוף באמצע השבוע. ידידותי לתינוקות עם בריכות רדודות וחמות. ארכיטקטורה הררית מעץ. שעה מפופרד.",
+    "distanceFromMalatiny": "110 ק\"מ, כ-שעה ו-30 דקות נסיעה",
+    "familyScore": 5,
+    "dayTripCluster": "zakopane-poland",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Termy_Malta%C5%84skie_16.JPG/1280px-Termy_Malta%C5%84skie_16.JPG",
+    "googleMapsUrl": "https://www.google.com/maps?q=49.382,20.108",
+    "tags": [
+      "מעיינות חמים",
+      "בריכות",
+      "פולין",
+      "נוף",
+      "ספורט מים",
+      "ילדים"
+    ],
+    "source": "https://www.termabania.pl/"
   }
 ]
