@@ -833,16 +833,18 @@ function closeDayPlanPanel() {
 }
 
 function renderDayPlanItems() {
-  const list = document.getElementById('day-plan-list');
+  const list = document.getElementById('day-plan-items');
   if (!list) return;
 
   list.textContent = '';
 
+  // Show/hide actions and empty state
+  const actions = document.getElementById('day-plan-actions');
+  const emptyState = document.getElementById('day-plan-empty');
+  if (actions) actions.style.display = dayPlan.length > 0 ? 'flex' : 'none';
+  if (emptyState) emptyState.style.display = dayPlan.length === 0 ? 'block' : 'none';
+
   if (dayPlan.length === 0) {
-    const emptyDiv = document.createElement('div');
-    emptyDiv.className = 'day-plan-empty';
-    emptyDiv.textContent = 'התוכנית ריקה. הוסיפו אטרקציות מהרשימה!';
-    list.appendChild(emptyDiv);
     return;
   }
 
