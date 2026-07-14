@@ -682,6 +682,19 @@ ul, ol {
   background: rgba(92, 184, 92, 0.08);
 }
 
+.card-btn-secondary.btn-share {
+  border: 1.5px solid #25D366;
+  color: #25D366;
+  background: rgba(37, 211, 102, 0.06);
+  font-size: 0.85rem;
+}
+
+.card-btn-secondary.btn-share:hover {
+  background: #25D366;
+  color: white;
+  transform: scale(1.05);
+}
+
 /* ===== Map Container ===== */
 .map-section {
   max-width: 1400px;

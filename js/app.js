@@ -1052,57 +1052,97 @@ function showShareMenu(url, text, title) {
 
   var overlay = document.createElement('div');
   overlay.id = 'share-menu-overlay';
-  overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:10000;display:flex;align-items:center;justify-content:center;';
+  overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:10000;display:flex;align-items:flex-end;justify-content:center;padding-bottom:env(safe-area-inset-bottom,0);animation:fadeIn 0.2s ease;';
 
   var menu = document.createElement('div');
-  menu.style.cssText = 'background:white;border-radius:16px;padding:1.5rem;max-width:320px;width:90%;text-align:center;font-family:Heebo,sans-serif;';
+  menu.style.cssText = 'background:white;border-radius:20px 20px 0 0;padding:1.5rem 1.5rem 2rem;max-width:400px;width:100%;font-family:Heebo,sans-serif;animation:slideUp 0.3s ease;';
 
-  var menuTitle = document.createElement('h3');
-  menuTitle.style.cssText = 'margin:0 0 1rem;font-size:1.1rem;';
-  menuTitle.textContent = '📤 שתף אטרקציה';
+  // Handle bar
+  var handle = document.createElement('div');
+  handle.style.cssText = 'width:40px;height:4px;background:#ddd;border-radius:2px;margin:0 auto 1.2rem;';
+  menu.appendChild(handle);
+
+  // Title with attraction name
+  var menuTitle = document.createElement('div');
+  menuTitle.style.cssText = 'font-size:1rem;font-weight:600;color:#333;margin-bottom:0.3rem;text-align:center;';
+  menuTitle.textContent = title || 'שתף אטרקציה';
   menu.appendChild(menuTitle);
 
-  // WhatsApp button
+  var menuSubtitle = document.createElement('div');
+  menuSubtitle.style.cssText = 'font-size:0.8rem;color:#999;margin-bottom:1.2rem;text-align:center;';
+  menuSubtitle.textContent = 'חופשה בסלובקיה 2026';
+  menu.appendChild(menuSubtitle);
+
+  // Buttons container
+  var btnsRow = document.createElement('div');
+  btnsRow.style.cssText = 'display:flex;gap:0.75rem;margin-bottom:1rem;';
+
+  // WhatsApp button - prominent green
   var waBtn = document.createElement('a');
-  waBtn.href = 'https://wa.me/?text=' + encodeURIComponent(text + '\n' + url);
+  waBtn.href = 'https://wa.me/?text=' + encodeURIComponent(text + '\n\n' + url);
   waBtn.target = '_blank';
-  waBtn.style.cssText = 'display:block;padding:0.8rem;margin:0.5rem 0;background:#25D366;color:white;border-radius:10px;text-decoration:none;font-weight:600;font-size:0.95rem;';
-  waBtn.textContent = '💬 שתף בוואטסאפ';
-  menu.appendChild(waBtn);
+  waBtn.rel = 'noopener';
+  waBtn.style.cssText = 'flex:1;display:flex;align-items:center;justify-content:center;gap:0.5rem;padding:0.9rem 1rem;background:#25D366;color:white;border-radius:12px;text-decoration:none;font-weight:600;font-size:0.95rem;box-shadow:0 4px 12px rgba(37,211,102,0.3);transition:transform 0.15s,box-shadow 0.15s;';
+  var waIcon = document.createElement('span');
+  waIcon.style.cssText = 'font-size:1.3rem;';
+  waIcon.textContent = '💬';
+  waBtn.appendChild(waIcon);
+  var waText = document.createElement('span');
+  waText.textContent = 'WhatsApp';
+  waBtn.appendChild(waText);
+  btnsRow.appendChild(waBtn);
 
   // Copy link button
   var copyBtn = document.createElement('button');
-  copyBtn.style.cssText = 'display:block;width:100%;padding:0.8rem;margin:0.5rem 0;background:#4A90D9;color:white;border-radius:10px;border:none;font-weight:600;font-size:0.95rem;cursor:pointer;font-family:Heebo,sans-serif;';
-  copyBtn.textContent = '🔗 העתק קישור';
+  copyBtn.style.cssText = 'flex:1;display:flex;align-items:center;justify-content:center;gap:0.5rem;padding:0.9rem 1rem;background:#f0f4f8;color:#4A90D9;border-radius:12px;border:2px solid #4A90D9;font-weight:600;font-size:0.95rem;cursor:pointer;font-family:Heebo,sans-serif;transition:all 0.15s;';
+  var copyIcon = document.createElement('span');
+  copyIcon.style.cssText = 'font-size:1.2rem;';
+  copyIcon.textContent = '🔗';
+  copyBtn.appendChild(copyIcon);
+  var copyText = document.createElement('span');
+  copyText.textContent = 'העתק קישור';
+  copyBtn.appendChild(copyText);
   copyBtn.addEventListener('click', function() {
     navigator.clipboard.writeText(url).then(function() {
-      copyBtn.textContent = '✓ הקישור הועתק!';
       copyBtn.style.background = '#27AE60';
-      setTimeout(function() { overlay.remove(); }, 1200);
+      copyBtn.style.color = 'white';
+      copyBtn.style.border = '2px solid #27AE60';
+      copyIcon.textContent = '✓';
+      copyText.textContent = 'הועתק!';
+      setTimeout(function() { overlay.remove(); }, 1000);
     }).catch(function() {
-      // Fallback for older browsers
       var input = document.createElement('input');
       input.value = url;
       document.body.appendChild(input);
       input.select();
       document.execCommand('copy');
       document.body.removeChild(input);
-      copyBtn.textContent = '✓ הקישור הועתק!';
       copyBtn.style.background = '#27AE60';
-      setTimeout(function() { overlay.remove(); }, 1200);
+      copyBtn.style.color = 'white';
+      copyBtn.style.border = '2px solid #27AE60';
+      copyIcon.textContent = '✓';
+      copyText.textContent = 'הועתק!';
+      setTimeout(function() { overlay.remove(); }, 1000);
     });
   });
-  menu.appendChild(copyBtn);
+  btnsRow.appendChild(copyBtn);
 
-  // Close button
-  var closeBtn = document.createElement('button');
-  closeBtn.style.cssText = 'display:block;width:100%;padding:0.6rem;margin:0.5rem 0 0;background:transparent;color:#666;border:1px solid #ddd;border-radius:10px;font-size:0.9rem;cursor:pointer;font-family:Heebo,sans-serif;';
-  closeBtn.textContent = 'סגור';
-  closeBtn.addEventListener('click', function() { overlay.remove(); });
-  menu.appendChild(closeBtn);
+  menu.appendChild(btnsRow);
+
+  // URL preview
+  var urlPreview = document.createElement('div');
+  urlPreview.style.cssText = 'background:#f8f9fa;border-radius:8px;padding:0.6rem 0.8rem;font-size:0.75rem;color:#888;text-align:center;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;direction:ltr;';
+  urlPreview.textContent = url;
+  menu.appendChild(urlPreview);
 
   overlay.appendChild(menu);
   overlay.addEventListener('click', function(e) { if (e.target === overlay) overlay.remove(); });
+
+  // Add CSS animation keyframes
+  var style = document.createElement('style');
+  style.textContent = '@keyframes slideUp{from{transform:translateY(100%)}to{transform:translateY(0)}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}';
+  menu.appendChild(style);
+
   document.body.appendChild(overlay);
 }
 
@@ -1257,10 +1297,11 @@ function openAttractionModal(attraction) {
       modalActions.appendChild(webBtn);
     }
 
-    // Share button (in modal)
+    // Share button (in modal) - WhatsApp style
     const shareBtn = document.createElement('button');
     shareBtn.className = 'modal-action-btn modal-btn-share';
-    shareBtn.textContent = '📤 שתף';
+    shareBtn.style.cssText = 'background:#25D366;color:white;border:none;';
+    shareBtn.textContent = '💬 שתף בוואטסאפ';
     shareBtn.addEventListener('click', function() {
       shareAttraction(attraction);
     });
