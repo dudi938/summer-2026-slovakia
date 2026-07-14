@@ -1038,6 +1038,54 @@ window.SlovakiaTrip = {
   getCategoryColor: getCategoryColor
 };
 
+// ===== Floating Buttons (Back to Top + Home) =====
+function setupFloatingButtons() {
+  // Check if buttons already exist (added in index.html)
+  if (document.getElementById('back-to-top-btn')) return;
+
+  // Create floating buttons dynamically for subpages
+  const container = document.createElement('div');
+  container.className = 'floating-btns';
+
+  const topBtn = document.createElement('button');
+  topBtn.className = 'float-btn';
+  topBtn.id = 'back-to-top-btn';
+  topBtn.setAttribute('aria-label', 'חזרה למעלה');
+  topBtn.title = 'חזרה למעלה';
+  topBtn.textContent = '⬆';
+  container.appendChild(topBtn);
+
+  // Determine home path based on current page depth
+  const isSubpage = window.location.pathname.includes('/areas/') || window.location.pathname.includes('/categories/');
+  const homePath = isSubpage ? '../index.html' : 'index.html';
+
+  const homeBtn = document.createElement('a');
+  homeBtn.className = 'float-btn home-btn';
+  homeBtn.id = 'home-btn';
+  homeBtn.href = homePath;
+  homeBtn.setAttribute('aria-label', 'דף הבית');
+  homeBtn.title = 'דף הבית';
+  homeBtn.textContent = '🏠';
+  container.appendChild(homeBtn);
+
+  document.body.appendChild(container);
+
+  // Scroll listener
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 400) {
+      topBtn.classList.add('visible');
+      homeBtn.classList.add('visible');
+    } else {
+      topBtn.classList.remove('visible');
+      homeBtn.classList.remove('visible');
+    }
+  });
+
+  topBtn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
 // ===== Initialize on DOM Load =====
 document.addEventListener('DOMContentLoaded', async function () {
   await loadAttractions();
@@ -1047,5 +1095,6 @@ document.addEventListener('DOMContentLoaded', async function () {
   setupViewToggle();
   setupNavigation();
   setupDayPlan();
+  setupFloatingButtons();
   applyFilters();
 });

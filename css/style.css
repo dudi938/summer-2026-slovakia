@@ -1196,3 +1196,66 @@ ul, ol {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-gray-400);
 }
+
+/* ===== Floating Action Buttons (Back to top + Home) ===== */
+.floating-btns {
+  position: fixed;
+  bottom: 90px;
+  left: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 900;
+  transition: var(--transition);
+}
+
+.float-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-primary);
+  color: white;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  cursor: pointer;
+  transition: var(--transition);
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none;
+  text-decoration: none;
+}
+
+.float-btn.visible {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+.float-btn:hover {
+  background: var(--color-primary-dark);
+  transform: scale(1.1);
+}
+
+.float-btn.home-btn {
+  background: var(--color-success);
+}
+
+.float-btn.home-btn:hover {
+  background: var(--color-success-dark);
+}
+
+@media (max-width: 768px) {
+  .floating-btns {
+    bottom: 80px;
+    left: 12px;
+  }
+  .float-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}

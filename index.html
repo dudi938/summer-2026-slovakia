@@ -257,6 +257,12 @@
 
   </div>
 
+  <!-- Floating Buttons: Back to Top + Home -->
+  <div class="floating-btns">
+    <button class="float-btn" id="back-to-top-btn" aria-label="חזרה למעלה" title="חזרה למעלה">⬆</button>
+    <a href="index.html" class="float-btn home-btn" id="home-btn" aria-label="דף הבית" title="דף הבית">🏠</a>
+  </div>
+
   <!-- Day Plan FAB -->
   <button class="day-plan-fab" id="day-plan-fab" aria-label="תוכנית יום">
     &#x1F4C5;
@@ -368,6 +374,24 @@
           });
         }
       });
+
+      // Floating back-to-top button
+      var backToTopBtn = document.getElementById('back-to-top-btn');
+      var homeBtn = document.getElementById('home-btn');
+      if (backToTopBtn) {
+        window.addEventListener('scroll', function() {
+          if (window.scrollY > 400) {
+            backToTopBtn.classList.add('visible');
+            if (homeBtn) homeBtn.classList.add('visible');
+          } else {
+            backToTopBtn.classList.remove('visible');
+            if (homeBtn) homeBtn.classList.remove('visible');
+          }
+        });
+        backToTopBtn.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
 
       // Bottom nav search button - scroll to search
       var bottomNavSearch = document.getElementById('bottom-nav-search');
