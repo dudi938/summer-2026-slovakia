@@ -129,7 +129,7 @@
       "lng": 17.11
     },
     "suitableFor": [
-      "baby-friendly",
+      "מתאים לתינוק",
       "כל הגילאים",
       "נוער (13+)",
       "מבוגרים"
@@ -210,7 +210,7 @@
     "suitableFor": [
       "נוער (13+)",
       "מבוגרים",
-      "experienced paddlers"
+      "חותרים מנוסים"
     ],
     "suitableForBaby": false,
     "notes": "Full-day trip requiring reasonable fitness. Some paddling experience recommended due to distance. Phone: +421 915 438 156. Season: spring to autumn. A unique way to travel between Vienna and Bratislava. Not suitable for young children or baby due to duration.",
@@ -246,7 +246,7 @@
       "lng": 17.08
     },
     "suitableFor": [
-      "baby-friendly",
+      "מתאים לתינוק",
       "פעוטות",
       "ילדים",
       "נוער (13+)",
@@ -328,9 +328,9 @@
     },
     "suitableFor": [
       "כל הגילאים",
-      "baby-friendly on larger boats",
+      "מתאים לתינוק (על סירות גדולות)",
       "נוער (13+)",
-      "family"
+      "משפחות"
     ],
     "suitableForBaby": true,
     "notes": "Multiple operators including Mahart PassNave (scheduled service) and Dunarama (private speedboat). Full day trip Budapest-Esztergom takes ~5 hours one-way by scheduled boat. Szentendre is closest (~1.5 hours). Boats run daily in summer. Can return by bus/train if one-way preferred. Stunning scenery through the bend. Book in advance in peak summer.",
@@ -368,9 +368,9 @@
     },
     "suitableFor": [
       "כל הגילאים",
-      "baby-friendly",
+      "מתאים לתינוק",
       "נוער (13+)",
-      "family"
+      "משפחות"
     ],
     "suitableForBaby": true,
     "notes": "Car-free island accessible by bus or tram. Bike and pedal car rentals available at multiple points on the island. Large playground at the southern end. Musical fountain shows in summer. Completely flat - excellent for families with strollers. Bring water and snacks. Free WiFi in some areas. Can easily spend half a day here.",
@@ -408,7 +408,7 @@
     },
     "suitableFor": [
       "כל הגילאים",
-      "baby in stroller on main paths",
+      "תינוק בעגלה בשבילים ראשיים",
       "ילדים",
       "נוער (13+)"
     ],
@@ -449,7 +449,7 @@
     "suitableFor": [
       "נוער (13+)",
       "מבוגרים",
-      "NOT baby-friendly"
+      "לא מתאים לתינוק"
     ],
     "suitableForBaby": true,
     "notes": "English service confirmed. Advance booking required via website. Bear watching starts at 5AM. Hiking in Sucha Bela rated difficulty 5/5 - requires sturdy boots, not for those afraid of heights. Minimum group 2 people, max 7 for bear watching. Transportation from Poprad included. Season: Jun-Oct for bear watching, May-Oct for hiking. NOT suitable for baby in carrier on most activities.",
@@ -488,8 +488,8 @@
       "נוער (13+)",
       "ילדים",
       "מבוגרים",
-      "stroller-friendly",
-      "wheelchair accessible"
+      "נגיש לעגלה",
+      "נגיש לכיסא גלגלים"
     ],
     "suitableForBaby": true,
     "notes": "Open daily Jul-Aug 9:00-18:00. Last entry 1 hour before closing. Minimum age 3 years. No pets allowed (free kennels provided). Online tickets recommended. Cable car access from valley or hiking trails available.",
@@ -566,7 +566,7 @@
     },
     "suitableFor": [
       "כל הגילאים",
-      "baby-friendly (calm water)",
+      "מתאים לתינוק (מים רגועים)",
       "ילדים",
       "נוער (13+)",
       "מבוגרים"
@@ -606,10 +606,10 @@
       "lng": 20.2247
     },
     "suitableFor": [
-      "baby in carrier (funicular + easy trail section)",
-      "10-year-old",
-      "13-year-old",
-      "17-year-old"
+      "תינוק בנשא (רכבל + קטע שביל קל)",
+      "ילדים מגיל 10",
+      "נוער (13+)",
+      "נוער 17+"
     ],
     "suitableForBaby": true,
     "notes": "Difficulty: EASY to Hrebienok (funicular), EASY-MEDIUM trail to waterfalls (approx 1-1.5 hours each way from Hrebienok). The first part of the trail is wide and well-maintained. Baby carrier feasible for the easier sections. The 10-year-old should manage the full trail to the waterfalls. Famous ice sculptures displayed here in winter.",
@@ -650,7 +650,7 @@
       "נוער (13+)",
       "מבוגרים",
       "משפחות",
-      "baby-friendly with carrier"
+      "מתאים לתינוק עם נשא"
     ],
     "suitableForBaby": true,
     "notes": "Connected to Tatra Electric Railway. Starting point for numerous hiking trails. Waterfall trails accessible from here. Relatively easy access via funicular.",
@@ -687,7 +687,7 @@
       "lng": 20.22
     },
     "suitableFor": [
-      "baby-friendly (funicular)",
+      "מתאים לתינוק (רכבל)",
       "כל הגילאים",
       "נוער (13+)",
       "מבוגרים"
@@ -727,8 +727,8 @@
       "lng": 19.9897
     },
     "suitableFor": [
-      "13-year-old (fit)",
-      "17-year-old"
+      "נוער 13+ (כושר גופני)",
+      "נוער 17+"
     ],
     "suitableForBaby": false,
     "notes": "Difficulty: HARD. Requires a demanding mountain hike from Štrbské pleso (approx 2.5-3 hours one way). NOT suitable for baby or 10-year-old due to steep, rocky terrain and significant elevation gain. Trail involves alpine sections. Best for the older/fitter family members only.",
@@ -766,7 +766,7 @@
     },
     "suitableFor": [
       "כל הגילאים",
-      "baby-friendly (shallow areas)",
+      "מתאים לתינוק (אזורים רדודים)",
       "ילדים",
       "נוער (13+)",
       "מבוגרים"
@@ -809,7 +809,7 @@
       "ילדים",
       "נוער (13+)",
       "מבוגרים",
-      "baby possible in carrier"
+      "תינוק אפשרי בנשא"
     ],
     "suitableForBaby": true,
     "notes": "Summit tickets sell out - book in advance via GoPass! Limited capacity. Allow half day. Weather dependent - peak may be in clouds. Dress warmly even in summer (can be 5-10C at top). Restaurant at Skalnate Pleso. Observatory at summit. Stroller NOT suitable for summit, OK to Skalnate Pleso.",
@@ -846,10 +846,10 @@
       "lng": 20.2128
     },
     "suitableFor": [
-      "10-year-old",
-      "13-year-old",
-      "17-year-old",
-      "baby (if weather permits)"
+      "ילדים מגיל 10",
+      "נוער (13+)",
+      "נוער 17+",
+      "תינוק (בתנאי מזג אוויר מתאימים)"
     ],
     "suitableForBaby": true,
     "notes": "Difficulty: EASY (cable car does the work). Visitors are allowed only 50 minutes at the peak. Cable car closes in May for maintenance - confirm August operation. Book in advance during peak season as capacity is limited. Very cold at the top (average near 0C year-round). Alpine climate. Intermediate stop at Skalnaté pleso (1,751m) also worthwhile.",
@@ -887,11 +887,11 @@
     },
     "suitableFor": [
       "כל הגילאים",
-      "baby-friendly",
+      "מתאים לתינוק",
       "ילדים",
       "נוער (13+)",
       "מבוגרים",
-      "elderly"
+      "קשישים"
     ],
     "suitableForBaby": true,
     "notes": "Tickets available through funcenter.sk. Relaxing cruise suitable for the whole family including baby. No physical effort required. Available during summer season when weather permits. Combined well with other MaraFun activities.",
@@ -929,7 +929,7 @@
     },
     "suitableFor": [
       "כל הגילאים",
-      "baby-friendly (kids zone)",
+      "מתאים לתינוק (אזור ילדים)",
       "ילדים",
       "נוער (13+)",
       "מבוגרים"
@@ -970,7 +970,7 @@
     },
     "suitableFor": [
       "כל הגילאים",
-      "baby-friendly (on boat)",
+      "מתאים לתינוק (על הסירה)",
       "ילדים",
       "נוער (13+)",
       "מבוגרים"
@@ -1013,7 +1013,7 @@
       "ילדים",
       "נוער (13+)",
       "מבוגרים",
-      "baby-friendly (catamaran cruise)"
+      "מתאים לתינוק (שייט קטמרן)"
     ],
     "suitableForBaby": true,
     "notes": "Hours: 10:00-19:00 daily in summer. Advance reservation recommended: rezervacie@marinaliptov.sk or +421 902 605 605. Catamaran cruise with captain suitable for all ages including baby. JUMBO paddleboard (6-8 person) great for family activity. Jet ski requires adult operation. On-site restaurant and glamping available. Large reservoir with mountain views.",
@@ -1090,7 +1090,7 @@
     "suitableFor": [
       "כל הגילאים",
       "משפחות",
-      "seniors",
+      "קשישים",
       "ילדים"
     ],
     "suitableForBaby": true,
@@ -1127,9 +1127,9 @@
       "lng": 20.0803
     },
     "suitableFor": [
-      "10-year-old (moderate hike)",
-      "13-year-old",
-      "17-year-old"
+      "ילדים מגיל 10 (טיול בינוני)",
+      "נוער (13+)",
+      "נוער 17+"
     ],
     "suitableForBaby": true,
     "notes": "Difficulty: MEDIUM. Reached by hiking from Štrbské pleso (approx 1.5 hours one way, well-marked trail with moderate elevation gain). NOT stroller-friendly - baby carrier required. The trail is well-maintained but rocky in parts. A good challenge for the 10-year-old. Mountain hut at the lake for food/drinks.",
@@ -1168,7 +1168,7 @@
     "suitableFor": [
       "נוער (13+)",
       "מבוגרים",
-      "17-year-old"
+      "נוער 17+"
     ],
     "suitableForBaby": false,
     "notes": "Minimum age typically 10-12 for Belá river due to rapids intensity. Advance reservation required at least 1 day ahead. Season: April-October. Difficulty: moderate to challenging depending on water level. Not suitable for baby. Call +421 948 906 506 for booking.",
@@ -1284,10 +1284,10 @@
       "lng": 20.2344
     },
     "suitableFor": [
-      "baby-friendly (cable car + flat area at lake)",
-      "10-year-old",
-      "13-year-old",
-      "17-year-old",
+      "מתאים לתינוק (רכבל + אזור שטוח ליד האגם)",
+      "ילדים מגיל 10",
+      "נוער (13+)",
+      "נוער 17+",
       "כל הגילאים"
     ],
     "suitableForBaby": true,
@@ -1328,7 +1328,7 @@
       "ילדים",
       "נוער (13+)",
       "מבוגרים",
-      "baby in carrier"
+      "תינוק בנשא"
     ],
     "suitableForBaby": true,
     "notes": "Boat rental separate from chairlift. Hotel FIS nearby. Beautiful hiking trails from top of Solisko. Lake walk around Strbske Pleso is flat and stroller-friendly (about 30 min). Good starting point for many hiking trails.",
@@ -1365,7 +1365,7 @@
       "lng": 20.0603
     },
     "suitableFor": [
-      "baby-friendly (lake loop)",
+      "מתאים לתינוק (מסלול סביב האגם)",
       "כל הגילאים",
       "נוער (13+)",
       "מבוגרים"
@@ -1444,7 +1444,7 @@
       "lng": 20.2583
     },
     "suitableFor": [
-      "baby-friendly",
+      "מתאים לתינוק",
       "כל הגילאים",
       "נוער (13+)",
       "מבוגרים"
@@ -1524,7 +1524,7 @@
     },
     "suitableFor": [
       "כל הגילאים",
-      "baby-friendly",
+      "מתאים לתינוק",
       "משפחות",
       "נוער (13+)",
       "מבוגרים"
@@ -1564,10 +1564,10 @@
       "lng": 20.0583
     },
     "suitableFor": [
-      "baby-friendly (stroller on paved path)",
-      "10-year-old",
-      "13-year-old",
-      "17-year-old",
+      "מתאים לתינוק (עגלה בשביל סלול)",
+      "ילדים מגיל 10",
+      "נוער (13+)",
+      "נוער 17+",
       "כל הגילאים"
     ],
     "suitableForBaby": true,
@@ -1605,10 +1605,10 @@
       "lng": 20.0693
     },
     "suitableFor": [
-      "10-year-old",
-      "13-year-old",
-      "17-year-old",
-      "baby in carrier"
+      "ילדים מגיל 10",
+      "נוער (13+)",
+      "נוער 17+",
+      "תינוק בנשא"
     ],
     "suitableForBaby": true,
     "notes": "Difficulty: EASY-MEDIUM. Approximately 4-5 km one way, 1.5-2 hours. Well-marked red trail. Moderate elevation changes. Baby carrier works well. The 10-year-old should manage this without problems. Mountain hut at Popradské pleso for food/rest before return. Return same way or continue on trail system.",
@@ -1646,7 +1646,7 @@
     },
     "suitableFor": [
       "כל הגילאים",
-      "baby-friendly",
+      "מתאים לתינוק",
       "משפחות",
       "נוער (13+)",
       "מבוגרים"
@@ -1685,10 +1685,10 @@
       "lng": 19.59
     },
     "suitableFor": [
-      "baby-friendly (cable car)",
-      "10-year-old",
-      "13-year-old",
-      "17-year-old",
+      "מתאים לתינוק (רכבל)",
+      "ילדים מגיל 10",
+      "נוער (13+)",
+      "נוער 17+",
       "כל הגילאים"
     ],
     "suitableForBaby": true,
@@ -1764,7 +1764,7 @@
       "lng": 20.3167
     },
     "suitableFor": [
-      "baby-friendly",
+      "מתאים לתינוק",
       "כל הגילאים",
       "נוער (13+)",
       "מבוגרים"
@@ -1841,9 +1841,9 @@
       "lng": 19.5819
     },
     "suitableFor": [
-      "10-year-old",
-      "13-year-old",
-      "17-year-old"
+      "ילדים מגיל 10",
+      "נוער (13+)",
+      "נוער 17+"
     ],
     "suitableForBaby": true,
     "notes": "Difficulty: EASY (paved paths inside cave). Guided tours only, typically 60-90 minutes. Temperature inside is constant (~7C) - bring warm layers even in summer. NOT stroller-friendly due to stairs inside. Baby in carrier is possible but the cold and 90-minute duration may be challenging for an infant. Book ahead in peak season. 118,000+ visitors per year.",
@@ -1917,9 +1917,9 @@
       "lng": 19.5819
     },
     "suitableFor": [
-      "10-year-old",
-      "13-year-old",
-      "17-year-old"
+      "ילדים מגיל 10",
+      "נוער (13+)",
+      "נוער 17+"
     ],
     "suitableForBaby": true,
     "notes": "Difficulty: EASY-MEDIUM (some stairs, 45-minute tour). Very cold inside - dress for near-freezing temperatures. NOT stroller-friendly. Baby in carrier is possible but cold conditions make it inadvisable for an infant. Shorter tour than Cave of Liberty. Located in same valley - can combine both caves in one day trip. Wooden stairs installed 1952.",
@@ -1955,10 +1955,10 @@
       "lng": 19.5833
     },
     "suitableFor": [
-      "baby-friendly (paved valley road sections)",
-      "10-year-old",
-      "13-year-old",
-      "17-year-old",
+      "מתאים לתינוק (קטעי כביש סלולים בעמק)",
+      "ילדים מגיל 10",
+      "נוער (13+)",
+      "נוער 17+",
       "כל הגילאים"
     ],
     "suitableForBaby": true,
@@ -2147,10 +2147,10 @@
       "lng": 19.5333
     },
     "suitableFor": [
-      "10-year-old",
-      "13-year-old",
-      "17-year-old",
-      "baby in carrier (easier sections)"
+      "ילדים מגיל 10",
+      "נוער (13+)",
+      "נוער 17+",
+      "תינוק בנשא (קטעים קלים)"
     ],
     "suitableForBaby": true,
     "notes": "Difficulty: EASY-MEDIUM. The trail through the gorge is approximately 5 km one way. Parts are flat and easy, but the narrow gorge section involves some scrambling over rocks. Baby carrier feasible for the first/easier sections. The historic Oblazy watermill is a highlight. Allow 2-3 hours round trip. Free parking at Kvačany village.",
@@ -2225,10 +2225,10 @@
       "lng": 19.4889
     },
     "suitableFor": [
-      "baby-friendly (beach areas)",
-      "10-year-old",
-      "13-year-old",
-      "17-year-old",
+      "מתאים לתינוק (אזורי חוף)",
+      "ילדים מגיל 10",
+      "נוער (13+)",
+      "נוער 17+",
       "כל הגילאים"
     ],
     "suitableForBaby": true,
@@ -2266,7 +2266,7 @@
     },
     "suitableFor": [
       "כל הגילאים",
-      "baby-friendly",
+      "מתאים לתינוק",
       "משפחות",
       "נוער (13+)",
       "מבוגרים"
@@ -2345,7 +2345,7 @@
     "suitableFor": [
       "כל הגילאים",
       "משפחות",
-      "baby-friendly area"
+      "אזור מתאים לתינוק"
     ],
     "suitableForBaby": true,
     "notes": "Easy access. Near mineral springs. Can combine with village walk. Good viewpoint of surrounding mountains.",
@@ -2422,8 +2422,8 @@
       "lng": 19.4833
     },
     "suitableFor": [
-      "13-year-old (fit)",
-      "17-year-old"
+      "נוער 13+ (כושר גופני)",
+      "נוער 17+"
     ],
     "suitableForBaby": true,
     "notes": "Difficulty: MEDIUM-HARD. Involves metal ladders and chains in narrow passages. NOT suitable for baby or stroller. The 10-year-old should only attempt if experienced with scrambling/climbing. Very narrow sections - can be intimidating. Trail can be slippery when wet. Best combined with Kvačianska dolina for a full day adventure. Allow 3-4 hours for the traverse.",
@@ -2611,10 +2611,10 @@
       "lng": 20.4167
     },
     "suitableFor": [
-      "10-year-old",
-      "13-year-old",
-      "17-year-old",
-      "baby in carrier (flat sections)"
+      "ילדים מגיל 10",
+      "נוער (13+)",
+      "נוער 17+",
+      "תינוק בנשא (קטעים שטוחים)"
     ],
     "suitableForBaby": true,
     "notes": "Difficulty: EASY. Flat riverside path, no ladders required. This is the best option for families with small children in Slovak Paradise. Other gorge trails (Suchá Belá, Piecky) require climbing metal ladders and are one-way only - NOT suitable for babies/strollers. The Hornád trail can be done as a return trip. Allow 2-3 hours.",
@@ -2650,8 +2650,8 @@
       "lng": 20.3833
     },
     "suitableFor": [
-      "13-year-old (fit and not afraid of heights)",
-      "17-year-old"
+      "נוער 13+ (כושר גופני ואינם מפחדים מגבהים)",
+      "נוער 17+"
     ],
     "suitableForBaby": true,
     "notes": "Difficulty: MEDIUM-HARD. Features metal ladders, chains, and bridges. One-way only (ascent). Takes 2-3 hours for the gorge section. NOT suitable for babies, strollers, or the 10-year-old unless very fit and experienced. You will get wet from waterfall spray. Wear sturdy shoes with grip. Open seasonally (typically June-October). Can be very crowded - start early.",
@@ -2687,11 +2687,11 @@
       "lng": 20.2833
     },
     "suitableFor": [
-      "baby-friendly (stroller accessible)",
+      "מתאים לתינוק (נגיש לעגלה)",
       "כל הגילאים",
       "נוער (13+)",
       "מבוגרים",
-      "wheelchair accessible"
+      "נגיש לכיסא גלגלים"
     ],
     "suitableForBaby": true,
     "notes": "Easy/accessible. 14 km gravel pathway. Stroller and wheelchair friendly. Educational signs about caves and nature along the route.",
@@ -2729,7 +2729,7 @@
     "suitableFor": [
       "כל הגילאים",
       "משפחות",
-      "baby-friendly area",
+      "אזור מתאים לתינוק",
       "נוער (13+)",
       "מבוגרים"
     ],
@@ -2767,10 +2767,10 @@
       "lng": 19.0167
     },
     "suitableFor": [
-      "baby-friendly (viewable from car, short walks)",
-      "10-year-old",
-      "13-year-old",
-      "17-year-old",
+      "מתאים לתינוק (נצפה מהרכב, הליכות קצרות)",
+      "ילדים מגיל 10",
+      "נוער (13+)",
+      "נוער 17+",
       "כל הגילאים"
     ],
     "suitableForBaby": true,
@@ -2807,8 +2807,8 @@
       "lng": 19.1
     },
     "suitableFor": [
-      "13-year-old (fit)",
-      "17-year-old"
+      "נוער 13+ (כושר גופני)",
+      "נוער 17+"
     ],
     "suitableForBaby": false,
     "notes": "Difficulty: MEDIUM-HARD. 2.5 hours ascent, ~1000m elevation gain. NOT suitable for baby or 10-year-old due to steep rocky sections near the summit. Protected Rozsutec National Nature Reserve with endemic species. Wear sturdy boots. Start early. The trail via Medziholie is described as the 'easiest route' but still demanding.",
@@ -2882,10 +2882,10 @@
       "lng": 19.0333
     },
     "suitableFor": [
-      "baby-friendly (cable car + short walks)",
-      "10-year-old",
-      "13-year-old",
-      "17-year-old",
+      "מתאים לתינוק (רכבל + הליכות קצרות)",
+      "ילדים מגיל 10",
+      "נוער (13+)",
+      "נוער 17+",
       "כל הגילאים"
     ],
     "suitableForBaby": true,
@@ -3001,10 +3001,10 @@
       "lng": 19.083
     },
     "suitableFor": [
-      "10-year-old",
-      "13-year-old",
-      "17-year-old",
-      "baby in carrier"
+      "ילדים מגיל 10",
+      "נוער (13+)",
+      "נוער 17+",
+      "תינוק בנשא"
     ],
     "suitableForBaby": true,
     "notes": "Difficulty: EASY-MEDIUM. Trail from Šútovo village is approximately 4 km one way through forest, relatively gentle gradient. Baby carrier friendly for most of the path. The last section near the waterfall may have some uneven terrain. Allow 1-1.5 hours each way. No booking needed. Free access.",
@@ -3078,7 +3078,7 @@
       "lng": 16.408
     },
     "suitableFor": [
-      "baby (flat paths, stroller-friendly)",
+      "תינוק (שבילים שטוחים, נגיש לעגלה)",
       "ילדים מגיל 10",
       "נוער (13+)",
       "מבוגרים",
@@ -3158,7 +3158,7 @@
       "lng": 16.615
     },
     "suitableFor": [
-      "baby-friendly (free under 3)",
+      "מתאים לתינוק (חינם מתחת לגיל 3)",
       "פעוטות",
       "ילדים",
       "נוער (13+)"
@@ -3277,7 +3277,7 @@
       "lng": 16.235
     },
     "suitableFor": [
-      "baby (main paths stroller-friendly)",
+      "תינוק (שבילים ראשיים נגישים לעגלה)",
       "ילדים מגיל 10",
       "נוער (13+)",
       "מבוגרים",
@@ -3318,7 +3318,7 @@
       "lng": 16.496
     },
     "suitableFor": [
-      "baby (flat paths, stroller-friendly)",
+      "תינוק (שבילים שטוחים, נגיש לעגלה)",
       "ילדים מגיל 10",
       "נוער (13+)",
       "מבוגרים",
@@ -3438,7 +3438,7 @@
       "lng": 15.9
     },
     "suitableFor": [
-      "baby (train is accessible)",
+      "תינוק (הרכבת נגישה)",
       "ילדים מגיל 10",
       "נוער (13+)",
       "מבוגרים",
@@ -3479,7 +3479,7 @@
       "lng": 16.3769
     },
     "suitableFor": [
-      "baby-friendly",
+      "מתאים לתינוק",
       "פעוטות",
       "ילדים",
       "נוער (13+)",
@@ -3562,7 +3562,7 @@
       "ילדים",
       "נוער (13+)",
       "מבוגרים",
-      "baby-friendly (stroller-accessible trails available)"
+      "מתאים לתינוק (שבילים נגישים לעגלה)"
     ],
     "suitableForBaby": true,
     "notes": "Peilstein Adventure Trail - best for families with kids. Kahlenberg to Sophienalpe - suitable for families and children. Circular Hike Around Exelberg has playgrounds along the way. Some trails NOT stroller-friendly (e.g., Jubilaumswarte route). Check trail descriptions before going with baby stroller. Well-marked paths.",
@@ -4053,7 +4053,7 @@
       "ילדים",
       "נוער (13+)",
       "מבוגרים",
-      "baby-friendly (resort facilities)"
+      "מתאים לתינוק (מתקני האתר)"
     ],
     "suitableForBaby": true,
     "notes": "Reservation: +421 945 44 55 44 or recepcia@gothal.sk (available 7AM-10AM). E-bike package available. Via Ferrata Dve Veze nearby (educational/beginner level). Resort has pools, saunas, kids programs making it good base. Part of Liptov's extensive e-bike charging network (30+ stations in region). Can serve as activity base with multiple day trips. Restaurant on-site.",
@@ -4367,7 +4367,7 @@
       "נוער (13+)",
       "מבוגרים",
       "משפחות",
-      "baby-friendly on boat tours"
+      "מתאים לתינוק (בסיורי סירה)"
     ],
     "suitableForBaby": true,
     "notes": "Multiple beaches: City Beach Liptovsky Mikulas, Sielnicka Bay, Liptovsky Trnovec. Marina Liptov for boat and equipment rental. Free swimming at beaches.",
@@ -5090,7 +5090,7 @@
       "ילדים",
       "נוער (13+)",
       "מבוגרים",
-      "stroller-accessible on main path"
+      "נגיש לעגלה בשביל הראשי"
     ],
     "suitableForBaby": false,
     "notes": "40-minute uphill walk from parking to walkway entrance. Recently built attraction. Open year-round. Near Zdiar village.",
@@ -5477,7 +5477,7 @@
     "suitableFor": [
       "נוער (13+)",
       "מבוגרים",
-      "17-year-old"
+      "נוער 17+"
     ],
     "suitableForBaby": false,
     "notes": "Requires swimming ability and reasonable fitness. Minimum age typically 15-16. Full wetsuit and equipment provided. Season: May-September when water conditions permit. Very intense activity - not for beginners. Book via +421 948 906 506.",
@@ -6989,12 +6989,12 @@
     "suitableFor": [
       "נוער (13+)",
       "מבוגרים",
-      "NOT baby-friendly"
+      "לא מתאים לתינוק"
     ],
     "suitableForBaby": true,
     "notes": "English service available. Season: April 30 - September 20, 2026. Online booking at rafting.sk/rezervacia/. Accommodation in 4-star apartments (4, 6, 8 person units) with kitchens and terraces. Activities on Soca River (Slovenia) and Predelica Stream. Operating since 1999. Phone: +421 908 047 699, rafting@rafting.sk. Good option if traveling through Slovenia. Multi-activity packages available.",
     "notesHebrew": "רפטינג.",
-    "distanceFromMalatiny": "Activities are in Slovenia (500+ km), but Slovak-based operator",
+    "distanceFromMalatiny": "הפעילויות בסלובניה (500+ ק\"מ), אך המפעיל סלובקי",
     "familyScore": 2,
     "dayTripCluster": "liptov-center",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Soca_4.jpg/960px-Soca_4.jpg",
@@ -7026,7 +7026,7 @@
     "suitableFor": [
       "נוער (13+)",
       "מבוגרים",
-      "NOT baby-friendly"
+      "לא מתאים לתינוק"
     ],
     "suitableForBaby": true,
     "notes": "Based in Bratislava but trips are multi-day expeditions to other countries. Family programs in July-August specifically designed for families. IRF certified guides with wild water rescue training. Programs categorized as: beginners, advanced, families, extreme. Slovak language website primarily. Contact: +421 911-305-961 (Mirec), +421 948-538-008 (Rasto), info@raftovanie.sk. Main season: April 30 - September 20. Base camps in Slovenia offer 4-day packages.",
@@ -7253,7 +7253,7 @@
       "פעוטות",
       "ילדים",
       "נוער (13+)",
-      "baby-friendly"
+      "מתאים לתינוק"
     ],
     "suitableForBaby": true,
     "notes": "Open daily 10:00-18:00. Hours vary with weather. Free parking. Restaurant Humno on site (10:00-18:00 weekdays, 10:00-20:00 weekends). Club membership gives 10% cashback. About 15 min from Martin. Online tickets available.",
@@ -7918,7 +7918,7 @@
       "ירידה",
       "אקסטרים",
       "טטרנסקה לומניצה",
-      "mountain carts"
+      "עגלות הרים"
     ],
     "source": "https://www.vt.sk/en/activities/summer-activities/mountain-carts"
   },
@@ -7956,7 +7956,7 @@
       "הרפתקה",
       "ירידה",
       "בכלדקה",
-      "mountain carts"
+      "עגלות הרים"
     ],
     "source": "https://bachledka.sk/en/mountain-carts"
   },
@@ -7992,7 +7992,7 @@
     "tags": [
       "מגלשת הרים",
       "בובסלד",
-      "alpine coaster",
+      "בובסלד אלפיני",
       "הרפתקה",
       "אקסטרים"
     ],
@@ -8030,7 +8030,7 @@
     "tags": [
       "מגלשת הרים",
       "בובסלד",
-      "alpine coaster",
+      "בובסלד אלפיני",
       "יאסנה",
       "הרפתקה"
     ],
@@ -8068,7 +8068,7 @@
     "tags": [
       "מגלשת הרים",
       "בובסלד",
-      "alpine coaster",
+      "בובסלד אלפיני",
       "וראטנה",
       "מאלה פאטרה"
     ],
@@ -8108,7 +8108,7 @@
       "הרפתקה",
       "ירידה",
       "יאסנה",
-      "mountain carts",
+      "עגלות הרים",
       "תלת אופן"
     ],
     "source": "https://www.jasna.sk"
@@ -8145,7 +8145,7 @@
     "tags": [
       "מגלשת הרים",
       "בובסלד",
-      "alpine coaster",
+      "בובסלד אלפיני",
       "טטרנסקה קוטלינה"
     ],
     "source": "https://www.gopass.travel"
