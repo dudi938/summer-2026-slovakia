@@ -25,6 +25,8 @@
   var radiusCircle = null;     // L.circle showing the search radius
   var center = null;           // { lat, lng } chosen point (null until picked)
   var radiusKm = 30;           // current radius in km (matches slider default)
+  var currentResults = [];     // radius-filtered {attraction,dist}, kept for viewport re-filtering
+  var lastVisibleKey = null;   // signature of last-rendered card set (skip identical re-renders)
   var searchDebounce = null;   // debounce timer for Nominatim
   var searchAbort = null;      // AbortController for in-flight geocode request
 
@@ -84,6 +86,11 @@
     areaMap.on('click', function (e) {
       setCenter(e.latlng.lat, e.latlng.lng, { fly: false });
     });
+
+    // When the user zooms/pans, re-render the cards to match what's on screen.
+    areaMap.on('moveend', function () {
+      if (center) renderVisibleCards();
+    });
   }
 
   // ===== Center point + radius rendering =====
@@ -109,7 +116,7 @@
     }).addTo(areaMap);
 
     // Always-visible label naming the chosen point.
-    centerMarker.bindTooltip('📍 הנקודה שבחרת', {
+    centerMarker.bindTooltip('הנקודה שבחרת', {
       permanent: true,
       direction: 'top',
       className: 'area-center-tooltip'
@@ -145,6 +152,7 @@
   function setCenter(lat, lng, opts) {
     opts = opts || {};
     center = { lat: lat, lng: lng };
+    lastVisibleKey = null;  // force card re-render (distances changed)
 
     ensureCenterMarker();
     centerMarker.setLatLng([lat, lng]);
@@ -160,6 +168,53 @@
   function clearNearbyMarkers() {
     nearbyMarkers.forEach(function (m) { areaMap.removeLayer(m); });
     nearbyMarkers = [];
+  }
+
+  // ===== Travel line (shown on hover over a marker or a card) =====
+  var travelLine = null;
+
+  // Rough drive estimate from the straight-line distance (no routing API here):
+  // add a detour factor and assume a regional average speed.
+  function estimateDrive(distKm) {
+    var roadKm = distKm * 1.3;                    // road detour over great-circle
+    var minutes = Math.max(1, Math.round(roadKm / 70 * 60)); // ~70 km/h avg
+    return { roadKm: roadKm, minutes: minutes };
+  }
+
+  function formatDrive(distKm) {
+    var e = estimateDrive(distKm);
+    var t;
+    if (e.minutes < 60) {
+      t = e.minutes + ' דק׳';
+    } else {
+      var h = Math.floor(e.minutes / 60);
+      var m = e.minutes % 60;
+      t = h + ' ש׳' + (m ? ' ' + m + ' דק׳' : '');
+    }
+    var km = e.roadKm < 10 ? e.roadKm.toFixed(1) : Math.round(e.roadKm);
+    return '🚗 כ-' + t + ' · כ-' + km + ' ק״מ';
+  }
+
+  function showTravelLine(attraction, distKm) {
+    clearTravelLine();
+    if (!center || !hasCoords(attraction)) return;
+    var c = attraction.coordinates;
+    travelLine = L.polyline(
+      [[center.lat, center.lng], [c.lat, c.lng]],
+      { color: '#1F2937', weight: 3, dashArray: '8, 9', opacity: 0.9 }
+    ).addTo(areaMap);
+    travelLine.bindTooltip(formatDrive(distKm), {
+      permanent: true,
+      direction: 'center',
+      className: 'travel-tooltip'
+    }).openTooltip();
+  }
+
+  function clearTravelLine() {
+    if (travelLine) {
+      areaMap.removeLayer(travelLine);
+      travelLine = null;
+    }
   }
 
   function computeNearby() {
@@ -184,12 +239,21 @@
     if (!center) return;
 
     var results = computeNearby();
+    currentResults = results;
 
     // --- Map markers (reuse app.js buildAttractionMarker) ---
     clearNearbyMarkers();
+    clearTravelLine();
     results.forEach(function (item) {
       var marker = buildAttractionMarker(item.attraction);
       if (!marker) return;
+      marker.__dist = item.dist;
+      marker.__attraction = item.attraction;
+      // Hovering a marker draws the dashed "drive" line from the chosen point.
+      marker.on('mouseover', function () {
+        showTravelLine(item.attraction, item.dist);
+      });
+      marker.on('mouseout', clearTravelLine);
       marker.addTo(areaMap);
       nearbyMarkers.push(marker);
     });
@@ -199,30 +263,62 @@
       var pts = nearbyMarkers.map(function (m) { return m.getLatLng(); });
       pts.push(L.latLng(center.lat, center.lng));
       if (pts.length > 1) {
-        areaMap.fitBounds(L.latLngBounds(pts).pad(0.15));
+        // animate:false → bounds update synchronously, so getBounds() below is
+        // correct even if moveend doesn't fire (e.g. bounds unchanged).
+        areaMap.fitBounds(L.latLngBounds(pts).pad(0.15), { animate: false });
       }
     }
+    // Always render directly; the dedup key makes any moveend echo a no-op.
+    renderVisibleCards();
+  }
 
-    // --- Cards (reuse app.js renderAttractionCard) ---
+  // Render cards ONLY for attractions currently inside the map viewport, so the
+  // list below mirrors exactly what the user sees on the map. Re-runs on zoom/pan.
+  function renderVisibleCards() {
     var grid = $('area-results');
-    if (grid) {
-      grid.textContent = '';
-      if (results.length === 0) {
-        grid.appendChild(buildEmptyState(
-          '😕',
-          'אין אטרקציות ברדיוס של ' + radiusKm + ' ק״מ',
-          'נסו להגדיל את הרדיוס או לבחור נקודה אחרת.'
-        ));
-      } else {
-        results.forEach(function (item, index) {
-          var card = renderAttractionCard(item.attraction, index);
-          injectDistance(card, item.dist);
-          grid.appendChild(card);
+    if (!grid || !center) return;
+
+    var bounds = areaMap.getBounds();
+    var visible = currentResults.filter(function (item) {
+      var c = item.attraction.coordinates;
+      return bounds.contains([c.lat, c.lng]);
+    });
+
+    // Skip re-render if the visible set is identical (avoids flicker on tiny pans).
+    var key = visible.map(function (i) { return i.attraction.id; }).join('|');
+    if (key === lastVisibleKey) {
+      updateCount(visible.length);
+      return;
+    }
+    lastVisibleKey = key;
+
+    grid.textContent = '';
+    if (currentResults.length === 0) {
+      grid.appendChild(buildEmptyState(
+        '😕',
+        'אין אטרקציות ברדיוס של ' + radiusKm + ' ק״מ',
+        'נסו להגדיל את הרדיוס או לבחור נקודה אחרת.'
+      ));
+    } else if (visible.length === 0) {
+      grid.appendChild(buildEmptyState(
+        '🔍',
+        'אין אטרקציות בתצוגה הנוכחית',
+        'הזיזו או הקטינו את הזום כדי לראות אטרקציות באזור.'
+      ));
+    } else {
+      visible.forEach(function (item, index) {
+        var card = renderAttractionCard(item.attraction, index);
+        injectDistance(card, item.dist);
+        // Hovering a card also highlights the drive line on the map.
+        card.addEventListener('mouseenter', function () {
+          showTravelLine(item.attraction, item.dist);
         });
-      }
+        card.addEventListener('mouseleave', clearTravelLine);
+        grid.appendChild(card);
+      });
     }
 
-    updateCount(results.length);
+    updateCount(visible.length);
   }
 
   // Insert a "~X km from the point" line under the card title.
@@ -264,8 +360,13 @@
     if (!el) return;
     if (!center) {
       el.textContent = 'בחרו נקודה כדי להתחיל';
+      return;
+    }
+    var total = currentResults.length;
+    if (n === total) {
+      el.textContent = 'מציג ' + n + ' אטרקציות ברדיוס ' + radiusKm + ' ק״מ';
     } else {
-      el.textContent = n + ' אטרקציות ברדיוס ' + radiusKm + ' ק״מ';
+      el.textContent = 'מציג ' + n + ' מתוך ' + total + ' אטרקציות ברדיוס ' + radiusKm + ' ק״מ (בתצוגה הנוכחית)';
     }
   }
 

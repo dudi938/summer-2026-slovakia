@@ -193,22 +193,25 @@
       font-size: 18px;
       line-height: 1;
     }
+    /* Hollow expanding ring (NOT a filled dot — a filled one reads as a 2nd marker). */
     .acm-pulse {
       position: absolute;
       left: 24px;                       /* == iconAnchor x (the geo point) */
       top: 48px;                        /* == iconAnchor y (the geo point) */
-      width: 22px;
-      height: 22px;
-      margin-left: -11px;
-      margin-top: -11px;
+      width: 20px;
+      height: 20px;
+      margin-left: -10px;
+      margin-top: -10px;
       border-radius: 50%;
-      background: rgba(31, 41, 55, 0.35);
+      background: transparent;
+      border: 3px solid rgba(31, 41, 55, 0.55);
       animation: acm-ping 1.8s ease-out infinite;
+      pointer-events: none;
     }
     @keyframes acm-ping {
-      0%   { transform: scale(0.5); opacity: 0.7; }
-      70%  { transform: scale(2.4); opacity: 0; }
-      100% { transform: scale(2.4); opacity: 0; }
+      0%   { transform: scale(0.4); opacity: 0.8; }
+      70%  { transform: scale(2.2); opacity: 0; }
+      100% { transform: scale(2.2); opacity: 0; }
     }
     .area-center-tooltip.leaflet-tooltip {
       background: #1F2937;
@@ -224,6 +227,20 @@
     .area-center-tooltip.leaflet-tooltip-top::before {
       border-top-color: #1F2937;
     }
+
+    /* Drive-time label on the dashed travel line */
+    .travel-tooltip.leaflet-tooltip {
+      background: #fff;
+      color: #1F2937;
+      border: 2px solid #1F2937;
+      font-weight: 700;
+      font-size: 0.8rem;
+      padding: 3px 9px;
+      border-radius: 14px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      white-space: nowrap;
+    }
+    .travel-tooltip.leaflet-tooltip::before { display: none; }
 
     /* Results */
     .explore-results-section {
