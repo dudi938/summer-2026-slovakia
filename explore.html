@@ -228,19 +228,34 @@
       border-top-color: #1F2937;
     }
 
-    /* Drive-time label on the dashed travel line */
+    /* Destination + drive-time label on the dashed travel line */
     .travel-tooltip.leaflet-tooltip {
       background: #fff;
       color: #1F2937;
       border: 2px solid #1F2937;
-      font-weight: 700;
-      font-size: 0.8rem;
-      padding: 3px 9px;
-      border-radius: 14px;
+      padding: 5px 11px;
+      border-radius: 12px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
       white-space: nowrap;
+      text-align: center;
+      direction: rtl;
     }
     .travel-tooltip.leaflet-tooltip::before { display: none; }
+    .travel-tooltip .travel-dest {
+      display: block;
+      font-weight: 700;
+      font-size: 0.82rem;
+      max-width: 220px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .travel-tooltip .travel-meta {
+      display: block;
+      font-weight: 600;
+      font-size: 0.78rem;
+      color: #4A5568;
+      margin-top: 1px;
+    }
 
     /* Results */
     .explore-results-section {

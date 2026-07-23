@@ -181,6 +181,15 @@
     return { roadKm: roadKm, minutes: minutes };
   }
 
+  // Prefer the Hebrew name; fall back to the English one.
+  function attractionName(attraction) {
+    return attraction.nameHebrew || attraction.name || 'היעד';
+  }
+
+  function esc(s) {
+    return (typeof escapeHtml === 'function') ? escapeHtml(s) : String(s);
+  }
+
   function formatDrive(distKm) {
     var e = estimateDrive(distKm);
     var t;
@@ -195,6 +204,12 @@
     return '🚗 כ-' + t + ' · כ-' + km + ' ק״מ';
   }
 
+  // Two-line label: destination name on top, drive time + distance below.
+  function travelTooltipHtml(attraction, distKm) {
+    return '<span class="travel-dest">📍 ' + esc(attractionName(attraction)) + '</span>' +
+           '<span class="travel-meta">' + formatDrive(distKm) + '</span>';
+  }
+
   function showTravelLine(attraction, distKm) {
     clearTravelLine();
     if (!center || !hasCoords(attraction)) return;
@@ -203,7 +218,7 @@
       [[center.lat, center.lng], [c.lat, c.lng]],
       { color: '#1F2937', weight: 3, dashArray: '8, 9', opacity: 0.9 }
     ).addTo(areaMap);
-    travelLine.bindTooltip(formatDrive(distKm), {
+    travelLine.bindTooltip(travelTooltipHtml(attraction, distKm), {
       permanent: true,
       direction: 'center',
       className: 'travel-tooltip'
