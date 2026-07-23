@@ -90,23 +90,30 @@
   function ensureCenterMarker() {
     if (centerMarker) return;
 
+    // A deliberately distinct marker for the CHOSEN point — bigger, dark
+    // (no category uses this color), a 🎯 icon, and a pulsing halo — so it can
+    // never be mistaken for a nearby attraction marker.
     var icon = L.divIcon({
       className: 'area-center-marker',
-      html: '<div style="' +
-        'background:#4A90D9;width:26px;height:26px;border-radius:50% 50% 50% 0;' +
-        'transform:rotate(-45deg);border:3px solid #fff;' +
-        'box-shadow:0 2px 8px rgba(0,0,0,0.4);"></div>',
-      iconSize: [26, 26],
-      iconAnchor: [13, 26]
+      html: '<div class="acm-pulse"></div>' +
+            '<div class="acm-pin"><span class="acm-emoji">🎯</span></div>',
+      iconSize: [48, 54],
+      iconAnchor: [24, 48],
+      tooltipAnchor: [0, -46]
     });
 
     centerMarker = L.marker([center.lat, center.lng], {
       icon: icon,
       draggable: true,
-      zIndexOffset: 1000
+      zIndexOffset: 2000
     }).addTo(areaMap);
 
-    centerMarker.bindTooltip('הנקודה שנבחרה — גררו לכוונון', { direction: 'top' });
+    // Always-visible label naming the chosen point.
+    centerMarker.bindTooltip('📍 הנקודה שבחרת', {
+      permanent: true,
+      direction: 'top',
+      className: 'area-center-tooltip'
+    });
 
     // Dragging the pin re-runs the search live.
     centerMarker.on('drag', function (e) {
