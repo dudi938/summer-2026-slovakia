@@ -1,10 +1,11 @@
 /**
  * area-explorer.js — Dynamic "What's around?" page (explore.html)
  *
- * Lets the user pick a point on the map — by searching a place (OpenStreetMap
- * Nominatim geocoder) or clicking/dragging on the map — then instantly shows
- * every attraction within an adjustable radius, both as map markers and as
- * cards below the map.
+ * The map viewport IS the filter: at any zoom/pan, only the attractions inside
+ * the current view are shown — both as map markers and as cards below the map —
+ * and they update live as the user moves the map. Searching a place (OpenStreetMap
+ * Nominatim) or clicking/dragging sets an optional anchor point used for
+ * distances and the dashed drive line.
  *
  * Reuses functions from js/app.js (loaded before this file):
  *   - buildAttractionMarker(attraction)  → Leaflet marker with RTL popup
@@ -20,13 +21,11 @@
   // ===== Module state =====
   var areaMap = null;          // Leaflet map instance
   var attractions = [];        // all attractions loaded from JSON
-  var nearbyMarkers = [];      // attraction markers currently on the map
-  var centerMarker = null;     // draggable marker for the chosen point
-  var radiusCircle = null;     // L.circle showing the search radius
-  var center = null;           // { lat, lng } chosen point (null until picked)
-  var radiusKm = 30;           // current radius in km (matches slider default)
-  var currentResults = [];     // radius-filtered {attraction,dist}, kept for viewport re-filtering
-  var lastVisibleKey = null;   // signature of last-rendered card set (skip identical re-renders)
+  var markersById = {};        // attraction id -> Leaflet marker (lazy cache, reused across renders)
+  var shownIds = [];           // ids of attraction markers currently on the map
+  var centerMarker = null;     // draggable marker for the chosen anchor point
+  var center = null;           // { lat, lng } chosen anchor point (optional)
+  var lastViewKey = null;      // signature of last render (skip identical re-renders)
   var searchDebounce = null;   // debounce timer for Nominatim
   var searchAbort = null;      // AbortController for in-flight geocode request
 
@@ -82,18 +81,18 @@
 
     setTimeout(function () { areaMap.invalidateSize(); }, 300);
 
-    // Click anywhere on the map to choose that point as the center.
+    // Click anywhere on the map to choose that point as the anchor (for
+    // distances / drive lines). It does NOT filter — the viewport does that.
     areaMap.on('click', function (e) {
       setCenter(e.latlng.lat, e.latlng.lng, { fly: false });
     });
 
-    // When the user zooms/pans, re-render the cards to match what's on screen.
-    areaMap.on('moveend', function () {
-      if (center) renderVisibleCards();
-    });
+    // The map viewport IS the filter: on every zoom/pan, re-render both the
+    // markers and the cards so only what's in the current view is shown.
+    areaMap.on('moveend', renderInView);
   }
 
-  // ===== Center point + radius rendering =====
+  // ===== Anchor point (for distances + drive lines) =====
   function ensureCenterMarker() {
     if (centerMarker) return;
 
@@ -122,52 +121,49 @@
       className: 'area-center-tooltip'
     });
 
-    // Dragging the pin re-runs the search live.
+    // Dragging the anchor updates distances/drive-lines live.
     centerMarker.on('drag', function (e) {
       var p = e.target.getLatLng();
       center = { lat: p.lat, lng: p.lng };
-      if (radiusCircle) radiusCircle.setLatLng(p);
     });
     centerMarker.on('dragend', function () {
-      renderNearby({ fit: false });
+      lastViewKey = null;   // distances changed → force re-render
+      renderInView();
     });
   }
 
-  function renderRadiusCircle() {
-    if (radiusCircle) {
-      radiusCircle.setLatLng([center.lat, center.lng]);
-      radiusCircle.setRadius(radiusKm * 1000);
-      return;
-    }
-    radiusCircle = L.circle([center.lat, center.lng], {
-      radius: radiusKm * 1000,
-      color: '#4A90D9',
-      weight: 2,
-      fillColor: '#4A90D9',
-      fillOpacity: 0.08
-    }).addTo(areaMap);
-  }
-
-  // Set the chosen center point and refresh everything.
+  // Set the chosen anchor point (for distances + drive lines). The viewport,
+  // not this point, decides which attractions are shown.
   function setCenter(lat, lng, opts) {
     opts = opts || {};
     center = { lat: lat, lng: lng };
-    lastVisibleKey = null;  // force card re-render (distances changed)
+    lastViewKey = null;  // distances changed → force re-render
 
     ensureCenterMarker();
     centerMarker.setLatLng([lat, lng]);
-    renderRadiusCircle();
 
     if (opts.fly) {
-      areaMap.setView([lat, lng], Math.max(areaMap.getZoom(), 10));
+      // Zoom in around the chosen place. animate:false → bounds update
+      // synchronously so the render below uses the correct (new) viewport.
+      areaMap.setView([lat, lng], Math.max(areaMap.getZoom(), 10), { animate: false });
     }
-    renderNearby({ fit: opts.fly !== false });
+    renderInView();
   }
 
-  // ===== Nearby filtering + rendering =====
-  function clearNearbyMarkers() {
-    nearbyMarkers.forEach(function (m) { areaMap.removeLayer(m); });
-    nearbyMarkers = [];
+  // ===== Viewport-driven filtering + rendering =====
+  // Get (or lazily build & cache) the marker for an attraction. Markers are
+  // reused across renders so panning back and forth is cheap and flicker-free.
+  function getMarker(a) {
+    if (markersById[a.id]) return markersById[a.id];
+    var marker = buildAttractionMarker(a);
+    if (!marker) return null;
+    marker.__attraction = a;
+    marker.on('mouseover', function () {
+      showTravelLine(a, center ? distanceKm(center.lat, center.lng, a.coordinates.lat, a.coordinates.lng) : null);
+    });
+    marker.on('mouseout', clearTravelLine);
+    markersById[a.id] = marker;
+    return marker;
   }
 
   // ===== Travel line (shown on hover over a marker or a card) =====
@@ -232,108 +228,79 @@
     }
   }
 
-  function computeNearby() {
-    return attractions
-      .map(function (a) {
-        return {
-          attraction: a,
-          dist: distanceKm(center.lat, center.lng, a.coordinates.lat, a.coordinates.lng)
-        };
-      })
-      .filter(function (item) { return item.dist <= radiusKm; })
-      .sort(function (x, y) { return x.dist - y.dist; });
-  }
-
   function formatDist(km) {
     if (km < 1) return Math.round(km * 1000) + ' מ׳'; // meters
     return (km < 10 ? km.toFixed(1) : Math.round(km)) + ' ק״מ';
   }
 
-  function renderNearby(opts) {
-    opts = opts || {};
-    if (!center) return;
+  // THE core function: show ONLY attractions inside the current map viewport,
+  // both as markers and as cards. Re-runs on every zoom/pan (moveend).
+  function renderInView() {
+    if (!areaMap) return;
+    var grid = $('area-results');
+    var bounds = areaMap.getBounds();
 
-    var results = computeNearby();
-    currentResults = results;
-
-    // --- Map markers (reuse app.js buildAttractionMarker) ---
-    clearNearbyMarkers();
-    clearTravelLine();
-    results.forEach(function (item) {
-      var marker = buildAttractionMarker(item.attraction);
-      if (!marker) return;
-      marker.__dist = item.dist;
-      marker.__attraction = item.attraction;
-      // Hovering a marker draws the dashed "drive" line from the chosen point.
-      marker.on('mouseover', function () {
-        showTravelLine(item.attraction, item.dist);
-      });
-      marker.on('mouseout', clearTravelLine);
-      marker.addTo(areaMap);
-      nearbyMarkers.push(marker);
+    // Which attractions fall inside the current view?
+    var inView = attractions.filter(function (a) {
+      return bounds.contains([a.coordinates.lat, a.coordinates.lng]);
     });
 
-    // --- Fit map to center + markers ---
-    if (opts.fit !== false) {
-      var pts = nearbyMarkers.map(function (m) { return m.getLatLng(); });
-      pts.push(L.latLng(center.lat, center.lng));
-      if (pts.length > 1) {
-        // animate:false → bounds update synchronously, so getBounds() below is
-        // correct even if moveend doesn't fire (e.g. bounds unchanged).
-        areaMap.fitBounds(L.latLngBounds(pts).pad(0.15), { animate: false });
+    // If an anchor point is chosen, annotate with distance and sort by nearest.
+    inView = inView.map(function (a) {
+      return {
+        attraction: a,
+        dist: center ? distanceKm(center.lat, center.lng, a.coordinates.lat, a.coordinates.lng) : null
+      };
+    });
+    if (center) {
+      inView.sort(function (x, y) { return x.dist - y.dist; });
+    }
+
+    // Skip a full re-render if the visible set is unchanged (avoids flicker).
+    var key = (center ? 'c' : 'n') + ':' + inView.map(function (i) { return i.attraction.id; }).join('|');
+    if (key === lastViewKey) return;
+    lastViewKey = key;
+
+    // --- Sync markers: add newly-visible, remove now-hidden (reuse cache) ---
+    var wantIds = {};
+    inView.forEach(function (item) {
+      var a = item.attraction;
+      wantIds[a.id] = true;
+      if (shownIds.indexOf(a.id) === -1) {
+        var marker = getMarker(a);
+        if (marker) marker.addTo(areaMap);
+      }
+    });
+    shownIds.filter(function (id) { return !wantIds[id]; })
+      .forEach(function (id) {
+        if (markersById[id]) areaMap.removeLayer(markersById[id]);
+      });
+    shownIds = Object.keys(wantIds);
+    clearTravelLine();
+
+    // --- Cards: exactly mirror what's on the map ---
+    if (grid) {
+      grid.textContent = '';
+      if (inView.length === 0) {
+        grid.appendChild(buildEmptyState(
+          '🔍',
+          'אין אטרקציות בתצוגה הנוכחית',
+          'הזיזו את המפה או הקטינו את הזום כדי לראות אטרקציות באזור.'
+        ));
+      } else {
+        inView.forEach(function (item, index) {
+          var card = renderAttractionCard(item.attraction, index);
+          if (item.dist != null) injectDistance(card, item.dist);
+          card.addEventListener('mouseenter', function () {
+            showTravelLine(item.attraction, item.dist);
+          });
+          card.addEventListener('mouseleave', clearTravelLine);
+          grid.appendChild(card);
+        });
       }
     }
-    // Always render directly; the dedup key makes any moveend echo a no-op.
-    renderVisibleCards();
-  }
 
-  // Render cards ONLY for attractions currently inside the map viewport, so the
-  // list below mirrors exactly what the user sees on the map. Re-runs on zoom/pan.
-  function renderVisibleCards() {
-    var grid = $('area-results');
-    if (!grid || !center) return;
-
-    var bounds = areaMap.getBounds();
-    var visible = currentResults.filter(function (item) {
-      var c = item.attraction.coordinates;
-      return bounds.contains([c.lat, c.lng]);
-    });
-
-    // Skip re-render if the visible set is identical (avoids flicker on tiny pans).
-    var key = visible.map(function (i) { return i.attraction.id; }).join('|');
-    if (key === lastVisibleKey) {
-      updateCount(visible.length);
-      return;
-    }
-    lastVisibleKey = key;
-
-    grid.textContent = '';
-    if (currentResults.length === 0) {
-      grid.appendChild(buildEmptyState(
-        '😕',
-        'אין אטרקציות ברדיוס של ' + radiusKm + ' ק״מ',
-        'נסו להגדיל את הרדיוס או לבחור נקודה אחרת.'
-      ));
-    } else if (visible.length === 0) {
-      grid.appendChild(buildEmptyState(
-        '🔍',
-        'אין אטרקציות בתצוגה הנוכחית',
-        'הזיזו או הקטינו את הזום כדי לראות אטרקציות באזור.'
-      ));
-    } else {
-      visible.forEach(function (item, index) {
-        var card = renderAttractionCard(item.attraction, index);
-        injectDistance(card, item.dist);
-        // Hovering a card also highlights the drive line on the map.
-        card.addEventListener('mouseenter', function () {
-          showTravelLine(item.attraction, item.dist);
-        });
-        card.addEventListener('mouseleave', clearTravelLine);
-        grid.appendChild(card);
-      });
-    }
-
-    updateCount(visible.length);
+    updateCount(inView.length);
   }
 
   // Insert a "~X km from the point" line under the card title.
@@ -373,15 +340,12 @@
   function updateCount(n) {
     var el = $('area-count');
     if (!el) return;
-    if (!center) {
-      el.textContent = 'בחרו נקודה כדי להתחיל';
-      return;
-    }
-    var total = currentResults.length;
-    if (n === total) {
-      el.textContent = 'מציג ' + n + ' אטרקציות ברדיוס ' + radiusKm + ' ק״מ';
+    if (n === 0) {
+      el.textContent = 'אין אטרקציות בתצוגה הנוכחית';
+    } else if (n === 1) {
+      el.textContent = 'אטרקציה אחת בתצוגה הנוכחית';
     } else {
-      el.textContent = 'מציג ' + n + ' מתוך ' + total + ' אטרקציות ברדיוס ' + radiusKm + ' ק״מ (בתצוגה הנוכחית)';
+      el.textContent = n + ' אטרקציות בתצוגה הנוכחית';
     }
   }
 
@@ -465,42 +429,30 @@
     });
   }
 
-  // ===== Radius slider =====
-  function setupRadiusSlider() {
-    var slider = $('radius-slider');
-    var label = $('radius-value');
-    if (!slider) return;
-
-    radiusKm = parseInt(slider.value, 10) || 30;
-    if (label) label.textContent = radiusKm;
-
-    slider.addEventListener('input', function () {
-      radiusKm = parseInt(slider.value, 10) || 30;
-      if (label) label.textContent = radiusKm;
-      if (center) {
-        renderRadiusCircle();
-        renderNearby({ fit: false });
-      } else {
-        updateCount(0);
-      }
-    });
-  }
-
   // ===== Init =====
   function init() {
     initAreaMap();
     setupSearchBox();
-    setupRadiusSlider();
-    updateCount(0);
 
-    loadData().catch(function (err) {
-      console.error('area-explorer: failed to load attractions', err);
-      var grid = $('area-results');
-      if (grid) {
-        grid.textContent = '';
-        grid.appendChild(buildEmptyState('⚠️', 'שגיאה בטעינת הנתונים', 'נסו לרענן את הדף.'));
-      }
-    });
+    var grid = $('area-results');
+    if (grid) {
+      grid.textContent = '';
+      grid.appendChild(buildEmptyState('⏳', 'טוען אטרקציות…', ''));
+    }
+
+    loadData()
+      .then(function () {
+        // Populate immediately from the default view — no need to pick a point
+        // first. Panning/zooming then updates markers + cards live.
+        renderInView();
+      })
+      .catch(function (err) {
+        console.error('area-explorer: failed to load attractions', err);
+        if (grid) {
+          grid.textContent = '';
+          grid.appendChild(buildEmptyState('⚠️', 'שגיאה בטעינת הנתונים', 'נסו לרענן את הדף.'));
+        }
+      });
   }
 
   if (document.readyState === 'loading') {
